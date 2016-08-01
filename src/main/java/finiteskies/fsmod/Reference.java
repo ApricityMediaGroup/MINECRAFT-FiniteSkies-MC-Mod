@@ -10,8 +10,8 @@ public class Reference {
 	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.ServerProxy";
 	
 	public static enum FiniteItems {
-		STRAWBERRY("strawberry", "ItemStrawberry"),
-		BLUEBERRY("blueberry", "ItemBlueberry");
+		STRAWBERRY("strawberry", "Strawberry"),
+		BLUEBERRY("blueberry", "Blueberry");
 		
 		private String unlocalizedName;
 		private String registryName;

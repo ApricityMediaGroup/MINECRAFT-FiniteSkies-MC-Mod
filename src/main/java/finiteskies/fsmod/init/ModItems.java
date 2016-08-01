@@ -1,8 +1,8 @@
 package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.Reference;
-import finiteskies.fsmod.items.ItemBlueberry;
-import finiteskies.fsmod.items.ItemStrawberry;
+import finiteskies.fsmod.items.Blueberry;
+import finiteskies.fsmod.items.Strawberry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -15,8 +15,8 @@ public class ModItems {
 	public static Item blueberry;
 	
 	public static void init() {
-		strawberry = new ItemStrawberry();
-		blueberry = new ItemBlueberry();
+		strawberry = new Strawberry();
+		blueberry = new Blueberry();
 		
 	}
 	
