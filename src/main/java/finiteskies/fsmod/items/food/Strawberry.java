@@ -11,7 +11,7 @@ public class Strawberry extends ItemFood {
 		super(1, 0.1F, false);
 		setUnlocalizedName(Reference.FiniteItems.STRAWBERRY.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.STRAWBERRY.getRegistryName());
-		setCreativeTab(FSMod.CREATIVE_TAB);
+		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 	}
 	
 }

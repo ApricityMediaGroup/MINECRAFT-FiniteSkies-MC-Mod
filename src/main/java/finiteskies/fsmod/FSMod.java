@@ -2,7 +2,10 @@ package finiteskies.fsmod;
 
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.proxy.CommonProxy;
+import javafx.geometry.Side;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -10,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
@@ -20,7 +24,19 @@ public class FSMod {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static final CreativeTabs CREATIVE_TAB = new FSModTab("tabFSMod");
+	public static final CreativeTabs CREATIVE_TAB_FOOD = new CreativeTabs("tabFSModFood") {
+		   @Override
+		   public Item getTabIconItem() {
+		       return ModItems.strawberry;
+		   }
+		};
+	public static final CreativeTabs CREATIVE_TAB_MISC = new CreativeTabs("tabFSModMisc") {
+			   @Override
+			   public Item getTabIconItem() {
+			       return ModItems.blueberry;
+		  }
+		};
+
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -38,7 +54,7 @@ public class FSMod {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
-	
+
 	}
 
 }
