@@ -1,0 +1,15 @@
+[
+{
+  "modid": "fsm",
+  "name": "FiniteSkies Mod",
+  "description": "Adds many things by FiniteSkies",
+  "version": "1.0",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Seabass247","Dasreyh"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
