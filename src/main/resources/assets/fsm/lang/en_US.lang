@@ -1,2 +1,5 @@
+//Foods\\
 item.strawberry.name=Strawberry
 item.blueberry.name=Blueberry
+//Creative Tabs\\
+itemGroup.tabFSMod=FiniteSkies
