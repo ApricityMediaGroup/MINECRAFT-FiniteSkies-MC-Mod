@@ -13,7 +13,7 @@ public class Reference {
 
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
-		STRAWBERRYPLANT("strawberryplant","strawberryplant");
+		STRAWBERRYPLANT("strawberryPlant","strawberry_plant");
 
 		private String unlocalizedName;
 		private String registryName;

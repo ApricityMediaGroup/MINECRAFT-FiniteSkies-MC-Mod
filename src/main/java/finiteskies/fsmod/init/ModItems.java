@@ -14,25 +14,25 @@ public class ModItems {
 	//foods
 	public static Item strawberry;
 	public static Item blueberry;
-	public static Item strawberryplant;
+	public static Item strawberryPlant;
 	
 	public static void init() {
 		strawberry = new Strawberry();
 		blueberry = new Blueberry();
-		strawberryplant = new StrawberryPlant();		
+		strawberryPlant = new StrawberryPlant();		
 		
 	}
 	
 	public static void register(){
 		GameRegistry.register(strawberry);
 		GameRegistry.register(blueberry);
-		GameRegistry.register(strawberryplant);
+		GameRegistry.register(strawberryPlant);
 	}
 	
 	public static void registerRender() {
 		registerRender(strawberry);
 		registerRender(blueberry);
-		registerRender(strawberryplant);
+		registerRender(strawberryPlant);
 	}
 
 	private static void registerRender(Item item) {
