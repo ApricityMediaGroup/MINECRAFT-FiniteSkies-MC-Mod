@@ -4,3 +4,6 @@ item.blueberry.name=Blueberry
 //Creative Tabs\\
 itemGroup.tabFSModFood=FiniteSkies Food
 itemGroup.tabFSModMisc=FiniteSkies Misc
+itemGroup.tabFSMod=FiniteSkies
+//Plants\\
+item.strawberryplant.name=Strawberry Plant

@@ -2,7 +2,6 @@ package finiteskies.fsmod.items.food;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 

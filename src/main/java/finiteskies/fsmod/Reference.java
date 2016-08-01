@@ -12,7 +12,8 @@ public class Reference {
 	public static enum FiniteItems {
 
 		STRAWBERRY("strawberry", "strawberry"),
-		BLUEBERRY("blueberry", "blueberry");
+		BLUEBERRY("blueberry", "blueberry"),
+		STRAWBERRYPLANT("strawberryplant","strawberryplant");
 
 		private String unlocalizedName;
 		private String registryName;
