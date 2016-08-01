@@ -1,8 +1,8 @@
 package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.Reference;
-import finiteskies.fsmod.items.Blueberry;
-import finiteskies.fsmod.items.Strawberry;
+import finiteskies.fsmod.items.food.Blueberry;
+import finiteskies.fsmod.items.food.Strawberry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
