@@ -9,4 +9,23 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "finiteskies.fsmod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.ServerProxy";
 	
+	public static enum FiniteItems {
+		STRAWBERRY("strawberry", "ItemStrawberry");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		FiniteItems(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+	    public String getRegistryName() {
+			return registryName;
+		}
 	}
+}

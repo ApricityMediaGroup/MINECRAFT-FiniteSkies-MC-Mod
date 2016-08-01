@@ -1,5 +1,6 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -21,11 +22,15 @@ public class FSMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
+		
+		ModItems.init();
+		ModItems.register();
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");
 		
+		proxy.init();
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
