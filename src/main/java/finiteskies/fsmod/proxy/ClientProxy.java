@@ -6,7 +6,7 @@ public class ClientProxy implements CommonProxy {
 
 	@Override
 	public void init() {
-		ModItems.registerRender();
+		ModItems.registerRenders();
 		
 	}
 

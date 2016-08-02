@@ -29,7 +29,7 @@ public class ModItems {
 		GameRegistry.register(strawberryPlant);
 	}
 	
-	public static void registerRender() {
+	public static void registerRenders() {
 		registerRender(strawberry);
 		registerRender(blueberry);
 		registerRender(strawberryPlant);
