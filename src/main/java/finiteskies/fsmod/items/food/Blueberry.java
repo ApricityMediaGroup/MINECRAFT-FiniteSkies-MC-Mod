@@ -10,6 +10,6 @@ public class Blueberry extends ItemFood {
 		super(1, 0.1F, false);
 		setUnlocalizedName(Reference.FiniteItems.BLUEBERRY.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.BLUEBERRY.getRegistryName());
-		setCreativeTab(FSMod.CREATIVE_TAB_MISC);
+		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 	}
 }
