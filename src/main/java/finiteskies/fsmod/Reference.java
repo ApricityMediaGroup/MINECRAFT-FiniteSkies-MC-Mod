@@ -11,10 +11,12 @@ public class Reference {
 	
 	public static enum FiniteItems {
 
+
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
-		STRAWBERRYPLANT("strawberryPlant","strawberry_plant");
-
+		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
+		MILKPOT("milkPot","milk_pot");
+		
 		private String unlocalizedName;
 		private String registryName;
 		
