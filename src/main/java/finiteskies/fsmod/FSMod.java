@@ -1,5 +1,6 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.proxy.CommonProxy;
 import javafx.geometry.Side;
@@ -44,6 +45,8 @@ public class FSMod {
 		
 		ModItems.init();
 		ModItems.register();
+		ModBlocks.init();
+		ModBlocks.register();
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
