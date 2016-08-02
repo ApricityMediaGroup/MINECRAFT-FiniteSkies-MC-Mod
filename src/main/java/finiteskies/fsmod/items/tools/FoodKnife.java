@@ -7,8 +7,8 @@ import net.minecraft.item.ItemFood;
 
 public class FoodKnife extends Item{
 	public FoodKnife() {
-		setUnlocalizedName(Reference.FiniteItems.FOOD_KNIFE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteItems.FOOD_KNIFE.getRegistryName());
+		setUnlocalizedName(Reference.FiniteItems.FOODKNIFE.getUnlocalizedName());
+		setRegistryName(Reference.FiniteItems.FOODKNIFE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_TOOLS);
 	}
 

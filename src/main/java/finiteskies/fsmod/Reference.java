@@ -16,10 +16,10 @@ public class Reference {
 		BLUEBERRY("blueberry", "blueberry"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
 		MILKPOT("milkPot","milk_pot"),
-		BREAD_SLICE("breadSlice","bread_slice"),
+		BREADSLICE("breadSlice","bread_slice"),
 		TOAST("toast","toast"),
-		FOOD_KNIFE("foodKnife","food_knife"),
-		CARBON_STEEL_INGOT("carbonSteelIngot","carbon_steel_ingot");
+		FOODKNIFE("foodKnife","food_knife"),
+		CARBONSTEELINGOT("carbonSteelIngot","carbon_steel_ingot");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

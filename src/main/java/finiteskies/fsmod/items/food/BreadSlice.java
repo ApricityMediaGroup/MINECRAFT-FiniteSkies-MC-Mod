@@ -9,8 +9,8 @@ public class BreadSlice extends ItemFood{
 
 	public BreadSlice() {
 		super(1, 0.2F, false);
-		setUnlocalizedName(Reference.FiniteItems.BREAD_SLICE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteItems.BREAD_SLICE.getRegistryName());
+		setUnlocalizedName(Reference.FiniteItems.BREADSLICE.getUnlocalizedName());
+		setRegistryName(Reference.FiniteItems.BREADSLICE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 	}
 
