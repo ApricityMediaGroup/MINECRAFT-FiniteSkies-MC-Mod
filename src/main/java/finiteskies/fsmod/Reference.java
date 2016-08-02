@@ -9,18 +9,18 @@ public class Reference {
 	public static final String CLIENT_PROXY_CLASS = "finiteskies.fsmod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.ServerProxy";
 	
+
 	public static enum FiniteItems {
-
-
+	//Set item names here NAMENAME(<nameName>, <name_name>)
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
-		MILKPOT("milkPot","milk_pot"),
-		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");
+		MILKPOT("milkPot","milk_pot");
+		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
 		private String registryName;
-		
+	
 		FiniteItems(String unlocalizedName, String registryName) {
 			this.unlocalizedName = unlocalizedName;
 			this.registryName = registryName;
@@ -34,10 +34,13 @@ public class Reference {
 			return registryName;
 		}
 	}
-	
+
+
 	public static enum FiniteBlocks {
+	//Set block names here NAMENAME(<nameName>, <name_name>)
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");		
-		
+		//Ends with semicolon continues with commas		
+
 		private String unlocalizedName;
 		private String registryName;
 		
