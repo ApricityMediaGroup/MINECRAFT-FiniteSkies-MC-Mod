@@ -8,7 +8,7 @@ public class CarbonSteelIngot extends Item {
 	public CarbonSteelIngot() {
 		setUnlocalizedName(Reference.FiniteItems.CARBON_STEEL_INGOT.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.CARBON_STEEL_INGOT.getRegistryName());
-		setCreativeTab(FSMod.CREATIVE_TAB_MISC);
+		setCreativeTab(FSMod.CREATIVE_TAB_ORE);
 	}
 	
 	
