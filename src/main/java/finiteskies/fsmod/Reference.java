@@ -17,6 +17,10 @@ public class Reference {
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
 		MILKPOT("milkPot","milk_pot"),
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");
+		SANDSTONE_BRICK("sandstoneBrick","sandstone_brick"),
+		BREAD_SLICE("breadSlice","bread_slice"),
+		TOAST("toast","toast"),
+		FOOD_KNIFE("foodKnife","food_knife");
 
 		private String unlocalizedName;
 		private String registryName;
