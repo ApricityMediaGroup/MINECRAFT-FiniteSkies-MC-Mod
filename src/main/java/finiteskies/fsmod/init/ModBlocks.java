@@ -1,6 +1,7 @@
 package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.blocks.SandstoneBrick;
+import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -11,15 +12,17 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBlocks {
 	
 	public static Block sandstoneBrick;
-	
+	public static Block strawberryPlant;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
-		
+		strawberryPlant = new StrawberryPlant();
 	}
 	
 	public static void register() {
 		registerBlock(sandstoneBrick);
+		registerBlock(strawberryPlant);
+
 	}
 
 	private static void registerBlock(Block block) {
@@ -31,6 +34,7 @@ public class ModBlocks {
 	
 	public static void registerRenders() {
 		registerRender(sandstoneBrick);
+		registerRender(strawberryPlant);
 	}
 
 	private static void registerRender(Block block) {

@@ -18,7 +18,8 @@ public class Reference {
 		MILKPOT("milkPot","milk_pot"),
 		BREAD_SLICE("breadSlice","bread_slice"),
 		TOAST("toast","toast"),
-		FOOD_KNIFE("foodKnife","food_knife");
+		FOOD_KNIFE("foodKnife","food_knife"),
+		CARBON_STEEL_INGOT("carbonSteelIngot","carbon_steel_ingot");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -41,7 +42,8 @@ public class Reference {
 
 	public static enum FiniteBlocks {
 	//Set block names here NAMENAME(<nameName>, <name_name>)
-		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");		
+		SANDSTONEBRICK("sandstoneBrick","sandstone_brick"),
+		STRAWBERRYPLANT("strawberryPlant","strawberry_plant");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

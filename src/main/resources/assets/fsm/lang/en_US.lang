@@ -13,7 +13,7 @@ itemGroup.tabFSModTools=FiniteSkies Tools
 itemGroup.tabFSMod=FiniteSkies
 
 //Plants\\
-item.strawberryPlant.name=Strawberry Plant
+tile.strawberryPlant.name=Strawberry Plant
 item.milkPot.name=Milk Pot
 <<<<<<< HEAD
 =======
@@ -24,3 +24,6 @@ tile.sandstoneBrick.name=Sandstone Brick
 
 //Tools\\
 item.foodKnife.name=Food Knife
+
+//Ores and Ingots\\
+item.carbonSteelIngot.name=Carbon Steel Ingot
