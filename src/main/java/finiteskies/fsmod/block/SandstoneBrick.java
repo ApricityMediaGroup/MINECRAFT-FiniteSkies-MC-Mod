@@ -2,6 +2,7 @@ package finiteskies.fsmod.block;
 
 import java.util.Random;
 
+import finiteskies.fsmod.FSMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -22,6 +23,7 @@ public class SandstoneBrick extends Block{
 		// 16 IS OPAQUE
 		this.setResistance(1.5f);
 		this.setSoundType(SoundType.ANVIL);
+		setCreativeTab(FSMod.CREATIVE_TAB_BLOCKS);
 	}
 	
 	public int quantityDroppedWithBonus(int fortune, Random random){

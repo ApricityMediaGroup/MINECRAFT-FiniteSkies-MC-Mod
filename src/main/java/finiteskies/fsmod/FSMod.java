@@ -4,7 +4,9 @@ import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.proxy.CommonProxy;
 import javafx.geometry.Side;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
@@ -37,7 +39,18 @@ public class FSMod {
 			       return ModItems.blueberry;
 		  }
 		};
-
+	public static final CreativeTabs CREATIVE_TAB_PLANTS = new CreativeTabs("tabFSModPlants") {
+			   @Override
+			   public Item getTabIconItem() {
+			       return ModItems.strawberryPlant;
+		  }
+		};
+	public static final CreativeTabs CREATIVE_TAB_BLOCKS = new CreativeTabs("tabFSModBlocks") {
+			   @Override
+			   public Item getTabIconItem() {
+				   return Item.getItemFromBlock(ModBlocks.sandstoneBrick);
+		  }
+		};
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

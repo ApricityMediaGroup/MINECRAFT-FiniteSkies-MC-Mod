@@ -8,6 +8,6 @@ public class StrawberryPlant extends Item {
 public StrawberryPlant() {
 	setUnlocalizedName(Reference.FiniteItems.STRAWBERRYPLANT.getUnlocalizedName());
 	setRegistryName(Reference.FiniteItems.STRAWBERRYPLANT.getRegistryName());
-	setCreativeTab(FSMod.CREATIVE_TAB_MISC);
+	setCreativeTab(FSMod.CREATIVE_TAB_PLANTS);
 	}
 }
