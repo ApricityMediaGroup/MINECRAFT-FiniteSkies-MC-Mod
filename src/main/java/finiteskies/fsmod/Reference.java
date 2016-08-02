@@ -15,8 +15,7 @@ public class Reference {
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
-		MILKPOT("milkPot","milk_pot");
-		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
+		MILKPOT("milkPot","milk_pot"),
 		SANDSTONE_BRICK("sandstoneBrick","sandstone_brick");
 
 		private String unlocalizedName;
