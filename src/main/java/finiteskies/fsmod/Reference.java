@@ -15,7 +15,7 @@ public class Reference {
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
-		MILKPOT("milkPot","milk_pot");	
+		MILKPOT("milkPot","milk_pot"),
 		BREAD_SLICE("breadSlice","bread_slice"),
 		TOAST("toast","toast"),
 		FOOD_KNIFE("foodKnife","food_knife");
