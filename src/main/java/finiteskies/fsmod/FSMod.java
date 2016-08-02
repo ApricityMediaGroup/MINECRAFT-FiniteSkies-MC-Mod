@@ -45,12 +45,7 @@ public class FSMod {
 			       return ModItems.strawberryPlant;
 		  }
 		};
-	public static final CreativeTabs CREATIVE_TAB_BLOCKS = new CreativeTabs("tabFSModBlocks") {
-			   @Override
-			   public Item getTabIconItem() {
-				   return Item.getItemFromBlock(ModBlocks.sandstoneBrick);
-		  }
-		};
+
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

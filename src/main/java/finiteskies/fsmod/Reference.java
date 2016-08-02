@@ -16,7 +16,7 @@ public class Reference {
 		BLUEBERRY("blueberry", "blueberry"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
 		MILKPOT("milkPot","milk_pot"),
-		SANDSTONE_BRICK("sandstoneBrick","sandstone_brick");
+		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");
 
 		private String unlocalizedName;
 		private String registryName;
@@ -34,4 +34,25 @@ public class Reference {
 			return registryName;
 		}
 	}
+	
+	public static enum FiniteBlocks {
+		SANDSTONEBRICK("sandstoneBrick","sandstone_brick");		
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		FiniteBlocks(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+	    
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
 }
+

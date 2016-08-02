@@ -1,12 +1,11 @@
 package finiteskies.fsmod.init;
 
-
-import finiteskies.fsmod.block.SandstoneBrick;
+import finiteskies.fsmod.blocks.SandstoneBrick;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -15,23 +14,28 @@ public class ModBlocks {
 	
 	
 	public static void init() {
-		sandstoneBrick = new SandstoneBrick();	
+		sandstoneBrick = new SandstoneBrick();
 		
 	}
 	
-	public static void register(){
-		GameRegistry.registerBlock(sandstoneBrick = new SandstoneBrick(), sandstoneBrick.getUnlocalizedName().substring(5));
-	}
-	
-	public static void registerRenders() {
-		registerRenders(sandstoneBrick);
+	public static void register() {
+		registerBlock(sandstoneBrick);
 	}
 
-	private static void registerRenders(Block block) {
-		Item item = Item.getItemFromBlock(block);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+	private static void registerBlock(Block block) {
+		GameRegistry.register(block);
+		ItemBlock item = new ItemBlock(block);
+		item.setRegistryName(block.getRegistryName());
+		GameRegistry.register(item);
+		}
+	
+	public static void registerRenders() {
+		registerRender(sandstoneBrick);
+	}
+
+	private static void registerRender(Block block) {
+		System.out.println(block.getRegistryName());
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 
 }
-
-

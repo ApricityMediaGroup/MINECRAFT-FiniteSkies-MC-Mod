@@ -1,4 +1,4 @@
-package finiteskies.fsmod.block;
+package finiteskies.fsmod.blocks;
 
 import net.minecraft.block.BlockTallGrass;
 
