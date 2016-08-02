@@ -1,12 +1,18 @@
 //Foods\\
 item.strawberry.name=Strawberry
 item.blueberry.name=Blueberry
+
 //Creative Tabs\\
 itemGroup.tabFSModFood=FiniteSkies Food
 itemGroup.tabFSModMisc=FiniteSkies Misc
 itemGroup.tabFSMod=FiniteSkies
+
 //Plants\\
 item.strawberryPlant.name=Strawberry Plant
 item.milkPot.name=Milk Pot
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/dasreyh/FiniteSkies.git
 //Blocks\\
 tile.sandstone_brick.name=Sandstone Brick

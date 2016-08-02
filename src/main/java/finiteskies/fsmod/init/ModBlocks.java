@@ -11,20 +11,20 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 	
-	public static Block sandstone_brick;
+	public static Block sandstoneBrick;
 	
 	
 	public static void init() {
-		sandstone_brick = new SandstoneBrick();	
+		sandstoneBrick = new SandstoneBrick();	
 		
 	}
 	
 	public static void register(){
-		GameRegistry.registerBlock(sandstone_brick = new SandstoneBrick(), sandstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(sandstoneBrick = new SandstoneBrick(), sandstoneBrick.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders() {
-		registerRenders(sandstone_brick);
+		registerRenders(sandstoneBrick);
 	}
 
 	private static void registerRenders(Block block) {
