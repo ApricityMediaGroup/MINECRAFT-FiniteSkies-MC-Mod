@@ -94,7 +94,7 @@ public class ModItems {
 		cokingCoal = new CokingCoal();
 		carbonSteelMixture = new CarbonSteelMixture();
 		//Initiate Crop seeds here
-		strawberrySeeds = new ItemSeeds(ModBlocks.strawberryCrop, Blocks.FARMLAND);
+		strawberrySeeds = new StrawberrySeeds();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
