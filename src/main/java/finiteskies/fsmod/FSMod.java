@@ -2,11 +2,18 @@ package finiteskies.fsmod;
 
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModFluids;
+import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
+import net.minecraft.block.BlockDoublePlant;
+
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -14,6 +21,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
@@ -37,11 +46,11 @@ public class FSMod {
 		  }
 		};
 	public static final CreativeTabs CREATIVE_TAB_PLANTS = new CreativeTabs("tabFSModPlants") {
-			   @Override
-			   public Item getTabIconItem() {
-			       return ModItems.strawberryPlant;
-		  }
-		};
+		   @Override
+		   public Item getTabIconItem() {
+			   return Item.getItemFromBlock(ModBlocks.strawberryPlant);
+	  }
+	};
 	public static final CreativeTabs CREATIVE_TAB_TOOLS = new CreativeTabs("tabFSModTools") {
 			   @Override
 			   public Item getTabIconItem() {
@@ -55,7 +64,14 @@ public class FSMod {
 				   return Item.getItemFromBlock(ModBlocks.sandstoneBrick);
 		  }
 		};
-
+	public static final CreativeTabs CREATIVE_TAB_ORE = new CreativeTabs("tabFSModOre") {
+			   @Override
+			   public Item getTabIconItem() {
+				   return ModItems.carbonSteelIngot;
+		  }
+		};
+		
+		
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
@@ -73,6 +89,8 @@ public class FSMod {
 		System.out.println("Init");
 	
 		proxy.init();
+		
+		ModCrafting.register();
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {

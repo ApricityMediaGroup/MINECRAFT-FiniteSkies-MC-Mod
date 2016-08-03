@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "fsm:items/strawberry_plant"
+        "layer0": "fsm:blocks/strawberry_plant"
     }
 }
