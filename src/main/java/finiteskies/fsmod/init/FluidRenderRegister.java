@@ -19,7 +19,7 @@ public class FluidRenderRegister {
 		registerFluid(ModFluids.blockFluidMilk, "fluid_milk");
 	}
 	
-	private static void registerFluid(BlockFluidClassic block, String name) {
+	public static void registerFluid(BlockFluidClassic block, String name) {
 		Item item = Item.getItemFromBlock(block);
 		ModelBakery.registerItemVariants(item);
 		final ModelResourceLocation loc = new ModelResourceLocation(Reference.MOD_ID + ":fluids", name);

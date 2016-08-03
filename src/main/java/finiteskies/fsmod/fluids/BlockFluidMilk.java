@@ -13,14 +13,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 public class BlockFluidMilk extends BlockFluidClassic {
-
+    public int getRenderType()
+    {
+    	return 3;
+    }
 	public BlockFluidMilk(Fluid fluid) {
 
 		super(fluid, Material.WATER);
 		setUnlocalizedName(Reference.FiniteBlocks.BLOCKFLUIDMILK.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.BLOCKFLUIDMILK.getRegistryName());
 	}
-   @SideOnly(Side.CLIENT)
+ 
+	@SideOnly(Side.CLIENT)
     public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
     {
     	 IBlockState neighbor = blockAccess.getBlockState(pos.offset(side));

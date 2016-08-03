@@ -3,7 +3,7 @@
   "variants": {
     "fluid_milk": {
       "model": "forge:fluid",
-      "custom": { "fluids": "fluid_milk" }
+      "custom": { "fluid": "fluid_milk" }
     }
   }
 }

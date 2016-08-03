@@ -81,15 +81,15 @@ public class FSMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
-		
+
+			
 		ModItems.init();
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
 		ModFluids.init();
 		ModFluids.register();
-		FluidRenderRegister.init();
-		proxy.preinit();	
+		proxy.preinit();
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
