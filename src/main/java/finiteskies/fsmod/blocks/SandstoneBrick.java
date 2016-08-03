@@ -12,9 +12,9 @@ public class SandstoneBrick extends Block {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.FiniteBlocks.SANDSTONEBRICK.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.SANDSTONEBRICK.getRegistryName());
-		this.setHardness(1.5F);
-		this.setResistance(10.0F);
-		this.setSoundType(SoundType.STONE);
+		setHardness(1.5F);
+		setResistance(10.0F);
+		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_BLOCKS);
 	}
 

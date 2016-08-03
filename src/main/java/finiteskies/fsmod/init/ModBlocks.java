@@ -2,6 +2,7 @@ package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.blocks.SandstoneBrick;
 import finiteskies.fsmod.fluids.BlockFluidMilk;
+import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -14,15 +15,18 @@ public class ModBlocks {
 	
 	public static Block sandstoneBrick;
 	public static Block strawberryPlant;
+	public static Block lantern;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
 		strawberryPlant = new StrawberryPlant();
+		lantern = new Lantern();
 	}
 	
 	public static void register() {
 		registerBlock(sandstoneBrick);
 		registerBlock(strawberryPlant);
+		registerBlock(lantern);
 
 	}
 
@@ -36,6 +40,7 @@ public class ModBlocks {
 	public static void registerRenders() {
 		registerRender(sandstoneBrick);
 		registerRender(strawberryPlant);
+		registerRender(lantern);
 	}
 
 	private static void registerRender(Block block) {

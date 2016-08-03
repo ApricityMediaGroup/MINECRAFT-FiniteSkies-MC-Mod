@@ -70,7 +70,12 @@ public class FSMod {
 				   return ModItems.carbonSteelIngot;
 		  }
 		};
-		
+	public static final CreativeTabs CREATIVE_TAB_FURNITURE = new CreativeTabs("tabFSModFurniture") {
+			   @Override
+			   public Item getTabIconItem() {
+				   return Item.getItemFromBlock(ModBlocks.lantern);
+		  }
+		};
 		
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

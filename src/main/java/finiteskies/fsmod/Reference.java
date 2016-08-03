@@ -44,7 +44,8 @@ public class Reference {
 	//Set block names here NAMENAME(<nameName>, <name_name>)
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick"),	
 		BLOCKFLUIDMILK("blockFluidMilk", "block_fluid_milk"),
-		STRAWBERRYPLANT("strawberryPlant","strawberry_plant");
+		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
+		LANTERN("lantern","lantern");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
