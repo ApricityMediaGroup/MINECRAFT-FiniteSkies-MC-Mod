@@ -14,7 +14,7 @@ public class FoodKnife extends Item{
 		setUnlocalizedName(Reference.FiniteItems.FOODKNIFE.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.FOODKNIFE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_TOOLS);
-		
+		setMaxStackSize(1);
 		setMaxStackSize(1);
 		setMaxDamage(64);
 	}    

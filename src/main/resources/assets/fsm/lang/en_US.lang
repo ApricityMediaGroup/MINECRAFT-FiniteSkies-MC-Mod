@@ -1,9 +1,3 @@
-//Foods\\
-item.strawberry.name=Strawberry
-item.blueberry.name=Blueberry
-item.breadSlice.name=Bread Slice
-item.toast.name=Toast
-
 //Creative Tabs\\
 itemGroup.tabFSModFood=FiniteSkies Food
 itemGroup.tabFSModMisc=FiniteSkies Misc
@@ -13,20 +7,38 @@ itemGroup.tabFSModTools=FiniteSkies Tools
 itemGroup.tabFSModOre=FiniteSkies Ores & Ingots
 itemGroup.tabFSMod=FiniteSkies
 
+//Foods\\
+item.strawberry.name=Strawberry
+item.blueberry.name=Blueberry
+item.breadSlice.name=Bread Slice
+item.toast.name=Toast
+item.jarOfWholeMilk.name=Jar of Whole Milk
+item.bigJarOfWholeMilk.name=Big Jar of Whole Milk
+item.heavyCream.name=Heavy Cream
+item.vinegar.name=Vinegar
+item.sourCream.name=Sour Cream
+item.bowl.name=Bowl
+item.alcohol.name=Alcohol
+item.vanillaBeans=Vanilla Beans
+item.vanillaExtract.name=Vanilla Extract
+item.whippedCream.name=Whipped Cream
+item.strawberriesAndCream.name=Strawberries and Cream
+
 //Plants\\
 tile.strawberryPlant.name=Strawberry Plant
-item.milkPot.name=Milk Pot
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/dasreyh/FiniteSkies.git
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
 tile.lantern.name=Lantern
 //Tools\\
 item.foodKnife.name=Food Knife
 
-//Ores and Ingots\\
+//Ores & Ingots\\
 item.carbonSteelIngot.name=Carbon Steel Ingot
 
 //Furniture\\
+
+//Misc\\
+item.milkPot.name=Milk Pot
+item.glassJar.name=Glass Jar
+item.bigGlassJar.name=Big Glass Jar
