@@ -122,7 +122,7 @@ public class ModItems {
 		GameRegistry.register(carbonSteelMixture);
 		GameRegistry.register(strawberrySeeds);
 	}
-	//FOUR --------------------------------------------------------
+	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
 		registerRender(strawberry);
 		registerRender(blueberry);
