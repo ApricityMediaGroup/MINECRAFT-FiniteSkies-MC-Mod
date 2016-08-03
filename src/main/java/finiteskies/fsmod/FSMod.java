@@ -1,13 +1,11 @@
 package finiteskies.fsmod;
 
 import finiteskies.fsmod.init.ModBlocks;
+import finiteskies.fsmod.init.ModFluids;
 import finiteskies.fsmod.init.ModItems;
+import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
-import javafx.geometry.Side;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,7 +14,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
@@ -67,11 +64,14 @@ public class FSMod {
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
+		ModFluids.init();
+		ModFluids.register();
+		proxy.preinit();	
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");
-		
+	
 		proxy.init();
 	}
 	@EventHandler
