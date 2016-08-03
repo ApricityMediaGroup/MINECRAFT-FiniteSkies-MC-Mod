@@ -14,7 +14,7 @@ import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fluids.BlockFluidClassic;
 
 public class FluidRenderRegister {
-	
+
 	public static void init() {
 		registerFluid(ModFluids.blockFluidMilk, "fluid_milk");
 	}
@@ -38,4 +38,5 @@ public class FluidRenderRegister {
 			}
 		});
 	}
+
 }

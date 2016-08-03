@@ -22,7 +22,7 @@ item.milkPot.name=Milk Pot
 >>>>>>> branch 'master' of https://github.com/dasreyh/FiniteSkies.git
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
-
+tile.lantern.name=Lantern
 //Tools\\
 item.foodKnife.name=Food Knife
 

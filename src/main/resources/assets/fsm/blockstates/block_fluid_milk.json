@@ -1,12 +1,9 @@
 {
-    "forge_marker": 1,
-	"defaults": {
-		"model": "forge:fluid",
-		"transform": "forge:default-item"
-	},
-    "variants": {
-        "fluid_milk": [{
-            "custom": { "fluid": "fluid_milk" }
-        }]
+  "forge_marker": 1,
+  "variants": {
+    "fluid_milk": {
+      "model": "forge:fluid",
+      "custom": { "fluids": "fluid_milk" }
     }
+  }
 }

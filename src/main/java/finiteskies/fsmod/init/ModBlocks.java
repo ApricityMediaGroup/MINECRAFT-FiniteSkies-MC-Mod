@@ -30,7 +30,7 @@ public class ModBlocks {
 
 	}
 
-	private static void registerBlock(Block block) {
+	static void registerBlock(Block block) {
 		GameRegistry.register(block);
 		ItemBlock item = new ItemBlock(block);
 		item.setRegistryName(block.getRegistryName());
