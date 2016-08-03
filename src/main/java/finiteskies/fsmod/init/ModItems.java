@@ -6,6 +6,7 @@ import finiteskies.fsmod.items.food.Blueberry;
 import finiteskies.fsmod.items.food.BreadSlice;
 import finiteskies.fsmod.items.food.Strawberry;
 import finiteskies.fsmod.items.food.Toast;
+import finiteskies.fsmod.items.misc.GlassJar;
 import finiteskies.fsmod.items.misc.MilkPot;
 import finiteskies.fsmod.items.ore.CarbonSteelIngot;
 import finiteskies.fsmod.items.tools.*;
@@ -18,6 +19,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 	
+	//ONE ---
+	
 	//foods
 	public static Item strawberry;
 	public static Item blueberry;
@@ -27,11 +30,13 @@ public class ModItems {
 	public static Block strawberryPlant;
 	//misc
 	public static Item milkPot;
+	public static Item glassJar;
     //tools
 	public static Item foodKnife;
 	//ore & ingots
 	public static Item carbonSteelIngot;
 	
+	//TWO ---
 	public static void init() {
 		strawberry = new Strawberry();
 		blueberry = new Blueberry();
@@ -40,8 +45,9 @@ public class ModItems {
 		toast = new Toast();
 		foodKnife = new FoodKnife();
 		carbonSteelIngot = new CarbonSteelIngot();
+		glassJar = new GlassJar();
 	}
-	
+	//THREE ---
 	public static void register() {
 		GameRegistry.register(strawberry);
 		GameRegistry.register(blueberry);
@@ -50,8 +56,9 @@ public class ModItems {
 		GameRegistry.register(toast);
 		GameRegistry.register(foodKnife);
 		GameRegistry.register(carbonSteelIngot);
+		GameRegistry.register(glassJar);
 	}
-	
+	//FOUR ---
 	public static void registerRenders() {
 		registerRender(strawberry);
 		registerRender(blueberry);
@@ -60,8 +67,9 @@ public class ModItems {
 		registerRender(toast);
 		registerRender(foodKnife);
 		registerRender(carbonSteelIngot);
+		registerRender(glassJar);
 	}
-
+	//DONE --- STOP
 	private static void registerRender(Item item) {
 		System.out.println(item.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));

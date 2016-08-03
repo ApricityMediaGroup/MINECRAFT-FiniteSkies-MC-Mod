@@ -11,6 +11,7 @@ public class Reference {
 	
 
 	public static enum FiniteItems {
+	//REGISTER ITEMS HERE
 	//Set item names here NAMENAME(<nameName>, <name_name>)
 		STRAWBERRY("strawberry", "strawberry"),
 		BLUEBERRY("blueberry", "blueberry"),
@@ -19,7 +20,8 @@ public class Reference {
 		BREADSLICE("breadSlice","bread_slice"),
 		TOAST("toast","toast"),
 		FOODKNIFE("foodKnife","food_knife"),
-		CARBONSTEELINGOT("carbonSteelIngot","carbon_steel_ingot");
+		CARBONSTEELINGOT("carbonSteelIngot","carbon_steel_ingot"),
+		GLASSJAR("glassJar","glass_jar");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -41,6 +43,7 @@ public class Reference {
 
 
 	public static enum FiniteBlocks {
+	//REGISTER BLOCKS HERE
 	//Set block names here NAMENAME(<nameName>, <name_name>)
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick"),	
 		BLOCKFLUIDMILK("blockFluidMilk", "block_fluid_milk"),
