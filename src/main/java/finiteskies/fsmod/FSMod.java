@@ -79,7 +79,6 @@ public class FSMod {
 				   return Item.getItemFromBlock(ModBlocks.lantern);
 		  }
 		};
-		
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");

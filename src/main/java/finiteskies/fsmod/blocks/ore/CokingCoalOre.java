@@ -27,7 +27,7 @@ public class CokingCoalOre extends Block
 {
     public CokingCoalOre()
     {
-        this(Material.ROCK.getMaterialMapColor());
+        super(Material.ROCK);
 		setUnlocalizedName(Reference.FiniteBlocks.COKINGCOALORE.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.COKINGCOALORE.getRegistryName());
 		setHardness(3.0F);

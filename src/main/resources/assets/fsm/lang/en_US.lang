@@ -26,6 +26,8 @@ item.strawberriesAndCream.name=Strawberries and Cream
 
 //Plants\\
 tile.strawberryPlant.name=Strawberry Plant
+tile.blueberryPlant.name=Blueberry Plant
+item.strawberrySeeds.name=Strawberry Seeds
 
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick

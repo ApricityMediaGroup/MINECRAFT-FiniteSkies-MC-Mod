@@ -1,7 +1,9 @@
 package finiteskies.fsmod.init;
 
+import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
+import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
@@ -27,7 +29,9 @@ import finiteskies.fsmod.items.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -51,7 +55,9 @@ public class ModItems {
 	public static Item whippedCream;
 	public static Item strawberriesAndCream;
 	//plants
-	public static Block strawberryPlant;
+	public static Item strawberrySeeds;
+	//crops
+	public static Item strawberryCrop;
 	//misc
 	public static Item milkPot;
 	public static Item glassJar;
@@ -87,6 +93,8 @@ public class ModItems {
 		strawberriesAndCream = new StrawberriesAndCream();
 		cokingCoal = new CokingCoal();
 		carbonSteelMixture = new CarbonSteelMixture();
+		//Initiate Crop seeds here
+		strawberrySeeds = new ItemSeeds(ModBlocks.strawberryCrop, Blocks.FARMLAND);
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -112,6 +120,7 @@ public class ModItems {
 		GameRegistry.register(strawberriesAndCream);
 		GameRegistry.register(cokingCoal);
 		GameRegistry.register(carbonSteelMixture);
+		GameRegistry.register(strawberrySeeds);
 	}
 	//FOUR --------------------------------------------------------
 	public static void registerRenders() {
@@ -137,6 +146,7 @@ public class ModItems {
 		registerRender(strawberriesAndCream);
 		registerRender(cokingCoal);
 		registerRender(carbonSteelMixture);
+		registerRender(strawberrySeeds);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {
