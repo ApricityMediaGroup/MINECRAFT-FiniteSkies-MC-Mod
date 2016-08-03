@@ -12,6 +12,17 @@ item.strawberry.name=Strawberry
 item.blueberry.name=Blueberry
 item.breadSlice.name=Bread Slice
 item.toast.name=Toast
+item.jarOfWholeMilk.name=Jar of Whole Milk
+item.bigJarOfWholeMilk.name=Big Jar of Whole Milk
+item.heavyCream.name=Heavy Cream
+item.vinegar.name=Vinegar
+item.sourCream.name=Sour Cream
+item.bowl.name=Bowl
+item.alcohol.name=Alcohol
+item.vanillaBeans=Vanilla Beans
+item.vanillaExtract.name=Vanilla Extract
+item.whippedCream.name=Whipped Cream
+item.strawberriesAndCream.name=Strawberries and Cream
 
 //Plants\\
 tile.strawberryPlant.name=Strawberry Plant
@@ -30,3 +41,4 @@ item.carbonSteelIngot.name=Carbon Steel Ingot
 //Misc\\
 item.milkPot.name=Milk Pot
 item.glassJar.name=Glass Jar
+item.bigGlassJar.name=Big Glass Jar

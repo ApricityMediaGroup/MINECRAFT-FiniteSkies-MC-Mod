@@ -32,5 +32,55 @@ public class ModCrafting {
 				});
 		//smelt iron to carbon iron
 		GameRegistry.addSmelting(Items.IRON_INGOT, new ItemStack(ModItems.carbonSteelIngot), 0.3f);
+		//milk bucket to milk jars
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.jarOfWholeMilk, 3), new Object[]{
+				Items.MILK_BUCKET, ModItems.glassJar, ModItems.glassJar, ModItems.glassJar
+		});
+		//milk bucket to big milk jar
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bigJarOfWholeMilk, 1), new Object[]{
+				Items.MILK_BUCKET, ModItems.bigGlassJar
+		});
+		//glass jar
+		GameRegistry.addRecipe(new ItemStack(ModItems.glassJar,3), new Object[]{
+				" B ",
+				"A A",
+				"AAA",
+				Character.valueOf('A'), new ItemStack(Blocks.GLASS),Character.valueOf('B'), new ItemStack(Blocks.WOODEN_BUTTON)
+				});
+		//big glass jar
+		GameRegistry.addRecipe(new ItemStack(ModItems.bigGlassJar,1), new Object[]{
+				"ABA",
+				"A A",
+				"AAA",
+				Character.valueOf('A'), new ItemStack(Blocks.GLASS),Character.valueOf('B'), new ItemStack(Blocks.WOODEN_BUTTON)
+				});
+		//heavy cream
+		GameRegistry.addSmelting(ModItems.bigJarOfWholeMilk, new ItemStack(ModItems.heavyCream), 0.5f);
+		//vinegar
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.vinegar, 1), new Object[]{
+				Items.APPLE,Items.WHEAT,Items.SUGAR, ModItems.glassJar
+		});	
+		//bowl
+		GameRegistry.addRecipe(new ItemStack(ModItems.bowl,1), new Object[]{
+				"A A",
+				"ABA",
+				Character.valueOf('A'), new ItemStack(Blocks.STONE),Character.valueOf('B'), new ItemStack(Blocks.STONE_PRESSURE_PLATE)
+				});
+		//sour cream
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sourCream, 1), new Object[]{
+				ModItems.vinegar,ModItems.heavyCream,ModItems.bigJarOfWholeMilk,ModItems.bowl
+		});	
+		//vanilla extract
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.vanillaExtract, 1), new Object[]{
+				ModItems.vanillaBeans,ModItems.vanillaBeans,ModItems.vanillaBeans,ModItems.alcohol,ModItems.glassJar
+		});	
+		//whipped cream
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.whippedCream, 1), new Object[]{
+				ModItems.heavyCream,Items.SUGAR,ModItems.vanillaExtract,ModItems.bowl
+		});	
+		//strawberries and cream
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.strawberriesAndCream, 1), new Object[]{
+				ModItems.sourCream,ModItems.strawberry,ModItems.strawberry,ModItems.strawberry,ModItems.whippedCream,Items.SUGAR
+		});	
 	}
 }
