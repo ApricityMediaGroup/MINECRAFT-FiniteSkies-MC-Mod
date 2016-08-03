@@ -1,5 +1,6 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.init.FSMFuelHandler;
 import finiteskies.fsmod.init.FluidRenderRegister;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModFluids;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -98,6 +100,7 @@ public class FSMod {
 		proxy.init();
 		
 		ModCrafting.register();
+		GameRegistry.registerFuelHandler(new FSMFuelHandler());
 	}
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {

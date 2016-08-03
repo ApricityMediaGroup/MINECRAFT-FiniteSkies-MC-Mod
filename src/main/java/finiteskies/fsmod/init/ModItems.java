@@ -21,6 +21,8 @@ import finiteskies.fsmod.items.misc.Bowl;
 import finiteskies.fsmod.items.misc.GlassJar;
 import finiteskies.fsmod.items.misc.MilkPot;
 import finiteskies.fsmod.items.ore.CarbonSteelIngot;
+import finiteskies.fsmod.items.ore.CarbonSteelMixture;
+import finiteskies.fsmod.items.ore.CokingCoal;
 import finiteskies.fsmod.items.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -59,7 +61,8 @@ public class ModItems {
 	public static Item foodKnife;
 	//ore & ingots
 	public static Item carbonSteelIngot;
-	
+	public static Item cokingCoal;
+	public static Item carbonSteelMixture;
 	//TWO ---------------------------------------------------
 	public static void init() {
 		strawberry = new Strawberry();
@@ -82,6 +85,8 @@ public class ModItems {
 		vanillaExtract = new VanillaExtract();
 		whippedCream = new WhippedCream();
 		strawberriesAndCream = new StrawberriesAndCream();
+		cokingCoal = new CokingCoal();
+		carbonSteelMixture = new CarbonSteelMixture();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -105,6 +110,8 @@ public class ModItems {
 		GameRegistry.register(vanillaExtract);
 		GameRegistry.register(whippedCream);
 		GameRegistry.register(strawberriesAndCream);
+		GameRegistry.register(cokingCoal);
+		GameRegistry.register(carbonSteelMixture);
 	}
 	//FOUR --------------------------------------------------------
 	public static void registerRenders() {
@@ -128,6 +135,8 @@ public class ModItems {
 		registerRender(vanillaExtract);
 		registerRender(whippedCream);
 		registerRender(strawberriesAndCream);
+		registerRender(cokingCoal);
+		registerRender(carbonSteelMixture);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

@@ -19,7 +19,7 @@ item.vinegar.name=Vinegar
 item.sourCream.name=Sour Cream
 item.bowl.name=Bowl
 item.alcohol.name=Alcohol
-item.vanillaBeans=Vanilla Beans
+item.vanillaBeans.name=Vanilla Beans
 item.vanillaExtract.name=Vanilla Extract
 item.whippedCream.name=Whipped Cream
 item.strawberriesAndCream.name=Strawberries and Cream
@@ -35,6 +35,9 @@ item.foodKnife.name=Food Knife
 
 //Ores & Ingots\\
 item.carbonSteelIngot.name=Carbon Steel Ingot
+tile.cokingCoalOre.name=Coking Coal Ore
+item.cokingCoal.name=Coking Coal
+item.carbonSteelMixture.name=Carbon Steel Mixture
 
 //Furniture\\
 
