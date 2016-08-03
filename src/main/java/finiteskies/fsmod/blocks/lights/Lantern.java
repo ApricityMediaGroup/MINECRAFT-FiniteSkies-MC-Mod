@@ -16,6 +16,6 @@ public class Lantern extends Block {
 		setRegistryName(Reference.FiniteBlocks.LANTERN.getRegistryName());
 		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_FURNITURE);
-		this.setLightLevel(11);
+		this.setLightLevel(12);
 	}
 }
