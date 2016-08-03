@@ -27,7 +27,7 @@ public class ModFluids {
 	public static FluidMilk fluidMilk;
 	
 	public static void init() {
-		fluidMilk = new FluidMilk("fluid_milk", "fsm:textures/blocks/fluid_milk_still", "textures/blocks/fluid_milk_still");
+		fluidMilk = new FluidMilk();
 		FluidRegistry.registerFluid(fluidMilk);
 		blockFluidMilk = new BlockFluidMilk(fluidMilk);
 	}

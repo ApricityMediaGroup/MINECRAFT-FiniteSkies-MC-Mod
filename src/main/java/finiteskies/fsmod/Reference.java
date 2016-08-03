@@ -8,7 +8,7 @@ public class Reference {
 	
 	public static final String CLIENT_PROXY_CLASS = "finiteskies.fsmod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.ServerProxy";
-	
+	public static final String RESOURCE_PREFIX = Reference.MOD_ID + ":";
 
 	public static enum FiniteItems {
 	//Set item names here NAMENAME(<nameName>, <name_name>)

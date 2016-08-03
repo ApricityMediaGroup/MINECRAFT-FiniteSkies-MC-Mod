@@ -1,5 +1,6 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.init.FluidRenderRegister;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModFluids;
 import finiteskies.fsmod.init.ModCrafting;
@@ -87,6 +88,7 @@ public class FSMod {
 		ModBlocks.register();
 		ModFluids.init();
 		ModFluids.register();
+		FluidRenderRegister.init();
 		proxy.preinit();	
 	}
 	@EventHandler
