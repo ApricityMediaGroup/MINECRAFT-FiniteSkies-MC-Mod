@@ -86,5 +86,9 @@ public class ModCrafting {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.carbonSteelMixture, 1), new Object[]{
 				Items.IRON_INGOT,ModItems.cokingCoal
 		});	
+		//butter
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.butter, 1), new Object[]{
+				ModItems.heavyCream
+		});
 	}
 }

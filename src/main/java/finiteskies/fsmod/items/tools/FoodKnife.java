@@ -1,6 +1,6 @@
 package finiteskies.fsmod.items.tools;
 
-import java.awt.List;
+import java.util.List;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
@@ -17,5 +17,9 @@ public class FoodKnife extends Item{
 		setMaxStackSize(1);
 		setMaxStackSize(1);
 		setMaxDamage(64);
-	}    
+	}
+    public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
+    list.add("Cuts food...");
+    list.add("Not people.");
+    }
 }

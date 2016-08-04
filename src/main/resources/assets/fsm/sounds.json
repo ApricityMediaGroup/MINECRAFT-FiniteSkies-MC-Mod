@@ -1,0 +1,7 @@
+{
+    "disgust":
+    { 
+    "category": "player", 
+    "sounds": [ "player/disgust" ] 
+    }
+}

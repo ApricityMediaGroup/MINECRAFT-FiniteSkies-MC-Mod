@@ -1,6 +1,6 @@
 package finiteskies.fsmod;
 
-import finiteskies.fsmod.init.FSMFuelHandler;
+import finiteskies.fsmod.init.ModFuelHandler;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
@@ -11,6 +11,8 @@ import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraftforge.client.model.ModelLoader;

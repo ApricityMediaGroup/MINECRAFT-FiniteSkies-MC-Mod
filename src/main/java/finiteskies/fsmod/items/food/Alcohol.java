@@ -7,6 +7,7 @@ import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.init.ModItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -30,5 +31,12 @@ public class Alcohol extends ItemFood{
     public EnumAction getItemUseAction(ItemStack stack)
     {
         return EnumAction.DRINK;  
+    }
+    //add effects when eaten
+    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
+    {
+        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 600, 1));
+        player.addPotionEffect(new PotionEffect(MobEffects.HUNGER, 700, 2));
+        super.onFoodEaten(stack, worldIn, player);
     }
 }

@@ -26,6 +26,9 @@ public class JarOfWholeMilk extends Item {
 		setRegistryName(Reference.FiniteItems.JAROFWHOLEMILK.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 		setMaxStackSize(1);
+		//Add curative effect to heal potions
+		//net.minecraft.potions.PotionEffect line 270
+		//add give jar back when crafting with this item in table
 	}
     /**
      * Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using
