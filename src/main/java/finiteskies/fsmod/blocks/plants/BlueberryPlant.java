@@ -36,13 +36,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class StrawberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable
+public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable
 {
-    public StrawberryPlant()
+    public BlueberryPlant()
     {		
         super(Material.VINE);
-		setUnlocalizedName(Reference.FiniteBlocks.STRAWBERRYPLANT.getUnlocalizedName());
-		setRegistryName(Reference.FiniteBlocks.STRAWBERRYPLANT.getRegistryName());
+		setUnlocalizedName(Reference.FiniteBlocks.BLUEBERRYPLANT.getUnlocalizedName());
+		setRegistryName(Reference.FiniteBlocks.BLUEBERRYPLANT.getRegistryName());
 		setSoundType(SoundType.PLANT);
 		setCreativeTab(FSMod.CREATIVE_TAB_PLANTS);
     }
@@ -51,13 +51,13 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
     @Nullable
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == ModBlocks.strawberryPlant ? ModItems.strawberry : Item.getItemFromBlock(this);
+        return this == ModBlocks.blueberryPlant ? ModItems.blueberry : Item.getItemFromBlock(this);
     }
 
     //how many dropped
     public int quantityDropped(Random random)
     {
-        return this == ModBlocks.strawberryPlant ? 1 + random.nextInt(2) : 1 ;
+        return this == ModBlocks.blueberryPlant ? 1 + random.nextInt(2) : 1 ;
     }
     
     //Can Shear? if so what gives?
@@ -66,7 +66,7 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
-        ret.add(new ItemStack(ModBlocks.strawberryPlant, 1));
+        ret.add(new ItemStack(ModBlocks.blueberryPlant, 1));
         return ret;
     }
     
@@ -94,7 +94,7 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
 		// TODO Auto-generated method stub
 		
 	}
-	
+   
     /**
      * Get the OffsetType for this Block. Determines if the model is rendered slightly offset.
      */
@@ -103,7 +103,6 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
     {
         return Block.EnumOffsetType.XYZ;
     }
-    
 
 
 }

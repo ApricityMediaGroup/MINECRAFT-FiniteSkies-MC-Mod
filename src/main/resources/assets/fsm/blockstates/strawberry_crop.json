@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "fsm:strawberry_crop0" },
+        "age=1": { "model": "fsm:strawberry_crop1" },
+        "age=2": { "model": "fsm:strawberry_crop2" },
+        "age=3": { "model": "fsm:strawberry_crop3" },
+        "age=4": { "model": "fsm:strawberry_crop4" },
+        "age=5": { "model": "fsm:strawberry_crop5" },
+        "age=6": { "model": "fsm:strawberry_crop6" },
+        "age=7": { "model": "fsm:strawberry_crop7" }
+    }
+}

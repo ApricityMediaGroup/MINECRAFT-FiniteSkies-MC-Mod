@@ -33,7 +33,10 @@ public class Reference {
 		VANILLABEANS("vanillaBeans","vanilla_beans"),
 		VANILLAEXTRACT("vanillaExtract","vanilla_extract"),
 		WHIPPEDCREAM("whippedCream","whipped_cream"),
-		STRAWBERRIESANDCREAM("strawberriesAndCream","strawberries_and_cream");
+		STRAWBERRIESANDCREAM("strawberriesAndCream","strawberries_and_cream"),
+		COKINGCOAL("cokingCoal","coking_coal"),
+		CARBONSTEELMIXTURE("carbonSteelMixture","carbon_steel_mixture"),
+		STRAWBERRYSEEDS("strawberrySeeds","strawberry_seeds");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -60,7 +63,11 @@ public class Reference {
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick"),	
 		BLOCKFLUIDMILK("blockFluidMilk", "block_fluid_milk"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
-		LANTERN("lantern","lantern");
+		LANTERN("lantern","lantern"),
+		COKINGCOALORE("cokingCoalOre","coking_coal_ore"),
+		BLUEBERRYPLANT("blueberryPlant","blueberry_plant"),
+		STRAWBERRYCROP("strawberryCrop","strawberry_crop"),
+		STRAWBERRIESANDCREAMBLOCK("strawberriesAndCreamBlock","strawberries_and_cream_block");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

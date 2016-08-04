@@ -1,5 +1,6 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.init.FSMFuelHandler;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;

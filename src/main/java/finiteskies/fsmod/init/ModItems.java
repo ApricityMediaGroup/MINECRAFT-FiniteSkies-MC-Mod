@@ -1,7 +1,9 @@
 package finiteskies.fsmod.init;
 
+import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
+import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
@@ -21,11 +23,15 @@ import finiteskies.fsmod.items.misc.Bowl;
 import finiteskies.fsmod.items.misc.GlassJar;
 import finiteskies.fsmod.items.misc.MilkPot;
 import finiteskies.fsmod.items.ore.CarbonSteelIngot;
+import finiteskies.fsmod.items.ore.CarbonSteelMixture;
+import finiteskies.fsmod.items.ore.CokingCoal;
 import finiteskies.fsmod.items.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -49,7 +55,9 @@ public class ModItems {
 	public static Item whippedCream;
 	public static Item strawberriesAndCream;
 	//plants
-	public static Block strawberryPlant;
+	public static Item strawberrySeeds;
+	//crops
+	public static Item strawberryCrop;
 	//misc
 	public static Item milkPot;
 	public static Item glassJar;
@@ -59,7 +67,8 @@ public class ModItems {
 	public static Item foodKnife;
 	//ore & ingots
 	public static Item carbonSteelIngot;
-	
+	public static Item cokingCoal;
+	public static Item carbonSteelMixture;
 	//TWO ---------------------------------------------------
 	public static void init() {
 		strawberry = new Strawberry();
@@ -82,6 +91,10 @@ public class ModItems {
 		vanillaExtract = new VanillaExtract();
 		whippedCream = new WhippedCream();
 		strawberriesAndCream = new StrawberriesAndCream();
+		cokingCoal = new CokingCoal();
+		carbonSteelMixture = new CarbonSteelMixture();
+		//Initiate Crop seeds here
+		strawberrySeeds = new StrawberrySeeds();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -105,8 +118,11 @@ public class ModItems {
 		GameRegistry.register(vanillaExtract);
 		GameRegistry.register(whippedCream);
 		GameRegistry.register(strawberriesAndCream);
+		GameRegistry.register(cokingCoal);
+		GameRegistry.register(carbonSteelMixture);
+		GameRegistry.register(strawberrySeeds);
 	}
-	//FOUR --------------------------------------------------------
+	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
 		registerRender(strawberry);
 		registerRender(blueberry);
@@ -128,6 +144,9 @@ public class ModItems {
 		registerRender(vanillaExtract);
 		registerRender(whippedCream);
 		registerRender(strawberriesAndCream);
+		registerRender(cokingCoal);
+		registerRender(carbonSteelMixture);
+		registerRender(strawberrySeeds);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

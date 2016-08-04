@@ -31,7 +31,7 @@ public class ModCrafting {
 				Character.valueOf('A'), new ItemStack(Items.STICK),Character.valueOf('B'), new ItemStack(ModItems.carbonSteelIngot),
 				});
 		//smelt iron to carbon iron
-		GameRegistry.addSmelting(Items.IRON_INGOT, new ItemStack(ModItems.carbonSteelIngot), 0.3f);
+		GameRegistry.addSmelting(ModItems.carbonSteelMixture, new ItemStack(ModItems.carbonSteelIngot), 0.3f);
 		//milk bucket to milk jars
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.jarOfWholeMilk, 3), new Object[]{
 				Items.MILK_BUCKET, ModItems.glassJar, ModItems.glassJar, ModItems.glassJar
@@ -81,6 +81,10 @@ public class ModCrafting {
 		//strawberries and cream
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.strawberriesAndCream, 1), new Object[]{
 				ModItems.sourCream,ModItems.strawberry,ModItems.strawberry,ModItems.strawberry,ModItems.whippedCream,Items.SUGAR
+		});	
+		//carbon steel mixture
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.carbonSteelMixture, 1), new Object[]{
+				Items.IRON_INGOT,ModItems.cokingCoal
 		});	
 	}
 }
