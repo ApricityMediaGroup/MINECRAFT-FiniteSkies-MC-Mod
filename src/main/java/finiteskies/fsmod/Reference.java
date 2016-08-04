@@ -1,5 +1,7 @@
 package finiteskies.fsmod;
 
+import finiteskies.fsmod.items.food.Butter;
+
 public class Reference {
 	public static final String MOD_ID = "fsm";
 	public static final String NAME = "FiniteSkies Mod";
@@ -36,7 +38,8 @@ public class Reference {
 		STRAWBERRIESANDCREAM("strawberriesAndCream","strawberries_and_cream"),
 		COKINGCOAL("cokingCoal","coking_coal"),
 		CARBONSTEELMIXTURE("carbonSteelMixture","carbon_steel_mixture"),
-		STRAWBERRYSEEDS("strawberrySeeds","strawberry_seeds");
+		STRAWBERRYSEEDS("strawberrySeeds","strawberry_seeds"),
+		BUTTER("butter","butter");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -66,8 +69,7 @@ public class Reference {
 		LANTERN("lantern","lantern"),
 		COKINGCOALORE("cokingCoalOre","coking_coal_ore"),
 		BLUEBERRYPLANT("blueberryPlant","blueberry_plant"),
-		STRAWBERRYCROP("strawberryCrop","strawberry_crop"),
-		STRAWBERRIESANDCREAMBLOCK("strawberriesAndCreamBlock","strawberries_and_cream_block");
+		STRAWBERRYCROP("strawberryCrop","strawberry_crop");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -86,5 +88,11 @@ public class Reference {
 			return registryName;
 		}
 	}
+	
+	public static enum FiniteSounds {
+
+
+
+		}
 }
 

@@ -9,6 +9,7 @@ import finiteskies.fsmod.init.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.common.MinecraftForge;
 
 public class ClientProxy implements CommonProxy {
 
@@ -25,7 +26,6 @@ public class ClientProxy implements CommonProxy {
 	public void init() {
 		ModItems.registerRenders();
 		ModBlocks.registerRenders();
-		
 	}
 
 }

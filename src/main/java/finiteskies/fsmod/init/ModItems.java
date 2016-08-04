@@ -8,6 +8,7 @@ import finiteskies.fsmod.items.food.Alcohol;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
 import finiteskies.fsmod.items.food.BreadSlice;
+import finiteskies.fsmod.items.food.Butter;
 import finiteskies.fsmod.items.food.HeavyCream;
 import finiteskies.fsmod.items.food.JarOfWholeMilk;
 import finiteskies.fsmod.items.food.SourCream;
@@ -54,6 +55,7 @@ public class ModItems {
 	public static Item vanillaExtract;
 	public static Item whippedCream;
 	public static Item strawberriesAndCream;
+	public static Item butter;
 	//plants
 	public static Item strawberrySeeds;
 	//crops
@@ -93,6 +95,7 @@ public class ModItems {
 		strawberriesAndCream = new StrawberriesAndCream();
 		cokingCoal = new CokingCoal();
 		carbonSteelMixture = new CarbonSteelMixture();
+		butter = new Butter();
 		//Initiate Crop seeds here
 		strawberrySeeds = new StrawberrySeeds();
 	}
@@ -121,6 +124,7 @@ public class ModItems {
 		GameRegistry.register(cokingCoal);
 		GameRegistry.register(carbonSteelMixture);
 		GameRegistry.register(strawberrySeeds);
+		GameRegistry.register(butter);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -147,6 +151,7 @@ public class ModItems {
 		registerRender(cokingCoal);
 		registerRender(carbonSteelMixture);
 		registerRender(strawberrySeeds);
+		registerRender(butter);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {
