@@ -1,7 +1,6 @@
 package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.blocks.SandstoneBrick;
-import finiteskies.fsmod.fluids.BlockFluidMilk;
 import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import net.minecraft.block.Block;
