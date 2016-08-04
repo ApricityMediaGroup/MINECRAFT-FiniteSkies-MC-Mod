@@ -40,7 +40,7 @@ public class Lantern extends Block {
 	}
 	@Override
 	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.TRANSLUCENT;
+		return BlockRenderLayer.CUTOUT;
 	}
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
@@ -59,4 +59,37 @@ public class Lantern extends Block {
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
     }
+
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
+    {
+        this.checkForDrop(worldIn, pos, state);
+    }
+
+    private boolean checkForDrop(World worldIn, BlockPos pos, IBlockState state)
+    {
+        if (!this.canBlockStay(worldIn, pos))
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private boolean canBlockStay(World worldIn, BlockPos pos)
+    {
+        return !worldIn.isAirBlock(pos.down());
+    }
+
+    @SideOnly(Side.CLIENT)
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    {
+        return side == EnumFacing.UP ? true : (blockAccess.getBlockState(pos.offset(side)).getBlock() == this ? true : super.shouldSideBeRendered(blockState, blockAccess, pos, side));
+    }
+    
+    
+    
 }
