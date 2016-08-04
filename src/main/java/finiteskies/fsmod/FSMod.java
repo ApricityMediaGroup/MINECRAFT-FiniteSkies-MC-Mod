@@ -56,7 +56,6 @@ public class FSMod {
 				   return ModItems.foodKnife;
 		  }
 		};
-
 	public static final CreativeTabs CREATIVE_TAB_BLOCKS = new CreativeTabs("tabFSModBlocks") {
 			   @Override
 			   public Item getTabIconItem() {
@@ -79,26 +78,23 @@ public class FSMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
-
-			
 		ModItems.init();
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
 		proxy.preinit();
 	}
+
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		System.out.println("Init");
-	
-		proxy.init();
-		
+		System.out.println("Init");	
 		ModCrafting.register();
+		proxy.init();		
 	}
+
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
-
 	}
 
 }
