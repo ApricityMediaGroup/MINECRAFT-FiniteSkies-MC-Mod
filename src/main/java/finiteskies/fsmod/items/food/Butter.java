@@ -38,7 +38,6 @@ public class Butter extends ItemFood{
     {
         return 32;
     }
-    //add disgust sound when eaten
     
     //add effects when eaten
 
