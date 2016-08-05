@@ -39,7 +39,10 @@ public class Reference {
 		COKINGCOAL("cokingCoal","coking_coal"),
 		CARBONSTEELMIXTURE("carbonSteelMixture","carbon_steel_mixture"),
 		STRAWBERRYSEEDS("strawberrySeeds","strawberry_seeds"),
-		BUTTER("butter","butter");
+		BUTTER("butter","butter"),
+		COCOABUTTER("cocoaButter","cocoa_butter"),
+		BLUEBERRYSEEDS("blueberrySeeds","blueberry_seeds"),
+		CHOCOLATE("chocolate","chocolate");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

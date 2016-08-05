@@ -90,5 +90,21 @@ public class ModCrafting {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.butter, 1), new Object[]{
 				ModItems.heavyCream
 		});
+		//strawberry seeds
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.strawberrySeeds, 1), new Object[]{
+				ModItems.strawberry
+		});
+		//strawberry seeds
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.strawberrySeeds, 1), new Object[]{
+				ModItems.strawberry
+		});
+		//cocoa butter
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.cocoaButter, 1), new Object[]{
+				ModItems.butter,new ItemStack(Items.DYE,1,3)
+		});
+		//blueberry seeds
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.blueberrySeeds, 1), new Object[]{
+				ModItems.blueberry
+		});
 	}
 }
