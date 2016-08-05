@@ -3,12 +3,15 @@ package finiteskies.fsmod.init;
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
+import finiteskies.fsmod.items.crops.BlueberrySeeds;
 import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
 import finiteskies.fsmod.items.food.BreadSlice;
 import finiteskies.fsmod.items.food.Butter;
+import finiteskies.fsmod.items.food.Chocolate;
+import finiteskies.fsmod.items.food.CocoaButter;
 import finiteskies.fsmod.items.food.HeavyCream;
 import finiteskies.fsmod.items.food.JarOfWholeMilk;
 import finiteskies.fsmod.items.food.SourCream;
@@ -56,8 +59,11 @@ public class ModItems {
 	public static Item whippedCream;
 	public static Item strawberriesAndCream;
 	public static Item butter;
+	public static Item cocoaButter;
+	public static Item chocolate;
 	//plants
 	public static Item strawberrySeeds;
+	public static Item blueberrySeeds;
 	//crops
 	public static Item strawberryCrop;
 	//misc
@@ -98,6 +104,9 @@ public class ModItems {
 		butter = new Butter();
 		//Initiate Crop seeds here
 		strawberrySeeds = new StrawberrySeeds();
+		cocoaButter = new CocoaButter();
+		blueberrySeeds = new BlueberrySeeds();
+		chocolate = new Chocolate();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -125,6 +134,9 @@ public class ModItems {
 		GameRegistry.register(carbonSteelMixture);
 		GameRegistry.register(strawberrySeeds);
 		GameRegistry.register(butter);
+		GameRegistry.register(cocoaButter);
+		GameRegistry.register(blueberrySeeds);
+		GameRegistry.register(chocolate);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -152,6 +164,9 @@ public class ModItems {
 		registerRender(carbonSteelMixture);
 		registerRender(strawberrySeeds);
 		registerRender(butter);
+		registerRender(cocoaButter);
+		registerRender(blueberrySeeds);
+		registerRender(chocolate);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

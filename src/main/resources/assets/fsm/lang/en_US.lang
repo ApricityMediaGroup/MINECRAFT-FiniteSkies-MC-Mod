@@ -24,11 +24,14 @@ item.vanillaExtract.name=Vanilla Extract
 item.whippedCream.name=Whipped Cream
 item.strawberriesAndCream.name=Strawberries and Cream
 item.butter.name=Butter
+item.cocoaButter.name=Cocoa Butter
+item.chocolate.name=Chocolate
 
 //Plants\\
 tile.strawberryPlant.name=Strawberry Plant
 tile.blueberryPlant.name=Blueberry Plant
 item.strawberrySeeds.name=Strawberry Seeds
+item.blueberrySeeds.name=Blueberry Seeds
 
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick

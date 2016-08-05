@@ -19,12 +19,12 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
-public class CocoaButter extends ItemFood{
+public class Chocolate extends ItemFood{
 
-	public CocoaButter() {
+	public Chocolate() {
 		super(1, 0.0F, false);
-		setUnlocalizedName(Reference.FiniteItems.COCOABUTTER.getUnlocalizedName());
-		setRegistryName(Reference.FiniteItems.COCOABUTTER.getRegistryName());
+		setUnlocalizedName(Reference.FiniteItems.CHOCOLATE.getUnlocalizedName());
+		setRegistryName(Reference.FiniteItems.CHOCOLATE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 
 	}
@@ -37,15 +37,7 @@ public class CocoaButter extends ItemFood{
     //add effects when eaten
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
-
-        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
-	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
-	        Minecraft.getMinecraft().thePlayer.sendChatMessage("But with a hint of Cocoa. Hmm.");
-    }
-    
-    public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
-    list.add("Cocoa Butter is not easy to make.");
-    list.add("No. Seriously. Google it.");
+        player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1000, 1));
     }
     
 }
