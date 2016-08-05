@@ -82,7 +82,7 @@ public class FSMod {
 		
 		
 		//ADD fsm: TO THE DANG .JSON FILE YA TAWT
-		//Thank yourself later.
+		//Thank yourself later,.
 		
 		
 	@EventHandler
