@@ -40,7 +40,7 @@ public class Butter extends ItemFood{
     //add disgust sound when eaten
     
     //add effects when eaten
-    @SideOnly(Side.CLIENT)
+
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
