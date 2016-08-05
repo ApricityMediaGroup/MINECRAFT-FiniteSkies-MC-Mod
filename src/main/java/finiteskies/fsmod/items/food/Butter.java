@@ -21,6 +21,8 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Butter extends ItemFood{
 
@@ -38,6 +40,7 @@ public class Butter extends ItemFood{
     //add disgust sound when eaten
     
     //add effects when eaten
+    @SideOnly(Side.CLIENT)
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
