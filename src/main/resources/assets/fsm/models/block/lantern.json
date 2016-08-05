@@ -11,7 +11,7 @@
     "glass": "blocks/glass",
     "planks_oak": "blocks/planks_oak"
 },
-"elements": [ 
+"elementss": [ 
 {
     "from": [ 6, 1, 6 ],
     "to": [ 10, 1.5, 10 ],
@@ -158,4 +158,5 @@
     }
 }
 ]
+
 }

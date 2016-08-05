@@ -4,6 +4,7 @@ package finiteskies.fsmod.init;
 import finiteskies.fsmod.Reference;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.registry.RegistryNamespaced;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -13,13 +14,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 
 	public class ModSoundEvents {
-	public static SoundEvent disgust;
+
+		
+		public static SoundEvent disgust;
 
 	/**
 	 * Register the {@link SoundEvent}s.
 	 */
 	public static void registerSounds() {
-		disgust = registerSound("player.disgust");
+		disgust = registerSound("disgust");
 	}
 
 	/**

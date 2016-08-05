@@ -4,7 +4,7 @@ import finiteskies.fsmod.init.ModFuelHandler;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
-import finiteskies.fsmod.init.ModSounds;
+import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
 import net.minecraft.block.BlockDoublePlant;
@@ -86,6 +86,7 @@ public class FSMod {
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
+		ModSoundEvents.registerSounds();
 		proxy.preinit();
 	}
 

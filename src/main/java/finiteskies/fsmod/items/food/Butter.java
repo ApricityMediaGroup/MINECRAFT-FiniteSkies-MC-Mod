@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.init.ModItems;
-import finiteskies.fsmod.init.ModSounds;
+import finiteskies.fsmod.init.ModSoundEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -42,7 +42,7 @@ public class Butter extends ItemFood{
     {
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
 	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
-	        player.playSound(ModSounds.PLAYER_DISGUST, 1.0F, 1.0F);
+	        player.playSound(ModSoundEvents.disgust, 1.0F, 1.0F);
     }
     
     public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
