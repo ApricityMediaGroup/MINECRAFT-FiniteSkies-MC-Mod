@@ -5,7 +5,9 @@ itemGroup.tabFSModPlants=FiniteSkies Plants
 itemGroup.tabFSModBlocks=FiniteSkies Blocks
 itemGroup.tabFSModTools=FiniteSkies Tools
 itemGroup.tabFSModOre=FiniteSkies Ores & Ingots
+itemGroup.tabFSModFurniture=FiniteSkies Furniture
 itemGroup.tabFSMod=FiniteSkies
+
 
 //Foods\\
 item.strawberry.name=Strawberry
