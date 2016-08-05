@@ -79,6 +79,12 @@ public class FSMod {
 				   return Item.getItemFromBlock(ModBlocks.lantern);
 		  }
 		};
+		
+		
+		//ADD fsm: TO THE DANG .JSON FILE YA TAWT
+		//Thank yourself later.
+		
+		
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
