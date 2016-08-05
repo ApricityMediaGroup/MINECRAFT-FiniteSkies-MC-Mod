@@ -35,7 +35,7 @@ public class Butter extends ItemFood{
 	}
     public int getMaxItemUseDuration(ItemStack stack)
     {
-        return 16;
+        return 32;
     }
     //add disgust sound when eaten
     
