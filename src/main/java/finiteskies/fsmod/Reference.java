@@ -9,7 +9,7 @@ public class Reference {
 	public static final String ACCEPTED_VERSIONS = "[1.10.2]";
 	
 	public static final String CLIENT_PROXY_CLASS = "finiteskies.fsmod.proxy.ClientProxy";
-	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.ServerProxy";
+	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.CommonProxy";
 	public static final String RESOURCE_PREFIX = Reference.MOD_ID + ":";
 
 	public static enum FiniteItems {

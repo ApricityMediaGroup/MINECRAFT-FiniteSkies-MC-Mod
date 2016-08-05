@@ -39,15 +39,31 @@ public class Butter extends ItemFood{
         return 32;
     }
     
+
+    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
+    {
+        --stack.stackSize;
+
+        if (entityLiving instanceof EntityPlayer)
+        {
+            EntityPlayer entityplayer = (EntityPlayer)entityLiving;
+            entityplayer.getFoodStats().addStats(this, stack);
+            worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvents.disgust, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+            this.onFoodEaten(stack, worldIn, entityplayer);
+            entityplayer.addStat(StatList.getObjectUseStats(this));
+        }
+
+        return stack;
+    }
     //add effects when eaten
-    
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
-        player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
+    	player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
 	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
-	        worldIn.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, ModSoundEvents.disgust, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+      //      worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, ModSoundEvents.DISGUST, SoundCategory.PLAYERS, 0.5F, worldIn.rand.nextFloat() * 0.1F + 0.9F);
+
     }
-    
+
     public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
     list.add("You stare at it in temptation...");
     }

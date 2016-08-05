@@ -92,14 +92,14 @@ public class FSMod {
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
-		proxy.preinit();
+		proxy.preInit();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
 		ModCrafting.register();
-		proxy.init();		
+		proxy.registerRenders();	
 	}
 
 	@EventHandler
