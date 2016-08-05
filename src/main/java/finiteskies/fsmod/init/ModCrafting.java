@@ -106,5 +106,9 @@ public class ModCrafting {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.blueberrySeeds, 1), new Object[]{
 				ModItems.blueberry
 		});
+		//chocolate
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.chocolate, 1), new Object[]{
+				ModItems.butter,ModItems.jarOfWholeMilk,Items.SUGAR,Items.POTIONITEM,new ItemStack(Items.DYE,1,3),new ItemStack(Items.DYE,1,3)
+		});
 	}
 }
