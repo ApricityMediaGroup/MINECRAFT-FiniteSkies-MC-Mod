@@ -92,7 +92,6 @@ public class FSMod {
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
-		ModSoundEvents.registerSounds();
 		proxy.preinit();
 	}
 
