@@ -1,12 +1,7 @@
 {
-    "player.disgust":
+    "disgust":
     { 
-<<<<<<< Upstream, based on branch 'master' of https://github.com/dasreyh/FiniteSkies.git
     "category": "player", 
-    "sounds": [ "fsm:player/disgust" ] 
-=======
-    "category": "master", 
-    "sounds": [ "player/disgust" ] 
->>>>>>> e9f1bba idk
+    "sounds": [ "fsm:player/disgust" ]  
     }
 }
