@@ -25,7 +25,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 	/**
 	 * Register a {@link SoundEvent}.
 	 *
-	 * @param soundName The SoundEvent's name without the testmod3 prefix
+	 * 
 	 * @return The SoundEvent
 	 */
 	private static SoundEvent registerSound(String soundName) {
