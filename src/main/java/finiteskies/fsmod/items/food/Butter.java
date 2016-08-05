@@ -40,12 +40,12 @@ public class Butter extends ItemFood{
     }
     
     //add effects when eaten
-
+    @SideOnly(Side.SERVER)
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
 	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
-	        worldIn.playSound(null , player.posX, player.posY, player.posZ, ModSoundEvents.disgust , SoundCategory.PLAYERS , 2.0F, 1.0F);
+	        player.worldObj.playSound(null , player.posX, player.posY, player.posZ, ModSoundEvents.disgust , SoundCategory.PLAYERS , 2.0F, 1.0F);
     }
     
     public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
