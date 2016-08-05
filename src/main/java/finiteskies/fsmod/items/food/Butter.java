@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.init.ModItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -36,8 +37,10 @@ public class Butter extends ItemFood{
     //add effects when eaten
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
+
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
-        super.onFoodEaten(stack, worldIn, player);
+	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
+       
 
     }
     
