@@ -45,7 +45,7 @@ public class Butter extends ItemFood{
     {
         player.addPotionEffect(new PotionEffect(MobEffects.NAUSEA, 300, 1));
 	        Minecraft.getMinecraft().thePlayer.sendChatMessage("Not as good as I imagined...");
-	        player.playSound(ModSoundEvents.disgust, 1.0F, 1.0F);
+	        player.worldObj.playSound(null , player.posX, player.posY, player.posZ, ModSoundEvents.disgust , SoundCategory.PLAYERS , 2.0F, 1.0F);
     }
     
     public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
