@@ -13,13 +13,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 
 	public class ModSoundEvents {
-	public static SoundEvent record_solaris;
+	public static SoundEvent disgust;
 
 	/**
 	 * Register the {@link SoundEvent}s.
 	 */
 	public static void registerSounds() {
-		record_solaris = registerSound("record.solaris");
+		disgust = registerSound("player.disgust");
 	}
 
 	/**
