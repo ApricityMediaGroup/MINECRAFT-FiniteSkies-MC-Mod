@@ -1,5 +1,6 @@
 package finiteskies.fsmod.blocks.plants;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.annotation.Nullable;
@@ -36,10 +37,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable
-{
-    public BlueberryPlant()
-    {		
+public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable{
+    public BlueberryPlant(){		
         super(Material.VINE);
 		setUnlocalizedName(Reference.FiniteBlocks.BLUEBERRYPLANT.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.BLUEBERRYPLANT.getRegistryName());
@@ -49,15 +48,15 @@ public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraf
 
     //Item that drops
     @Nullable
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-        return this == ModBlocks.blueberryPlant ? ModItems.blueberry : Item.getItemFromBlock(this);
+    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+        
+    	return ModItems.blueberry ;
     }
-
+    
     //how many dropped
-    public int quantityDropped(Random random)
-    {
-        return this == ModBlocks.blueberryPlant ? 1 + random.nextInt(2) : 1 ;
+    @Override
+    public int quantityDropped(Random random){
+        return 1 + random.nextInt(2);
     }
     
     //Can Shear? if so what gives?
@@ -94,7 +93,7 @@ public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraf
 		// TODO Auto-generated method stub
 		
 	}
-   
+	
     /**
      * Get the OffsetType for this Block. Determines if the model is rendered slightly offset.
      */
@@ -103,6 +102,7 @@ public class BlueberryPlant extends BlockBush implements IGrowable, net.minecraf
     {
         return Block.EnumOffsetType.XYZ;
     }
+    
 
 
 }
