@@ -5,6 +5,7 @@ import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
+import finiteskies.fsmod.init.ModWorldGen;
 import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
 import net.minecraft.block.BlockDoublePlant;
@@ -94,7 +95,7 @@ public class FSMod {
 		ModBlocks.init();
 		ModBlocks.register();
 		ModSoundEvents.registerSounds();
-		GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
+		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
 		proxy.preInit();
 	}
 
