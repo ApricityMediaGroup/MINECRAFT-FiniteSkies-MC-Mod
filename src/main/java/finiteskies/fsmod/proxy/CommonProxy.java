@@ -1,5 +1,6 @@
 package finiteskies.fsmod.proxy;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
@@ -36,5 +37,13 @@ public class CommonProxy implements ProxyInterface
 	public void preInit()
 	{
 		
+	}
+	@Override
+	public void init()
+	{
+		
+	}
+	@Override
+	public void registerRenderers() {
 	}
 }

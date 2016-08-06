@@ -53,3 +53,6 @@ item.carbonSteelMixture.name=Carbon Steel Mixture
 item.milkPot.name=Milk Pot
 item.glassJar.name=Glass Jar
 item.bigGlassJar.name=Big Glass Jar
+
+//Entities\\
+entity.fsm.Squirrel.name=Squirrel

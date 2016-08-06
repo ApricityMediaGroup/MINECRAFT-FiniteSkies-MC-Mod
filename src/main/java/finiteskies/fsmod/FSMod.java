@@ -1,6 +1,8 @@
 package finiteskies.fsmod;
 
 import finiteskies.fsmod.init.ModFuelHandler;
+import finiteskies.fsmod.entity.EntitySquirrel;
+import finiteskies.fsmod.entity.ModEntities;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
@@ -11,12 +13,16 @@ import net.minecraft.block.BlockDoublePlant;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.world.biome.BiomeForest.Type;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -25,13 +31,14 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
 
-	@Instance
+	@Instance(Reference.MOD_ID)
 	public static FSMod instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
@@ -100,12 +107,16 @@ public class FSMod {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
 		ModCrafting.register();
+		ModEntities.registerEntity();
 		proxy.registerRenders();	
+		proxy.registerRenderers();
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
+		EntityRegistry.addSpawn(EntitySquirrel.class, 10, 3, 10, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.FOREST_HILLS, 
+		Biomes.ROOFED_FOREST, Biomes.TAIGA, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS);
 	}
 
 }

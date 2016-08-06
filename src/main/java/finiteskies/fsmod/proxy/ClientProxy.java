@@ -1,9 +1,10 @@
 package finiteskies.fsmod.proxy;
 
 import finiteskies.fsmod.FSMod;
-import finiteskies.fsmod.entity.passive.EntitySquirrel;
-import finiteskies.fsmod.entity.passive.ModelEntitySquirrel;
-import finiteskies.fsmod.entity.passive.RenderEntitySquirrel;
+import finiteskies.fsmod.entity.EntitySquirrel;
+import finiteskies.fsmod.entity.EntitySquirrel;
+import finiteskies.fsmod.model.ModelEntitySquirrel;
+import finiteskies.fsmod.render.RenderEntitySquirrel;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
@@ -14,6 +15,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
@@ -36,7 +38,7 @@ public class ClientProxy extends CommonProxy
 	{		
 		ModItems.registerRenders();
 		ModBlocks.registerRenders();
-	}
+		}
 
 	@Override
 	public EntityPlayer getClientPlayer()
@@ -61,7 +63,16 @@ public class ClientProxy extends CommonProxy
 	{
 		MinecraftForge.EVENT_BUS.register(this);
 	}
-
+	@Override
+	public void init() {
+		//RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(Minecraft.getMinecraft().getRenderManager(), new ModelEntitySquirrel(), 0));
+	}
+	@Override
+	public void registerRenderers() {
+		float shadowSize = 0.0F;
+		RenderManager rm = Minecraft.getMinecraft().getRenderManager();
+		RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(rm, new ModelEntitySquirrel(), shadowSize));
+	}
 	@SubscribeEvent
 	public void onPrePlayerRender(RenderPlayerEvent.Pre event)
 	{
@@ -71,7 +82,7 @@ public class ClientProxy extends CommonProxy
 		if(event.getEntityPlayer() == renderEntity)
 		{
 			this.backupEntity = Minecraft.getMinecraft().getRenderManager().renderViewEntity;
-			Minecraft.getMinecraft().getRenderManager().renderViewEntity = renderEntity;
+//			Minecraft.getMinecraft().getRenderManager().renderViewEntity = renderEntity;
 		}
 	}
 
