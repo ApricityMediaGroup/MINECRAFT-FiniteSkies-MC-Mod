@@ -16,7 +16,8 @@ public class ModWorldGen implements IWorldGenerator
 	
 	public ModWorldGen()
 	{
-		this.COKING_COAL = new ModWorldGenMinable(ModBlocks.cokingCoalOre.getDefaultState(), 3);
+		int vienSize = 6;
+		this.COKING_COAL = new ModWorldGenMinable(ModBlocks.cokingCoalOre.getDefaultState(), vienSize);
 	}
 
 	@Override
@@ -27,7 +28,7 @@ public class ModWorldGen implements IWorldGenerator
 		{
 		case 0:  //OverWorld
 			
-			this.runGenerator(this.COKING_COAL, world, random, chunckX, chunckZ, 45, 0, 35);
+			this.runGenerator(this.COKING_COAL, world, random, chunckX, chunckZ, 3, 6, 20, 0, 100);
 			
 			break;
 			
@@ -41,12 +42,14 @@ public class ModWorldGen implements IWorldGenerator
 		}
 	}
 	
-	private void runGenerator(WorldGenerator generator, World world, Random random, int chunckX, int chunckZ, int chanceToSpawn, int minHeight, int maxHeight)
+	private void runGenerator(WorldGenerator generator, World world, Random random, int chunckX, int chunckZ, int minVien, int maxVien, int chanceToSpawn, int minHeight, int maxHeight)
 	{
 		if(minHeight < 0 || maxHeight > 256 || minHeight > maxHeight) 
 			throw new IllegalArgumentException("Minimum or Maximum Height out of bounds");
 		
+		int vienSize = minVien + random.nextInt(maxVien - minVien);
 		int heightDiff = maxHeight - minHeight +1;
+
 		for(int i = 0; i < chanceToSpawn; i++)
 		{
 			int x = chunckX * 16 + random.nextInt(16);
