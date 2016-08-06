@@ -72,7 +72,8 @@ public class Reference {
 		LANTERN("lantern","lantern"),
 		COKINGCOALORE("cokingCoalOre","coking_coal_ore"),
 		BLUEBERRYPLANT("blueberryPlant","blueberry_plant"),
-		STRAWBERRYCROP("strawberryCrop","strawberry_crop");
+		STRAWBERRYCROP("strawberryCrop","strawberry_crop"),
+		FLOWERPOT("flowerPot","flower_pot");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

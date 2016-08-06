@@ -1,10 +1,5 @@
  {
  "variants": {
- "normal": [
- { "model": "fsm:lantern" },
- { "model": "fsm:lantern", "y": 90 },
- { "model": "fsm:lantern", "y": 180 },
- { "model": "fsm:lantern", "y": 270 }
- ]
+ "normal": { "model": "fsm:lantern" }
  }
 }

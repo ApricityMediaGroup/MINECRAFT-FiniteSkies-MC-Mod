@@ -1,5 +1,6 @@
 package finiteskies.fsmod.blocks.plants;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import javax.annotation.Nullable;
@@ -36,10 +37,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class StrawberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable
-{
-    public StrawberryPlant()
-    {		
+public class StrawberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable{
+    public StrawberryPlant(){		
         super(Material.VINE);
 		setUnlocalizedName(Reference.FiniteBlocks.STRAWBERRYPLANT.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.STRAWBERRYPLANT.getRegistryName());
@@ -49,15 +48,15 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
 
     //Item that drops
     @Nullable
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-        return this == ModBlocks.strawberryPlant ? ModItems.strawberry : Item.getItemFromBlock(this);
+    public Item getItemDropped(IBlockState state, Random rand, int fortune){
+        
+    	return ModItems.strawberry ;
     }
-
+    
     //how many dropped
-    public int quantityDropped(Random random)
-    {
-        return this == ModBlocks.strawberryPlant ? 1 + random.nextInt(2) : 1 ;
+    @Override
+    public int quantityDropped(Random random){
+        return 1 + random.nextInt(2);
     }
     
     //Can Shear? if so what gives?

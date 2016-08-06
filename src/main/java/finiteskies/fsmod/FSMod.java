@@ -25,6 +25,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -93,6 +94,7 @@ public class FSMod {
 		ModBlocks.init();
 		ModBlocks.register();
 		ModSoundEvents.registerSounds();
+		GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
 		proxy.preInit();
 	}
 

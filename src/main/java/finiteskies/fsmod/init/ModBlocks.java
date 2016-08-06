@@ -4,6 +4,7 @@ import finiteskies.fsmod.blocks.SandstoneBrick;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.plants.BlueberryPlant;
+import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
 import net.minecraft.block.Block;
@@ -22,6 +23,7 @@ public class ModBlocks {
 	public static Block cokingCoalOre;
 	public static Block blueberryPlant;
 	public static Block strawberryCrop;
+	public static Block flowerPot;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -30,6 +32,7 @@ public class ModBlocks {
 		cokingCoalOre = new CokingCoalOre();
 		blueberryPlant = new BlueberryPlant();
 		strawberryCrop = new StrawberryCrop();
+		flowerPot = new FlowerPot();
 	}
 	
 	public static void register() {
@@ -39,6 +42,7 @@ public class ModBlocks {
 		registerBlock(cokingCoalOre);
         registerBlock(blueberryPlant);
         registerBlock(strawberryCrop);
+        registerBlock(flowerPot);
 	}
 
 	static void registerBlock(Block block) {
@@ -55,6 +59,7 @@ public class ModBlocks {
 		registerRender(cokingCoalOre);
 		registerRender(blueberryPlant);
 		registerRender(strawberryCrop);
+		registerRender(flowerPot);
 	}
 
 	private static void registerRender(Block block) {
