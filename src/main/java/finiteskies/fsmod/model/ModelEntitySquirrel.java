@@ -22,7 +22,7 @@ public class ModelEntitySquirrel extends ModelBase
     ModelRenderer Ear1;
     ModelRenderer Ear2;
     ModelRenderer Nose;
-    protected float childYOffset = 8.0F;
+    protected float childYOffset = 13.0F;
     protected float childZOffset = 0.0F;
   
   public ModelEntitySquirrel()
@@ -107,13 +107,13 @@ public class ModelEntitySquirrel extends ModelBase
     {
         float f11 = 2.0F;
         GlStateManager.pushMatrix();
-        GlStateManager.translate(0.0F, this.childYOffset * scale, this.childZOffset * scale);
-        GlStateManager.scale(0.7F, 0.7F, 0.7F);
+        GlStateManager.translate(0.0F, 1.05f, this.childZOffset * scale);
+        GlStateManager.scale(0.3F, 0.3F, 0.3F);
         WolfHead.render(scale);
         GlStateManager.popMatrix();
         GlStateManager.pushMatrix();
-        GlStateManager.scale(0.5F, 0.5F, 0.5F);
-        GlStateManager.translate(0.0F, 24.0F * scale, 0.0F);
+        GlStateManager.scale(0.3F, 0.3F, 0.3F);
+        GlStateManager.translate(0.0F, 56.0F * scale, 0.0F);
         Body.render(scale);
         Leg1.render(scale);
         Leg2.render(scale);
@@ -124,6 +124,8 @@ public class ModelEntitySquirrel extends ModelBase
     }
     else
     {
+        GlStateManager.translate(0.0F, 12.0F * scale, 0.0F);
+    	GlStateManager.scale(0.5F, 0.5F, 0.5F);
         WolfHead.render(scale);
         Body.render(scale);
         Leg1.render(scale);
@@ -131,6 +133,7 @@ public class ModelEntitySquirrel extends ModelBase
         Leg3.render(scale);
         Leg4.render(scale);
         Tail.render(scale);
+
     }
   }
   
@@ -147,10 +150,10 @@ public class ModelEntitySquirrel extends ModelBase
     this.WolfHead.rotateAngleX = headPitch * 0.017453292F;
     this.WolfHead.rotateAngleY = netHeadYaw * 0.017453292F;
     this.Body.rotateAngleX = ((float)Math.PI / 2F);
-    this.Leg1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
-    this.Leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-    this.Leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
-    this.Leg4.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+    this.Leg1.rotateAngleX = MathHelper.cos(limbSwing * 2F) * 1.4F * limbSwingAmount;
+    this.Leg2.rotateAngleX = MathHelper.cos(limbSwing * 2F + (float)Math.PI) * 1.4F * limbSwingAmount;
+    this.Leg3.rotateAngleX = MathHelper.cos(limbSwing * 2F + (float)Math.PI) * 1.4F * limbSwingAmount;
+    this.Leg4.rotateAngleX = MathHelper.cos(limbSwing * 2F) * 1.4F * limbSwingAmount;
   }
   protected void convertToChild(ModelRenderer parParent, ModelRenderer parChild)
   {
