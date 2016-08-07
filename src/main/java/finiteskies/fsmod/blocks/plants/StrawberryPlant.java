@@ -50,7 +50,7 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
     @Nullable
     public Item getItemDropped(IBlockState state, Random rand, int fortune){
         
-    	return ModItems.strawberry ;
+    	return ModItems.strawberry;
     }
     
     //how many dropped

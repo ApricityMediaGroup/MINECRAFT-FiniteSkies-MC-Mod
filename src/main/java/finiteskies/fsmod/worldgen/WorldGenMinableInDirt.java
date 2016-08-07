@@ -1,9 +1,7 @@
-package finiteskies.fsmod.init;
-
-import java.util.Random;
+package finiteskies.fsmod.worldgen;
 
 import com.google.common.base.Predicate;
-
+import java.util.Random;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMatcher;
 import net.minecraft.init.Blocks;
@@ -12,19 +10,19 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class ModWorldGenMinable extends WorldGenerator
+public class WorldGenMinableInDirt extends WorldGenerator
 {
     private final IBlockState oreBlock;
     /** The number of blocks to generate. */
     private final int numberOfBlocks;
     private final Predicate<IBlockState> predicate;
 
-    public ModWorldGenMinable(IBlockState state, int blockCount)
+    public WorldGenMinableInDirt(IBlockState state, int blockCount)
     {
-        this(state, blockCount, BlockMatcher.forBlock(Blocks.STONE));
+        this(state, blockCount, BlockMatcher.forBlock(Blocks.DIRT));
     }
 
-    public ModWorldGenMinable(IBlockState state, int blockCount, Predicate<IBlockState> p_i45631_3_)
+    public WorldGenMinableInDirt(IBlockState state, int blockCount, Predicate<IBlockState> p_i45631_3_)
     {
         this.oreBlock = state;
         this.numberOfBlocks = blockCount;
@@ -78,7 +76,7 @@ public class ModWorldGenMinable extends WorldGenerator
                                     BlockPos blockpos = new BlockPos(l1, i2, j2);
 
                                     IBlockState state = worldIn.getBlockState(blockpos);
-                                    if (state.getBlock().isReplaceableOreGen(state, worldIn, blockpos, this.predicate))
+                                    if (state.getBlock() == Blocks.DIRT)
                                     {
                                         worldIn.setBlockState(blockpos, this.oreBlock, 2);
                                     }

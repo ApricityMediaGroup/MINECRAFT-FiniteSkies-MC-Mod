@@ -1,7 +1,6 @@
 package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.FSMod;
-import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.items.crops.BlueberrySeeds;
 import finiteskies.fsmod.items.crops.StrawberrySeeds;
