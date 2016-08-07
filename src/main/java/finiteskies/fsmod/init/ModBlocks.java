@@ -1,12 +1,14 @@
 package finiteskies.fsmod.init;
 
-import finiteskies.fsmod.blocks.SandstoneBrick;
+import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.plants.BlueberryPlant;
 import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
+import finiteskies.fsmod.blocks.ore.DirtFossil;
+import finiteskies.fsmod.blocks.ore.StoneFossil;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -24,6 +26,8 @@ public class ModBlocks {
 	public static Block blueberryPlant;
 	public static Block strawberryCrop;
 	public static Block flowerPot;
+	public static Block dirtFossil;
+	public static Block stoneFossil;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -33,6 +37,8 @@ public class ModBlocks {
 		blueberryPlant = new BlueberryPlant();
 		strawberryCrop = new StrawberryCrop();
 		flowerPot = new FlowerPot();
+		dirtFossil = new DirtFossil();
+		stoneFossil = new StoneFossil();
 	}
 	
 	public static void register() {
@@ -43,6 +49,8 @@ public class ModBlocks {
         registerBlock(blueberryPlant);
         registerBlock(strawberryCrop);
         registerBlock(flowerPot);
+        registerBlock(dirtFossil);
+        registerBlock(stoneFossil);
 	}
 
 	static void registerBlock(Block block) {
@@ -60,6 +68,8 @@ public class ModBlocks {
 		registerRender(blueberryPlant);
 		registerRender(strawberryCrop);
 		registerRender(flowerPot);
+		registerRender(dirtFossil);
+		registerRender(stoneFossil);
 	}
 
 	private static void registerRender(Block block) {

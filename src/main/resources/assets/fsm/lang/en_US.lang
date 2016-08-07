@@ -34,6 +34,7 @@ tile.strawberryPlant.name=Strawberry Plant
 tile.blueberryPlant.name=Blueberry Plant
 item.strawberrySeeds.name=Strawberry Seeds
 item.blueberrySeeds.name=Blueberry Seeds
+tile.flowerPot.name=Flower Pot
 
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
@@ -46,6 +47,8 @@ item.carbonSteelIngot.name=Carbon Steel Ingot
 tile.cokingCoalOre.name=Coking Coal Ore
 item.cokingCoal.name=Coking Coal
 item.carbonSteelMixture.name=Carbon Steel Mixture
+tile.dirtFossil.name=Dirt Fossil
+tile.stoneFossil.name=Stone Fossil
 
 //Furniture\\
 

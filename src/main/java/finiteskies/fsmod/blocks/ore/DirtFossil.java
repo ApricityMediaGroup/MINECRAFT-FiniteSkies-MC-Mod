@@ -8,6 +8,7 @@ import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -23,22 +24,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class CokingCoalOre extends Block
+public class DirtFossil extends Block
 {
-    public CokingCoalOre()
+    public DirtFossil()
     {
-        super(Material.ROCK);
-		setUnlocalizedName(Reference.FiniteBlocks.COKINGCOALORE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteBlocks.COKINGCOALORE.getRegistryName());
-		setHardness(3.0F);
-		setResistance(5.0F);
-		setSoundType(SoundType.STONE);
+        super(Material.GROUND);
+		setUnlocalizedName(Reference.FiniteBlocks.DIRTFOSSIL.getUnlocalizedName());
+		setRegistryName(Reference.FiniteBlocks.DIRTFOSSIL.getRegistryName());
+		setHardness(0.5F);
+		setSoundType(SoundType.GROUND);
 		setCreativeTab(FSMod.CREATIVE_TAB_ORE);
     }
 
-    public CokingCoalOre(MapColor color)
+    public DirtFossil(MapColor color)
     {
-        super(Material.ROCK, color);
+        super(Material.GROUND, color);
     }
 
     /**
@@ -47,7 +47,7 @@ public class CokingCoalOre extends Block
     @Nullable
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == ModBlocks.cokingCoalOre ? ModItems.cokingCoal : Item.getItemFromBlock(this);
+        return this == ModBlocks.dirtFossil ? Items.BONE : Item.getItemFromBlock(this);
     }
 
     /**
@@ -55,7 +55,7 @@ public class CokingCoalOre extends Block
      */
     public int quantityDropped(Random random)
     {
-        return this == ModBlocks.cokingCoalOre ? 1 : 1;
+        return this == ModBlocks.dirtFossil ? 1 + random.nextInt(2) : 1;
     }
 
     /**
@@ -79,5 +79,5 @@ public class CokingCoalOre extends Block
             return this.quantityDropped(random);
         }
     }
-
+    
 }

@@ -1,0 +1,10 @@
+{
+ "variants": {
+ "normal": [
+ { "model": "fsm:dirt_fossil" },
+ { "model": "fsm:dirt_fossil", "y": 90 },
+ { "model": "fsm:dirt_fossil", "y": 180 },
+ { "model": "fsm:dirt_fossil", "y": 270 }
+ ]
+ }
+}

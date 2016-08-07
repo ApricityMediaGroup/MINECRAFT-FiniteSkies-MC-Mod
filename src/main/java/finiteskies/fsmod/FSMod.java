@@ -7,9 +7,9 @@ import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
-import finiteskies.fsmod.init.ModWorldGen;
 import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
+import finiteskies.fsmod.worldgen.OreGen;
 import net.minecraft.block.BlockDoublePlant;
 
 import net.minecraft.block.Block;
@@ -39,7 +39,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
-
+	
 	@Instance(Reference.MOD_ID)
 	public static FSMod instance;
 	
@@ -102,7 +102,7 @@ public class FSMod {
 		ModBlocks.init();
 		ModBlocks.register();
 		ModSoundEvents.registerSounds();
-		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
+		GameRegistry.registerWorldGenerator(new OreGen(), 0);
 		proxy.preInit();
 	}
 

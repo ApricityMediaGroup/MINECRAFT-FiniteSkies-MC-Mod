@@ -8,6 +8,7 @@ import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -23,20 +24,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class CokingCoalOre extends Block
+public class StoneFossil extends Block
 {
-    public CokingCoalOre()
+    public StoneFossil()
     {
         super(Material.ROCK);
-		setUnlocalizedName(Reference.FiniteBlocks.COKINGCOALORE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteBlocks.COKINGCOALORE.getRegistryName());
-		setHardness(3.0F);
-		setResistance(5.0F);
+		setUnlocalizedName(Reference.FiniteBlocks.STONEFOSSIL.getUnlocalizedName());
+		setRegistryName(Reference.FiniteBlocks.STONEFOSSIL.getRegistryName());
+		setHardness(1.5F);
+		setResistance(10.0F);
 		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_ORE);
     }
 
-    public CokingCoalOre(MapColor color)
+    public StoneFossil(MapColor color)
     {
         super(Material.ROCK, color);
     }
@@ -47,7 +48,7 @@ public class CokingCoalOre extends Block
     @Nullable
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == ModBlocks.cokingCoalOre ? ModItems.cokingCoal : Item.getItemFromBlock(this);
+        return this == ModBlocks.stoneFossil ? Items.BONE : Item.getItemFromBlock(this);
     }
 
     /**
@@ -55,7 +56,7 @@ public class CokingCoalOre extends Block
      */
     public int quantityDropped(Random random)
     {
-        return this == ModBlocks.cokingCoalOre ? 1 : 1;
+        return this == ModBlocks.stoneFossil ? 1 + random.nextInt(1) : 1;
     }
 
     /**
@@ -79,5 +80,5 @@ public class CokingCoalOre extends Block
             return this.quantityDropped(random);
         }
     }
-
+    
 }

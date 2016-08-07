@@ -1,8 +1,11 @@
 package finiteskies.fsmod.proxy;
+import finiteskies.fsmod.worldgen.OreGen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy implements ProxyInterface
 {
@@ -46,4 +49,8 @@ public class CommonProxy implements ProxyInterface
 	@Override
 	public void registerRenderers() {
 	}
+	
+    public void init(FMLInitializationEvent e) {
+    }
+
 }

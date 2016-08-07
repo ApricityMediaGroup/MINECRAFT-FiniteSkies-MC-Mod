@@ -1,4 +1,4 @@
-package finiteskies.fsmod.blocks;
+package finiteskies.fsmod.blocks.building;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
