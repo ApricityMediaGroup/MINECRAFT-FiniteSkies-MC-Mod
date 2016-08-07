@@ -4,7 +4,15 @@
  { "model": "fsm:dirt_fossil" },
  { "model": "fsm:dirt_fossil", "y": 90 },
  { "model": "fsm:dirt_fossil", "y": 180 },
- { "model": "fsm:dirt_fossil", "y": 270 }
+ { "model": "fsm:dirt_fossil", "y": 270 },
+ { "model": "fsm:dirt_fossil" },
+ { "model": "fsm:dirt_fossil", "x": 90 },
+ { "model": "fsm:dirt_fossil", "x": 180 },
+ { "model": "fsm:dirt_fossil", "x": 270 },
+ { "model": "fsm:dirt_fossil" },
+ { "model": "fsm:dirt_fossil", "z": 90 },
+ { "model": "fsm:dirt_fossil", "z": 180 },
+ { "model": "fsm:dirt_fossil", "z": 270 }
  ]
  }
 }
