@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModelEntitySquirrel extends ModelBase
 {
 	  //fields
-    ModelRenderer WolfHead;
+    ModelRenderer Head;
     ModelRenderer Body;
     ModelRenderer Leg1;
     ModelRenderer Leg2;
@@ -30,12 +30,12 @@ public class ModelEntitySquirrel extends ModelBase
     textureWidth = 64;
     textureHeight = 32;
     
-      WolfHead = new ModelRenderer(this, 0, 0);
-      WolfHead.addBox(-3F, -3F, -2F, 6, 6, 4);
-      WolfHead.setRotationPoint(-1F, 16.5F, -4F);
-      WolfHead.setTextureSize(64, 32);
-      WolfHead.mirror = true;
-      setRotation(WolfHead, 0F, 0F, 0F);
+      Head = new ModelRenderer(this, 0, 0);
+      Head.addBox(-3F, -3F, -2F, 6, 6, 4);
+      Head.setRotationPoint(-1F, 16.5F, -4F);
+      Head.setTextureSize(64, 32);
+      Head.mirror = true;
+      setRotation(Head, 0F, 0F, 0F);
       Body = new ModelRenderer(this, 18, 14);
       Body.addBox(-4F, -2F, -3F, 5, 7, 4);
       Body.setRotationPoint(0.5F, 19F, -1F);
@@ -91,9 +91,9 @@ public class ModelEntitySquirrel extends ModelBase
       Nose.mirror = true;
       setRotation(Nose, 0F, 0F, 0F);
 
-      convertToChild(WolfHead, Ear1);
-      convertToChild(WolfHead, Ear2);
-      convertToChild(WolfHead, Nose);
+      convertToChild(Head, Ear1);
+      convertToChild(Head, Ear2);
+      convertToChild(Head, Nose);
 
   }
   
@@ -109,7 +109,7 @@ public class ModelEntitySquirrel extends ModelBase
         GlStateManager.pushMatrix();
         GlStateManager.translate(0.0F, 1.05f, this.childZOffset * scale);
         GlStateManager.scale(0.3F, 0.3F, 0.3F);
-        WolfHead.render(scale);
+        Head.render(scale);
         GlStateManager.popMatrix();
         GlStateManager.pushMatrix();
         GlStateManager.scale(0.3F, 0.3F, 0.3F);
@@ -126,7 +126,7 @@ public class ModelEntitySquirrel extends ModelBase
     {
         GlStateManager.translate(0.0F, 12.0F * scale, 0.0F);
     	GlStateManager.scale(0.5F, 0.5F, 0.5F);
-        WolfHead.render(scale);
+        Head.render(scale);
         Body.render(scale);
         Leg1.render(scale);
         Leg2.render(scale);
@@ -147,8 +147,8 @@ public class ModelEntitySquirrel extends ModelBase
   public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entity)
   {
     super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entity);
-    this.WolfHead.rotateAngleX = headPitch * 0.017453292F;
-    this.WolfHead.rotateAngleY = netHeadYaw * 0.017453292F;
+    this.Head.rotateAngleX = headPitch * 0.017453292F;
+    this.Head.rotateAngleY = netHeadYaw * 0.017453292F;
     this.Body.rotateAngleX = ((float)Math.PI / 2F);
     this.Leg1.rotateAngleX = MathHelper.cos(limbSwing * 2F) * 1.4F * limbSwingAmount;
     this.Leg2.rotateAngleX = MathHelper.cos(limbSwing * 2F + (float)Math.PI) * 1.4F * limbSwingAmount;
