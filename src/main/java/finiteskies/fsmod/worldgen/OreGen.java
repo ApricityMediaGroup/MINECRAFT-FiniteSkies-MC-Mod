@@ -40,7 +40,7 @@ public class OreGen implements IWorldGenerator {
 			this.runGenerator(this.STONE_FOSSIL, world, random, chunckX, chunckZ, 3, 44, 60);
 			//make salt only spawn under oceans? where else does salt come from?
 			this.runGenerator(this.SALT_ORE, world, random, chunckX, chunckZ, 3, 50, 70);
-			this.runGenerator(this.GROUND_MARBLE, world, random, chunckX, chunckZ, 2, 0, 65);
+			this.runGenerator(this.GROUND_MARBLE, world, random, chunckX, chunckZ, 2, 0, 50);
 
 
 			break;
