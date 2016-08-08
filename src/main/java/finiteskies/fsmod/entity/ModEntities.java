@@ -5,6 +5,7 @@ import java.util.BitSet;
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.entity.EntitySquirrel;
+import finiteskies.fsmod.entity.EntityFish;
 import net.minecraft.entity.EntityList;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
@@ -30,14 +31,18 @@ public class ModEntities {
 			throw new RuntimeException("No more entity indicies left");
 		}
 		return res;
-	}
-	
-	public static void registerEntity() {
-		createEntity(EntitySquirrel.class, "Squirrel", 0x982000, 0x421805);
-	}
+	}   
+
 	
 	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
 		int randomId = findGlobalUniqueEntityId();
 		EntityRegistry.registerModEntity(entityClass, entityName, randomId, FSMod.instance, 64, 1, true, solidColor, spotColor);
+	}
+	
+	public static void registerEntity() {
+		int randomId = findGlobalUniqueEntityId();
+		createEntity(EntitySquirrel.class, "Squirrel", 0x982000, 0x421805);
+	//	createEntity(EntityFish.class, "Fish", 0x6b9f93, 0xadbedb);
+		EntityRegistry.registerModEntity(EntityFish.class, "Fish", ++randomId, FSMod.instance, 64, 1, true, 0x6b9f93, 0xadbedb);
 	}
 }
