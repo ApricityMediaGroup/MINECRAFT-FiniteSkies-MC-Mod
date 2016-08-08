@@ -69,6 +69,11 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
         return ret;
     }
     
+    public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
+    {
+        return super.canBlockStay(worldIn, pos, state);
+    }
+    
     //Can place block on plant?
     public boolean isReplaceable(IBlockAccess worldIn, BlockPos pos)
     {

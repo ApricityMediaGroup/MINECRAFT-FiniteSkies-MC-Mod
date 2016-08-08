@@ -1,5 +1,18 @@
 {
-    "variants": {
-        "normal": { "model": "fsm:stone_fossil" }
-    }
+ "variants": {
+ "normal": [
+ { "model": "fsm:stone_fossil" },
+ { "model": "fsm:stone_fossil", "y": 90 },
+ { "model": "fsm:stone_fossil", "y": 180 },
+ { "model": "fsm:stone_fossil", "y": 270 },
+ { "model": "fsm:stone_fossil" },
+ { "model": "fsm:stone_fossil", "x": 90 },
+ { "model": "fsm:stone_fossil", "x": 180 },
+ { "model": "fsm:stone_fossil", "x": 270 },
+ { "model": "fsm:stone_fossil" },
+ { "model": "fsm:stone_fossil", "z": 90 },
+ { "model": "fsm:stone_fossil", "z": 180 },
+ { "model": "fsm:stone_fossil", "z": 270 }
+ ]
+ }
 }

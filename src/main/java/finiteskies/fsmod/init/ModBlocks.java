@@ -2,12 +2,14 @@ package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
+import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.plants.BlueberryPlant;
 import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
 import finiteskies.fsmod.blocks.ore.DirtFossil;
+import finiteskies.fsmod.blocks.ore.SaltOre;
 import finiteskies.fsmod.blocks.ore.StoneFossil;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -28,6 +30,8 @@ public class ModBlocks {
 	public static Block flowerPot;
 	public static Block dirtFossil;
 	public static Block stoneFossil;
+	public static Block saltOre;
+	public static Block groundMarble;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -39,6 +43,8 @@ public class ModBlocks {
 		flowerPot = new FlowerPot();
 		dirtFossil = new DirtFossil();
 		stoneFossil = new StoneFossil();
+		saltOre = new SaltOre();
+		groundMarble = new GroundMarble();
 	}
 	
 	public static void register() {
@@ -51,6 +57,8 @@ public class ModBlocks {
         registerBlock(flowerPot);
         registerBlock(dirtFossil);
         registerBlock(stoneFossil);
+        registerBlock(saltOre);
+        registerBlock(groundMarble);
 	}
 
 	static void registerBlock(Block block) {
@@ -70,6 +78,8 @@ public class ModBlocks {
 		registerRender(flowerPot);
 		registerRender(dirtFossil);
 		registerRender(stoneFossil);
+		registerRender(saltOre);
+		registerRender(groundMarble);
 	}
 
 	private static void registerRender(Block block) {

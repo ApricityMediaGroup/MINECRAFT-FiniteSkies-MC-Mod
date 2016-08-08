@@ -28,6 +28,7 @@ import finiteskies.fsmod.items.misc.MilkPot;
 import finiteskies.fsmod.items.ore.CarbonSteelIngot;
 import finiteskies.fsmod.items.ore.CarbonSteelMixture;
 import finiteskies.fsmod.items.ore.CokingCoal;
+import finiteskies.fsmod.items.ore.SaltLump;
 import finiteskies.fsmod.items.tools.*;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -76,6 +77,7 @@ public class ModItems {
 	public static Item carbonSteelIngot;
 	public static Item cokingCoal;
 	public static Item carbonSteelMixture;
+	public static Item saltLump;
 	//TWO ---------------------------------------------------
 	public static void init() {
 		strawberry = new Strawberry();
@@ -101,7 +103,7 @@ public class ModItems {
 		cokingCoal = new CokingCoal();
 		carbonSteelMixture = new CarbonSteelMixture();
 		butter = new Butter();
-		//Initiate Crop seeds here
+		saltLump = new SaltLump();
 		strawberrySeeds = new StrawberrySeeds();
 		cocoaButter = new CocoaButter();
 		blueberrySeeds = new BlueberrySeeds();
@@ -136,6 +138,7 @@ public class ModItems {
 		GameRegistry.register(cocoaButter);
 		GameRegistry.register(blueberrySeeds);
 		GameRegistry.register(chocolate);
+		GameRegistry.register(saltLump);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -166,6 +169,7 @@ public class ModItems {
 		registerRender(cocoaButter);
 		registerRender(blueberrySeeds);
 		registerRender(chocolate);
+		registerRender(saltLump);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

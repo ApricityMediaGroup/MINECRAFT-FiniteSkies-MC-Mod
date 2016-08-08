@@ -13,11 +13,11 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class PlantGenerator extends WorldGenerator
 {
-    private final IBlockState plantState;
+    private final IBlockState tallGrassState;
 
     public PlantGenerator()
     {
-        this.plantState = ModBlocks.strawberryPlant.getDefaultState();
+        this.tallGrassState = ModBlocks.strawberryPlant.getDefaultState();
     }
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
@@ -31,9 +31,9 @@ public class PlantGenerator extends WorldGenerator
         {
             BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 
-            if (worldIn.isAirBlock(blockpos))
+            if (worldIn.isAirBlock(blockpos) && ((BlockTallGrass) ModBlocks.strawberryPlant).canBlockStay(worldIn, blockpos, this.tallGrassState))
             {
-                worldIn.setBlockState(blockpos, this.plantState, 2);
+                worldIn.setBlockState(blockpos, this.tallGrassState, 2);
             }
         }
 

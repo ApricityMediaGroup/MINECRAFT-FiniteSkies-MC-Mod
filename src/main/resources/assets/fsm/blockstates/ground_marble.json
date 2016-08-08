@@ -1,0 +1,18 @@
+{
+ "variants": {
+ "normal": [
+ { "model": "fsm:ground_marble", "y": 0 },
+ { "model": "fsm:ground_marble", "y": 90 },
+ { "model": "fsm:ground_marble", "y": 180 },
+ { "model": "fsm:ground_marble", "y": 270 },
+ { "model": "fsm:ground_marble", "x": 0 },
+ { "model": "fsm:ground_marble", "x": 90 },
+ { "model": "fsm:ground_marble", "x": 180 },
+ { "model": "fsm:ground_marble", "x": 270 },
+ { "model": "fsm:ground_marble", "z": 0 },
+ { "model": "fsm:ground_marble", "z": 90 },
+ { "model": "fsm:ground_marble", "z": 180 },
+ { "model": "fsm:ground_marble", "z": 270 }
+ ]
+ }
+}

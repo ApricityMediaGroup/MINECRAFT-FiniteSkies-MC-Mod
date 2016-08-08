@@ -10,6 +10,7 @@ import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
 import finiteskies.fsmod.worldgen.OreGen;
+import finiteskies.fsmod.worldgen.PlantGenerator;
 import net.minecraft.block.BlockDoublePlant;
 
 import net.minecraft.block.Block;
@@ -79,7 +80,7 @@ public class FSMod {
 	public static final CreativeTabs CREATIVE_TAB_ORE = new CreativeTabs("tabFSModOre") {
 			   @Override
 			   public Item getTabIconItem() {
-				   return ModItems.carbonSteelIngot;
+				   return Item.getItemFromBlock(ModBlocks.dirtFossil);
 		  }
 		};
 	public static final CreativeTabs CREATIVE_TAB_FURNITURE = new CreativeTabs("tabFSModFurniture") {

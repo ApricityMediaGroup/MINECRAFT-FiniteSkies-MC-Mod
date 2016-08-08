@@ -39,6 +39,10 @@ tile.flowerPot.name=Flower Pot
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
 tile.lantern.name=Lantern
+
+//GROUND\\
+tile.groundMarble.name=Ground Marble
+
 //Tools\\
 item.foodKnife.name=Food Knife
 
@@ -49,6 +53,8 @@ item.cokingCoal.name=Coking Coal
 item.carbonSteelMixture.name=Carbon Steel Mixture
 tile.dirtFossil.name=Dirt Fossil
 tile.stoneFossil.name=Stone Fossil
+tile.saltOre.name=Salt Ore
+item.saltLump.name=Salt Lump
 
 //Furniture\\
 

@@ -42,7 +42,8 @@ public class Reference {
 		BUTTER("butter","butter"),
 		COCOABUTTER("cocoaButter","cocoa_butter"),
 		BLUEBERRYSEEDS("blueberrySeeds","blueberry_seeds"),
-		CHOCOLATE("chocolate","chocolate");
+		CHOCOLATE("chocolate","chocolate"),
+		SALTLUMP("saltLump","salt_lump");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -75,7 +76,9 @@ public class Reference {
 		STRAWBERRYCROP("strawberryCrop","strawberry_crop"),
 		FLOWERPOT("flowerPot","flower_pot"),
 		DIRTFOSSIL("dirtFossil","dirt_fossil"),
-		STONEFOSSIL("stoneFossil","stone_fossil");
+		STONEFOSSIL("stoneFossil","stone_fossil"),
+		SALTORE("saltOre","salt_ore"),
+		GROUNDMARBLE("groundMarble","ground_marble");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
