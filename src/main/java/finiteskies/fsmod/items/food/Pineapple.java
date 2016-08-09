@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 public class Pineapple extends ItemFood {
 
 	public Pineapple() {
-		super(3, 0.0F, false);
+		super(5, 0.5F, false);
 		setUnlocalizedName(Reference.FiniteItems.PINEAPPLE.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.PINEAPPLE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
