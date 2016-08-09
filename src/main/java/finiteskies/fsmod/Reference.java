@@ -43,6 +43,7 @@ public class Reference {
 		COCOABUTTER("cocoaButter","cocoa_butter"),
 		BLUEBERRYSEEDS("blueberrySeeds","blueberry_seeds"),
 		CHOCOLATE("chocolate","chocolate"),
+		PINEAPPLE("pineapple", "pineapple"),
 		SALTLUMP("saltLump","salt_lump");
 		//Ends with semicolon continues with commas		
 
