@@ -1,6 +1,7 @@
 package finiteskies.fsmod;
 
 import finiteskies.fsmod.dimension.EmpyreanDimension;
+import finiteskies.fsmod.dimension.biome.ModBiomes;
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.entity.ModEntities;
 import finiteskies.fsmod.init.ModBlocks;
@@ -98,6 +99,7 @@ public class FSMod {
 		ModCrafting.register();
 		ModEntities.registerEntity();
 		EmpyreanDimension.mainRegistry();
+		ModBiomes.init();
 		proxy.registerRenders();	
 		proxy.registerRenderers();
 
