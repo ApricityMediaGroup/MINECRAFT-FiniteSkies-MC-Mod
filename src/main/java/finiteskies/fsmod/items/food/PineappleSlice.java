@@ -6,12 +6,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 
-public class Pineapple extends ItemFood {
+public class PineappleSlice extends ItemFood {
 
-	public Pineapple() {
-		super(3, 0.5F, false);
-		setUnlocalizedName(Reference.FiniteItems.PINEAPPLE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteItems.PINEAPPLE.getRegistryName());
+	public PineappleSlice() {
+		super(1, 0.5F, false);
+		setUnlocalizedName(Reference.FiniteItems.PINEAPPLESLICE.getUnlocalizedName());
+		setRegistryName(Reference.FiniteItems.PINEAPPLESLICE.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
 	}
 	 

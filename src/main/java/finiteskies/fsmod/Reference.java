@@ -44,6 +44,7 @@ public class Reference {
 		BLUEBERRYSEEDS("blueberrySeeds","blueberry_seeds"),
 		CHOCOLATE("chocolate","chocolate"),
 		PINEAPPLE("pineapple", "pineapple"),
+		PINEAPPLESLICE("pineappleSlice", "pineapple_slice"),
 		SALTLUMP("saltLump","salt_lump");
 		//Ends with semicolon continues with commas		
 

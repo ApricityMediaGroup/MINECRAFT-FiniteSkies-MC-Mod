@@ -16,6 +16,10 @@ public class ModCrafting {
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.breadSlice, 3), new Object[]{
 				Items.BREAD, ModItems.foodKnife
 		});
+		//cutting pineapple to slices
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.pineappleSlice, 4), new Object[]{
+				ModItems.pineapple, ModItems.foodKnife
+		});
 		//cooking toast
 		GameRegistry.addSmelting(ModItems.breadSlice, new ItemStack(ModItems.toast), 0.1f);
 		//sandstone brick

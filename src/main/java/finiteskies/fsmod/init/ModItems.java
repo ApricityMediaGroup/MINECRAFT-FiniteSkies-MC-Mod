@@ -14,6 +14,7 @@ import finiteskies.fsmod.items.food.CocoaButter;
 import finiteskies.fsmod.items.food.HeavyCream;
 import finiteskies.fsmod.items.food.JarOfWholeMilk;
 import finiteskies.fsmod.items.food.Pineapple;
+import finiteskies.fsmod.items.food.PineappleSlice;
 import finiteskies.fsmod.items.food.SourCream;
 import finiteskies.fsmod.items.food.StrawberriesAndCream;
 import finiteskies.fsmod.items.food.Strawberry;
@@ -63,6 +64,7 @@ public class ModItems {
 	public static Item cocoaButter;
 	public static Item chocolate;
 	public static Item pineapple;
+	public static Item pineappleSlice;
 	//plants
 	public static Item strawberrySeeds;
 	public static Item blueberrySeeds;
@@ -111,6 +113,7 @@ public class ModItems {
 		blueberrySeeds = new BlueberrySeeds();
 		chocolate = new Chocolate();
 		pineapple = new Pineapple();
+		pineappleSlice = new PineappleSlice();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -143,6 +146,7 @@ public class ModItems {
 		GameRegistry.register(chocolate);
 		GameRegistry.register(saltLump);
 		GameRegistry.register(pineapple);
+		GameRegistry.register(pineappleSlice);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -175,6 +179,7 @@ public class ModItems {
 		registerRender(chocolate);
 		registerRender(saltLump);
 		registerRender(pineapple);
+		registerRender(pineappleSlice);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

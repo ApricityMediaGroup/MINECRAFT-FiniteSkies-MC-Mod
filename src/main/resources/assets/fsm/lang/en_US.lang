@@ -29,6 +29,7 @@ item.butter.name=Butter
 item.cocoaButter.name=Cocoa Butter
 item.chocolate.name=Chocolate
 item.pineapple.name=Pineapple
+item.pineappleSlice.name=Pineapple Slice
 
 //Plants\\
 tile.strawberryPlant.name=Strawberry Plant
