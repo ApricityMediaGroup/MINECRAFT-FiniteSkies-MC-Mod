@@ -46,6 +46,7 @@ public class Reference {
 		PINEAPPLE("pineapple", "pineapple"),
 		PINEAPPLESLICE("pineappleSlice", "pineapple_slice"),
 		SALTLUMP("saltLump","salt_lump");
+
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;
@@ -70,7 +71,7 @@ public class Reference {
 	//REGISTER BLOCKS HERE
 	//Set block names here NAMENAME(<nameName>, <name_name>)
 		SANDSTONEBRICK("sandstoneBrick","sandstone_brick"),	
-		BLOCKFLUIDMILK("blockFluidMilk", "block_fluid_milk"),
+		FLUIDMILK("fluidMilk", "fluid_milk"),
 		STRAWBERRYPLANT("strawberryPlant","strawberry_plant"),
 		LANTERN("lantern","lantern"),
 		COKINGCOALORE("cokingCoalOre","coking_coal_ore"),
@@ -80,7 +81,9 @@ public class Reference {
 		DIRTFOSSIL("dirtFossil","dirt_fossil"),
 		STONEFOSSIL("stoneFossil","stone_fossil"),
 		SALTORE("saltOre","salt_ore"),
-		GROUNDMARBLE("groundMarble","ground_marble");
+		GROUNDMARBLE("groundMarble","ground_marble"),
+		EMPYREANPORTAL("empyreanPortal","empyrean_portal"),
+		GLOWQUARTZ("glowquartz","glowquartz");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

@@ -41,6 +41,8 @@ tile.flowerPot.name=Flower Pot
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
 tile.lantern.name=Lantern
+tile.glowquartz.name=Glowquartz Block
+
 
 //GROUND\\
 tile.groundMarble.name=Ground Marble

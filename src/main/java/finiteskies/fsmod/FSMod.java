@@ -1,31 +1,18 @@
 package finiteskies.fsmod;
 
-import finiteskies.fsmod.init.ModFuelHandler;
+import finiteskies.fsmod.dimension.EmpyreanDimension;
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.entity.ModEntities;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
-import finiteskies.fsmod.proxy.ClientProxy;
 import finiteskies.fsmod.proxy.CommonProxy;
 import finiteskies.fsmod.worldgen.OreGen;
-import finiteskies.fsmod.worldgen.PlantGenerator;
-import net.minecraft.block.BlockDoublePlant;
-
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.world.biome.BiomeForest.Type;
 import net.minecraft.init.Biomes;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -35,8 +22,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
@@ -112,8 +97,10 @@ public class FSMod {
 		System.out.println("Init");	
 		ModCrafting.register();
 		ModEntities.registerEntity();
+		EmpyreanDimension.mainRegistry();
 		proxy.registerRenders();	
 		proxy.registerRenderers();
+
 	}
 
 	@EventHandler

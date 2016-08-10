@@ -4,13 +4,15 @@ import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Lantern;
-import finiteskies.fsmod.blocks.plants.BlueberryPlant;
-import finiteskies.fsmod.blocks.plants.FlowerPot;
-import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
 import finiteskies.fsmod.blocks.ore.DirtFossil;
 import finiteskies.fsmod.blocks.ore.SaltOre;
 import finiteskies.fsmod.blocks.ore.StoneFossil;
+import finiteskies.fsmod.blocks.plants.BlueberryPlant;
+import finiteskies.fsmod.blocks.plants.FlowerPot;
+import finiteskies.fsmod.blocks.plants.StrawberryPlant;
+import finiteskies.fsmod.blocks.portal.EmpyreanPortal;
+import finiteskies.fsmod.blocks.portal.Glowquartz;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -32,6 +34,8 @@ public class ModBlocks {
 	public static Block stoneFossil;
 	public static Block saltOre;
 	public static Block groundMarble;
+	public static Block empyreanPortal;
+	public static Block glowquartz;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -45,6 +49,8 @@ public class ModBlocks {
 		stoneFossil = new StoneFossil();
 		saltOre = new SaltOre();
 		groundMarble = new GroundMarble();
+		empyreanPortal = new EmpyreanPortal();
+		glowquartz = new Glowquartz();
 	}
 	
 	public static void register() {
@@ -59,6 +65,8 @@ public class ModBlocks {
         registerBlock(stoneFossil);
         registerBlock(saltOre);
         registerBlock(groundMarble);
+        registerBlock(empyreanPortal);
+        registerBlock(glowquartz);
 	}
 
 	static void registerBlock(Block block) {
@@ -80,6 +88,8 @@ public class ModBlocks {
 		registerRender(stoneFossil);
 		registerRender(saltOre);
 		registerRender(groundMarble);
+        registerRender(empyreanPortal);
+        registerRender(glowquartz);
 	}
 
 	private static void registerRender(Block block) {
