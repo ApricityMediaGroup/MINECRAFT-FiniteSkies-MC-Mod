@@ -14,6 +14,7 @@ import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.proxy.CommonProxy;
 import finiteskies.fsmod.worldgen.CaveGen;
 import finiteskies.fsmod.worldgen.OreGen;
+import finiteskies.fsmod.worldgen.PlantGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
