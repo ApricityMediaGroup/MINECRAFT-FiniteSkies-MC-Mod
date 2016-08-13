@@ -18,7 +18,7 @@ public class WorldProviderEmpyrean extends WorldProvider
 	@Override
 	public IChunkGenerator createChunkGenerator()
 	{
-		return new EmpyreanChunkGenerator(this.worldObj, false, this.getDimension());
+		return new EmpyreanChunkGenerator(this.worldObj, this.getDimension());
 	}
 
 	@Override
@@ -32,6 +32,11 @@ public class WorldProviderEmpyrean extends WorldProvider
 	{
 		return false;
 	}
+    @Override
+    public int getAverageGroundLevel()
+    {
+        return 100;
+    }
 
 	@Override
 	public int getRespawnDimension(EntityPlayerMP player)
