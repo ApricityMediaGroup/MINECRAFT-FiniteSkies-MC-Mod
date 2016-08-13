@@ -1,6 +1,9 @@
 package finiteskies.fsmod.init;
 
+import java.util.Random;
+
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
+import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Lantern;
@@ -18,6 +21,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -36,6 +42,7 @@ public class ModBlocks {
 	public static Block groundMarble;
 	public static Block empyreanPortal;
 	public static Block glowquartz;
+	public static Block stalactite;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -51,6 +58,7 @@ public class ModBlocks {
 		groundMarble = new GroundMarble();
 		empyreanPortal = new EmpyreanPortal();
 		glowquartz = new Glowquartz();
+		stalactite = new Stalactite();
 	}
 	
 	public static void register() {
@@ -67,6 +75,7 @@ public class ModBlocks {
         registerBlock(groundMarble);
         registerBlock(empyreanPortal);
         registerBlock(glowquartz);
+        registerBlock(stalactite);
 	}
 
 	static void registerBlock(Block block) {
@@ -90,11 +99,11 @@ public class ModBlocks {
 		registerRender(groundMarble);
         registerRender(empyreanPortal);
         registerRender(glowquartz);
+		registerRender(stalactite);
 	}
 
 	private static void registerRender(Block block) {
 		System.out.println(block.getRegistryName());
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
-
 }

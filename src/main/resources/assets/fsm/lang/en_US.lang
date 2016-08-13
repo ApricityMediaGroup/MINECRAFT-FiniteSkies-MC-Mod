@@ -42,7 +42,7 @@ tile.flowerPot.name=Flower Pot
 tile.sandstoneBrick.name=Sandstone Brick
 tile.lantern.name=Lantern
 tile.glowquartz.name=Glowquartz Block
-
+tile.stalactite.name=Stalactite
 
 //GROUND\\
 tile.groundMarble.name=Ground Marble

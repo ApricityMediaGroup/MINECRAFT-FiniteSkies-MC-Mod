@@ -83,7 +83,8 @@ public class Reference {
 		SALTORE("saltOre","salt_ore"),
 		GROUNDMARBLE("groundMarble","ground_marble"),
 		EMPYREANPORTAL("empyreanPortal","empyrean_portal"),
-		GLOWQUARTZ("glowquartz","glowquartz");
+		GLOWQUARTZ("glowquartz","glowquartz"),
+		STALACTITE("stalactite","stalactite");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

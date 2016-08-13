@@ -16,7 +16,7 @@ public class SaltLump extends ItemFood{
 		super(1, 0.1F, false);
 		setUnlocalizedName(Reference.FiniteItems.SALTLUMP.getUnlocalizedName());
 		setRegistryName(Reference.FiniteItems.SALTLUMP.getRegistryName());
-		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
+		setCreativeTab(FSMod.CREATIVE_TAB_ORE);
 	}
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 	        player.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 300, 1));
