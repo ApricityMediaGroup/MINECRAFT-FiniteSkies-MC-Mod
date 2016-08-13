@@ -12,7 +12,6 @@ import finiteskies.fsmod.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockDoublePlant;
-import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.SoundType;
@@ -38,9 +37,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class StrawberryPlant extends BlockFlower {
+public class StrawberryPlant extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable{
     public StrawberryPlant(){		
-        super();
+        super(Material.VINE);
 		setUnlocalizedName(Reference.FiniteBlocks.STRAWBERRYPLANT.getUnlocalizedName());
 		setRegistryName(Reference.FiniteBlocks.STRAWBERRYPLANT.getRegistryName());
 		setSoundType(SoundType.PLANT);
@@ -61,7 +60,8 @@ public class StrawberryPlant extends BlockFlower {
     }
     
     //Can Shear? if so what gives?
-    public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos){ return false; }
+    @Override public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos){ return false; }
+    @Override
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
@@ -80,7 +80,24 @@ public class StrawberryPlant extends BlockFlower {
         return false;
     }
     
+    //It got mad at me for not having these.
+	@Override
+	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
+	@Override
+	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+		// TODO Auto-generated method stub
+		
+	}
 	
     /**
      * Get the OffsetType for this Block. Determines if the model is rendered slightly offset.
@@ -90,12 +107,6 @@ public class StrawberryPlant extends BlockFlower {
     {
         return Block.EnumOffsetType.XYZ;
     }
-
-	@Override
-	public EnumFlowerColor getBlockType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
     
 
 
