@@ -6,6 +6,7 @@ import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
+import finiteskies.fsmod.blocks.lights.Firepit;
 import finiteskies.fsmod.blocks.lights.Lantern;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
 import finiteskies.fsmod.blocks.ore.DirtFossil;
@@ -43,6 +44,7 @@ public class ModBlocks {
 	public static Block empyreanPortal;
 	public static Block glowquartz;
 	public static Block stalactite;
+	public static Block firePit;
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -59,6 +61,7 @@ public class ModBlocks {
 		empyreanPortal = new EmpyreanPortal();
 		glowquartz = new Glowquartz();
 		stalactite = new Stalactite();
+		firePit = new Firepit();
 	}
 	
 	public static void register() {
@@ -76,6 +79,7 @@ public class ModBlocks {
         registerBlock(empyreanPortal);
         registerBlock(glowquartz);
         registerBlock(stalactite);
+        registerBlock(firePit);
 	}
 
 	static void registerBlock(Block block) {
@@ -100,6 +104,7 @@ public class ModBlocks {
         registerRender(empyreanPortal);
         registerRender(glowquartz);
 		registerRender(stalactite);
+		registerRender(firePit);
 	}
 
 	private static void registerRender(Block block) {
