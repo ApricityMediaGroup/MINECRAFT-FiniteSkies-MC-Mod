@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "axis=z": { "model": "fsm:empyrean_portal_ew" },
+        "axis=x": { "model": "fsm:empyrean_portal_ns" }
+    }
+}

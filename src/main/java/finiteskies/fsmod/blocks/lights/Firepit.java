@@ -18,18 +18,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Lantern2 extends Block {
+public class Firepit extends Block {
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 5, 0, 0.0625 * 5, 0.0625 * 11, 0.0625 * 9, 0.0625 * 11);
 
-	public Lantern2() {
-		super(Material.GLASS);
-		setUnlocalizedName(Reference.FiniteBlocks.LANTERN.getUnlocalizedName());
-		setRegistryName(Reference.FiniteBlocks.LANTERN.getRegistryName());
+	public Firepit() {
+		super(Material.ROCK);
+		setUnlocalizedName(Reference.FiniteBlocks.FIREPIT.getUnlocalizedName());
+		setRegistryName(Reference.FiniteBlocks.FIREPIT.getRegistryName());
 		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_FURNITURE);
 		setLightLevel(0.9f);
 		setLightOpacity(12);
-		setHardness(0.2f);
+		setHardness(1.0f);
 		}
 	@Override
 	public boolean isFullCube(IBlockState state) {
@@ -59,6 +59,7 @@ public class Lantern2 extends Block {
 
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+            worldIn.spawnParticle(EnumParticleTypes.SMOKE_LARGE, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
     }
 
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)

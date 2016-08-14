@@ -18,6 +18,7 @@ public class OreGen implements IWorldGenerator {
 	private WorldGenerator STONE_FOSSIL;
 	private WorldGenerator SALT_ORE;
 	private WorldGenerator GROUND_MARBLE;
+	private WorldGenerator GLOWQUARTZ;
 
 	public OreGen() {
 		// spawn block with vein size
@@ -26,6 +27,7 @@ public class OreGen implements IWorldGenerator {
 		this.STONE_FOSSIL = new WorldGenMinable(ModBlocks.stoneFossil.getDefaultState(), 7);
 		this.SALT_ORE = new WorldGenMinable(ModBlocks.saltOre.getDefaultState(), 7);
 		this.GROUND_MARBLE = new WorldGenMinable(ModBlocks.groundMarble.getDefaultState(), 30);
+		this.GLOWQUARTZ = new WorldGenMinableInNetherrack(ModBlocks.glowquartz.getDefaultState(), 20);
 
 	}
 
@@ -46,6 +48,7 @@ public class OreGen implements IWorldGenerator {
 			break;
 
 		case -1: // Neather
+			this.runGenerator(this.GLOWQUARTZ, world, random, chunckX, chunckZ, 2, 0, 256);
 
 			break;
 
