@@ -1,7 +1,12 @@
 {
-    "disgust":
+    "player.disgust":
     { 
     "category": "player", 
     "sounds": [ "fsm:player/disgust" ]  
+    },
+	    "furniture.firepit.firepit":
+    { 
+    "category": "ambient", 
+    "sounds": [ "fsm:furniture/firepit/firepit" ]  
     }
 }

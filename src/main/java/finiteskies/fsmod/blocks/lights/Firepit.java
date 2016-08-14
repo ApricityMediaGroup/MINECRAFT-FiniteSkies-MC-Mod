@@ -4,13 +4,16 @@ import java.util.Random;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
+import finiteskies.fsmod.init.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -18,18 +21,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class Lantern2 extends Block {
+public class Firepit extends Block {
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 5, 0, 0.0625 * 5, 0.0625 * 11, 0.0625 * 9, 0.0625 * 11);
 
-	public Lantern2() {
-		super(Material.GLASS);
-		setUnlocalizedName(Reference.FiniteBlocks.LANTERN.getUnlocalizedName());
-		setRegistryName(Reference.FiniteBlocks.LANTERN.getRegistryName());
+	public Firepit() {
+		super(Material.ROCK);
+		setUnlocalizedName(Reference.FiniteBlocks.FIREPIT.getUnlocalizedName());
+		setRegistryName(Reference.FiniteBlocks.FIREPIT.getRegistryName());
 		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_FURNITURE);
 		setLightLevel(0.9f);
 		setLightOpacity(12);
-		setHardness(0.2f);
+		setHardness(1.0f);
 		}
 	@Override
 	public boolean isFullCube(IBlockState state) {
@@ -59,6 +62,15 @@ public class Lantern2 extends Block {
 
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+            worldIn.spawnParticle(EnumParticleTypes.SMOKE_LARGE, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+            
+            
+            if (rand.nextInt(24) == 0)
+            {
+                worldIn.playSound((double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0.5F), ModSoundEvents.firepit, SoundCategory.AMBIENT, 1.0F + rand.nextFloat(), rand.nextFloat() * 0.7F + 0.3F, false);
+            }
+            
+            
     }
 
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
