@@ -4,13 +4,16 @@ import java.util.Random;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
+import finiteskies.fsmod.init.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -60,6 +63,14 @@ public class Firepit extends Block {
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_LARGE, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+            
+            
+            if (rand.nextInt(24) == 0)
+            {
+                worldIn.playSound((double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0.5F), ModSoundEvents.firepit, SoundCategory.AMBIENT, 1.0F + rand.nextFloat(), rand.nextFloat() * 0.7F + 0.3F, false);
+            }
+            
+            
     }
 
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
