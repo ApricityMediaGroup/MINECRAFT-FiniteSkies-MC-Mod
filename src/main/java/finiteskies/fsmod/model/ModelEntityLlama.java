@@ -13,7 +13,6 @@ import net.minecraft.util.math.MathHelper;
 
 public class ModelEntityLlama extends ModelBase
 {
-  //fields
     ModelRenderer body;
     ModelRenderer chest;
     ModelRenderer neck;
