@@ -34,15 +34,15 @@ public class ModEntities {
 	}   
 
 	
-	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
-		int randomId = findGlobalUniqueEntityId();
-		EntityRegistry.registerModEntity(entityClass, entityName, randomId, FSMod.instance, 64, 1, true, solidColor, spotColor);
-	}
+//	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
+//		int randomId = findGlobalUniqueEntityId();
+//		EntityRegistry.registerModEntity(entityClass, entityName, randomId, FSMod.instance, 64, 1, true, solidColor, spotColor);
+//	}
 	
 	public static void registerEntity() {
-		int randomId = findGlobalUniqueEntityId();
-		createEntity(EntitySquirrel.class, "Squirrel", 0x982000, 0x421805);
-	//	createEntity(EntityFish.class, "Fish", 0x6b9f93, 0xadbedb);
-		EntityRegistry.registerModEntity(EntityFish.class, "Fish", ++randomId, FSMod.instance, 64, 1, true, 0x6b9f93, 0xadbedb);
+		int entityId = findGlobalUniqueEntityId();
+		EntityRegistry.registerModEntity(EntitySquirrel.class, "Squirrel", entityId, FSMod.instance, 64, 1, true, 0x982000, 0x421805);
+		EntityRegistry.registerModEntity(EntityFish.class, "Fish", entityId + 1, FSMod.instance, 64, 1, true, 0x6b9f93, 0xadbedb);
+		EntityRegistry.registerModEntity(EntityLlama.class, "Llama", entityId + 2, FSMod.instance, 64, 1, true, 0xffffe6, 0x663300);
 	}
 }
