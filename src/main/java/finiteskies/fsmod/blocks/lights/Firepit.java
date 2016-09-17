@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Firepit extends Block {
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 5, 0, 0.0625 * 5, 0.0625 * 11, 0.0625 * 9, 0.0625 * 11);
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 10, 0, 0.0625 * 15, 0.0625 * 15, 0.0625 * 9, 0.0625 * 15);
 
 	public Firepit() {
 		super(Material.ROCK);
@@ -55,7 +55,7 @@ public class Firepit extends Block {
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
     {
         double d0 = (double)pos.getX() + 0.5D;
-        double d1 = (double)pos.getY() + 0.25D;
+        double d1 = (double)pos.getY() + 0.5D;
         double d2 = (double)pos.getZ() + 0.5D;
         double d3 = 0.22D;
         double d4 = 0.27D;
