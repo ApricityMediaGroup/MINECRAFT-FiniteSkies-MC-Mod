@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Firepit extends Block {
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 10, 0, 0.0625 * 15, 0.0625 * 15, 0.0625 * 9, 0.0625 * 15);
+	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 0, 0, 0.0625 * 0, 0.0625 * 16, 0.0625 * 8, 0.0625 * 16);
 
 	public Firepit() {
 		super(Material.ROCK);
