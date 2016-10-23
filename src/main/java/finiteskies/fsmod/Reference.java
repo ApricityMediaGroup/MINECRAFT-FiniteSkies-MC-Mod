@@ -85,7 +85,8 @@ public class Reference {
 		EMPYREANPORTAL("empyreanPortal","empyrean_portal"),
 		GLOWQUARTZ("glowquartz","glowquartz"),
 		STALACTITE("stalactite","stalactite"),
-		FIREPIT("firePit","fire_pit");
+		FIREPIT("firePit","fire_pit"),
+		FINITEGRASSBLOCK("finiteGrassBlock","finite_grass_block");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

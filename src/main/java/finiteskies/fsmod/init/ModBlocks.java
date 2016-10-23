@@ -5,6 +5,7 @@ import java.util.Random;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
+import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Firepit;
 import finiteskies.fsmod.blocks.lights.Lantern;
@@ -45,6 +46,7 @@ public class ModBlocks {
 	public static Block glowquartz;
 	public static Block stalactite;
 	public static Block firePit;
+
 	
 	public static void init() {
 		sandstoneBrick = new SandstoneBrick();
@@ -62,6 +64,7 @@ public class ModBlocks {
 		glowquartz = new Glowquartz();
 		stalactite = new Stalactite();
 		firePit = new Firepit();
+
 	}
 	
 	public static void register() {
@@ -80,6 +83,7 @@ public class ModBlocks {
         registerBlock(glowquartz);
         registerBlock(stalactite);
         registerBlock(firePit);
+
 	}
 
 	static void registerBlock(Block block) {
@@ -105,6 +109,7 @@ public class ModBlocks {
         registerRender(glowquartz);
 		registerRender(stalactite);
 		registerRender(firePit);
+
 	}
 
 	private static void registerRender(Block block) {
