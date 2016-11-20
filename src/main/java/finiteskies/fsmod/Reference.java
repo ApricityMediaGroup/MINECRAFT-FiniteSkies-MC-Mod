@@ -86,7 +86,11 @@ public class Reference {
 		GLOWQUARTZ("glowquartz","glowquartz"),
 		STALACTITE("stalactite","stalactite"),
 		FIREPIT("firePit","fire_pit"),
-		FINITEGRASSBLOCK("finiteGrassBlock","finite_grass_block");
+		FINITEGRASSBLOCK("finiteGrassBlock","finite_grass_block"),
+		//SANDSTONEBRICKSTAIRS("sandstoneBrickStairs","sandstone_brick_stairs"),
+		COTTONWOOD("cottonwood","cottonwood"),
+		COTTONWOODLEAVES("cottonwoodLeaves","cottonwood_leaves"),
+		STAINEDOAKWOODPLANKS("stainedOakWoodPlanks","stained_oak_wood_planks");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

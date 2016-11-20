@@ -44,7 +44,9 @@ tile.lantern.name=Lantern
 tile.glowquartz.name=Glowquartz Block
 tile.stalactite.name=Stalactite
 tile.firePit.name=Fire Pit
-tile.finiteGrassBlock=Finite Grass Block
+tile.finiteGrassBlock.name=Finite Grass Block
+tile.cottonwoodLeaves.name=Cottonwood Leaves
+tile.stainedOakWoodPlanks.name=Stained Oak Wood Planks
 
 //GROUND\\
 tile.groundMarble.name=Ground Marble

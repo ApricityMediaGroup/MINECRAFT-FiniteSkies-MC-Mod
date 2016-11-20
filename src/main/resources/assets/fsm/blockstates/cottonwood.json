@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":  { "model": "fsm:cottonwood" },
+        "axis=z":   { "model": "fsm:cottonwood", "x": 90 },
+        "axis=x":   { "model": "fsm:cottonwood", "x": 90, "y": 90 },
+        "axis=none": { "model": "fsm:cottonwood_bark" }
+    }
+}

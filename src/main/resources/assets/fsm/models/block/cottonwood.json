@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "fsm:blocks/cottonwood_top",
+        "side": "fsm:blocks/cottonwood"
+    }
+}

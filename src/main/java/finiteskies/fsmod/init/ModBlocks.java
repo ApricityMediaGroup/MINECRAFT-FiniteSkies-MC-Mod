@@ -2,7 +2,10 @@ package finiteskies.fsmod.init;
 
 import java.util.Random;
 
+import finiteskies.fsmod.blocks.building.Cottonwood;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
+import finiteskies.fsmod.blocks.building.SandstoneBrickStairs;
+import finiteskies.fsmod.blocks.building.StainedOakWoodPlanks;
 import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
@@ -14,6 +17,7 @@ import finiteskies.fsmod.blocks.ore.DirtFossil;
 import finiteskies.fsmod.blocks.ore.SaltOre;
 import finiteskies.fsmod.blocks.ore.StoneFossil;
 import finiteskies.fsmod.blocks.plants.BlueberryPlant;
+import finiteskies.fsmod.blocks.plants.CottonwoodLeaves;
 import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.portal.EmpyreanPortal;
@@ -46,6 +50,10 @@ public class ModBlocks {
 	public static Block glowquartz;
 	public static Block stalactite;
 	public static Block firePit;
+	//public static Block sandstoneBrickStairs;
+	public static Block cottonwoodLeaves;
+	public static Block cottonwood;
+	public static Block stainedOakWoodPlanks;
 
 	
 	public static void init() {
@@ -64,6 +72,10 @@ public class ModBlocks {
 		glowquartz = new Glowquartz();
 		stalactite = new Stalactite();
 		firePit = new Firepit();
+		//sandstoneBrickStairs = new SandstoneBrickStairs(null); //IDK about this. finish stairs.
+		cottonwoodLeaves = new CottonwoodLeaves();
+		cottonwood = new Cottonwood();
+		stainedOakWoodPlanks = new StainedOakWoodPlanks();
 
 	}
 	
@@ -83,6 +95,10 @@ public class ModBlocks {
         registerBlock(glowquartz);
         registerBlock(stalactite);
         registerBlock(firePit);
+        //registerBlock(sandstoneBrickStairs);
+        registerBlock(cottonwoodLeaves);
+        registerBlock(cottonwood);
+        registerBlock(stainedOakWoodPlanks);
 
 	}
 
@@ -109,6 +125,10 @@ public class ModBlocks {
         registerRender(glowquartz);
 		registerRender(stalactite);
 		registerRender(firePit);
+		//registerRender(sandstoneBrickStairs);
+		registerRender(cottonwoodLeaves);
+		registerRender(cottonwood);
+		registerRender(stainedOakWoodPlanks);
 
 	}
 
