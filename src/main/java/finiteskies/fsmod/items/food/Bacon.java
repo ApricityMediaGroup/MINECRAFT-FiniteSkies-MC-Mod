@@ -19,26 +19,20 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.StatList;
 import net.minecraft.world.World;
 
-public class Chocolate extends ItemFood{
+public class Bacon extends ItemFood{
 
-	public Chocolate() {
-		super(1, 0.0F, false);
-		setUnlocalizedName(Reference.FiniteItems.CHOCOLATE.getUnlocalizedName());
-		setRegistryName(Reference.FiniteItems.CHOCOLATE.getRegistryName());
+	public Bacon() {
+		super(5, 0.5F, false);
+		setUnlocalizedName(Reference.FiniteItems.BACON.getUnlocalizedName());
+		setRegistryName(Reference.FiniteItems.BACON.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_FOOD);
-		
+		isWolfsFavoriteMeat();
 
 	}
     public int getMaxItemUseDuration(ItemStack stack)
     {
-        return 16;
+        return 32;
     }
-    //make dogs die when eaten >:D heh heh heh
     
-    //add effects when eaten
-    protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
-    {
-        player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1000, 1));
-    }
-
+    
 }

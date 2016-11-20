@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "fsm:slate_stone_brick" }
+    }
+}

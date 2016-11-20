@@ -45,7 +45,9 @@ public class Reference {
 		CHOCOLATE("chocolate","chocolate"),
 		PINEAPPLE("pineapple", "pineapple"),
 		PINEAPPLESLICE("pineappleSlice", "pineapple_slice"),
-		SALTLUMP("saltLump","salt_lump");
+		SALTLUMP("saltLump","salt_lump"),
+		BACON("bacon", "bacon"),
+		RAWBACON("rawBacon", "raw_bacon");
 
 		//Ends with semicolon continues with commas		
 
@@ -90,7 +92,8 @@ public class Reference {
 		//SANDSTONEBRICKSTAIRS("sandstoneBrickStairs","sandstone_brick_stairs"),
 		COTTONWOOD("cottonwood","cottonwood"),
 		COTTONWOODLEAVES("cottonwoodLeaves","cottonwood_leaves"),
-		STAINEDOAKWOODPLANKS("stainedOakWoodPlanks","stained_oak_wood_planks");
+		STAINEDOAKWOODPLANKS("stainedOakWoodPlanks","stained_oak_wood_planks"),
+		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 
 		private String unlocalizedName;

@@ -22,6 +22,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Firepit extends Block {
+	//set extends block to BlockContainer
 	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 0, 0, 0.0625 * 0, 0.0625 * 16, 0.0625 * 8, 0.0625 * 16);
 
 	public Firepit() {
@@ -54,9 +55,17 @@ public class Firepit extends Block {
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
     {
-        double d0 = (double)pos.getX() + 0.5D;
-        double d1 = (double)pos.getY() + 0.5D;
-        double d2 = (double)pos.getZ() + 0.5D;
+    	
+    	float minX = 0.1f;
+    	float maxX = 0.5f;
+
+    	Random daddy = new Random();
+
+    	float finalX = rand.nextFloat() * (maxX - minX) + minX;
+    	
+        double d0 = (double)pos.getX() + 0.0D + finalX;
+        double d1 = (double)pos.getY() + 0.0D + finalX;
+        double d2 = (double)pos.getZ() + 0.0D + finalX;
         double d3 = 0.22D;
         double d4 = 0.27D;
 

@@ -9,6 +9,7 @@ import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.entity.ModEntities;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModCrafting;
+import finiteskies.fsmod.init.ModFuelHandler;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.proxy.CommonProxy;
@@ -42,6 +43,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+
+//Built on Forge 12.18.1.2044 | Minecraft 1.10.2 | Made with Love <3 - Finite Team
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class FSMod {
@@ -107,6 +110,7 @@ public class FSMod {
 		ModSoundEvents.registerSounds();
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
 		proxy.preInit();
+
 	}
 
 	@EventHandler
@@ -118,6 +122,7 @@ public class FSMod {
 		ModBiomes.init();
 		proxy.registerRenders();	
 		proxy.registerRenderers();
+		GameRegistry.registerFuelHandler(new ModFuelHandler());
 
 	}
 

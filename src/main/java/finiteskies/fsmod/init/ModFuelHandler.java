@@ -13,7 +13,7 @@ public class ModFuelHandler implements IFuelHandler{
 		
 		if(var1 == ModItems.cokingCoal){
 			return 1700;
-			//ADD ELSE IF IF YOU WANT TO ADD MORE FUEL...
+			//ADD [ELSE IF] IF YOU WANT TO ADD MORE FUEL...
 		}else{
 			return 0;
 		}
