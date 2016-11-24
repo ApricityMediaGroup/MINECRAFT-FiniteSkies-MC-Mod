@@ -2,6 +2,7 @@ package finiteskies.fsmod.init;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
+import finiteskies.fsmod.items.crops.Acorn;
 import finiteskies.fsmod.items.crops.BlueberrySeeds;
 import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
@@ -72,6 +73,7 @@ public class ModItems {
 	//plants
 	public static Item strawberrySeeds;
 	public static Item blueberrySeeds;
+	public static Item acorn;
 	//crops
 	public static Item strawberryCrop;
 	//misc
@@ -120,6 +122,7 @@ public class ModItems {
 		pineappleSlice = new PineappleSlice();
 		bacon = new Bacon();
 		rawBacon = new RawBacon();
+		acorn = new Acorn();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -155,6 +158,7 @@ public class ModItems {
 		GameRegistry.register(pineappleSlice);
 		GameRegistry.register(bacon);
 		GameRegistry.register(rawBacon);
+		GameRegistry.register(acorn);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -190,6 +194,7 @@ public class ModItems {
 		registerRender(pineappleSlice);
 		registerRender(bacon);
 		registerRender(rawBacon);
+		registerRender(acorn);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

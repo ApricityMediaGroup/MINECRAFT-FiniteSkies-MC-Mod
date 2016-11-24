@@ -47,7 +47,8 @@ public class Reference {
 		PINEAPPLESLICE("pineappleSlice", "pineapple_slice"),
 		SALTLUMP("saltLump","salt_lump"),
 		BACON("bacon", "bacon"),
-		RAWBACON("rawBacon", "raw_bacon");
+		RAWBACON("rawBacon", "raw_bacon"),
+		ACORN("acorn","acorn");
 
 		//Ends with semicolon continues with commas		
 

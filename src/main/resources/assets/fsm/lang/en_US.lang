@@ -39,6 +39,7 @@ tile.blueberryPlant.name=Blueberry Plant
 item.strawberrySeeds.name=Strawberry Seeds
 item.blueberrySeeds.name=Blueberry Seeds
 tile.flowerPot.name=Flower Pot
+item.acorn.name=Acorn
 
 //Blocks\\
 tile.sandstoneBrick.name=Sandstone Brick
