@@ -46,7 +46,7 @@ public class EntitySquirrel extends EntityAnimal {
         this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
         this.tasks.addTask(2, new EntityAIAvoidEntity(this, EntityPlayer.class, 2.0F, 1.0D, 1.2D));
         this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
-        this.tasks.addTask(4, new EntityAITempt(this, 1.25D, Items.BEETROOT_SEEDS, false));
+        this.tasks.addTask(4, new EntityAITempt(this, 1.25D, ModItems.acorn, false));
         this.tasks.addTask(5, new EntityAIFollowParent(this, 1.25D));
         this.tasks.addTask(6, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
@@ -65,11 +65,11 @@ public class EntitySquirrel extends EntityAnimal {
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
     }
 	protected Item getDropItem() {
-		return ModItems.blueberrySeeds;
+		return ModItems.acorn;
 	
 	}
 	protected void dropRareItem() {
-		this.dropItem(Items.BEETROOT_SEEDS, 5);
+		this.dropItem(ModItems.acorn, 5);
 	}
 	protected SoundEvent getAmbientSound() {
 		return SoundEvents.ENTITY_RABBIT_AMBIENT;

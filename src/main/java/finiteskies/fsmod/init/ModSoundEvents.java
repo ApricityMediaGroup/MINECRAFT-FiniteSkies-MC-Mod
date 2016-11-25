@@ -11,10 +11,12 @@ public class ModSoundEvents {
 
 		public static SoundEvent disgust;
 		public static SoundEvent firepit;
+		public static SoundEvent crunch;
 
 	public static void registerSounds() {
 		disgust = registerSound("player.disgust");
 		firepit = registerSound("furniture.firepit.firepit");
+		crunch = registerSound("player.crunch");
 	}
 
 
