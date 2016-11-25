@@ -47,7 +47,7 @@ public class ModBlocks {
 	public static Block stoneFossil;
 	public static Block saltOre;
 	public static Block groundMarble;
-	public static Block empyreanPortal;
+	//public static Block empyreanPortal;
 	public static Block glowquartz;
 	public static Block stalactite;
 	public static Block firePit;
@@ -70,7 +70,7 @@ public class ModBlocks {
 		stoneFossil = new StoneFossil();
 		saltOre = new SaltOre();
 		groundMarble = new GroundMarble();
-		empyreanPortal = new EmpyreanPortal();
+		//empyreanPortal = new EmpyreanPortal();
 		glowquartz = new Glowquartz();
 		stalactite = new Stalactite();
 		firePit = new Firepit();
@@ -94,7 +94,7 @@ public class ModBlocks {
         registerBlock(stoneFossil);
         registerBlock(saltOre);
         registerBlock(groundMarble);
-        registerBlock(empyreanPortal);
+        //registerBlock(empyreanPortal);
         registerBlock(glowquartz);
         registerBlock(stalactite);
         registerBlock(firePit);
@@ -125,7 +125,7 @@ public class ModBlocks {
 		registerRender(stoneFossil);
 		registerRender(saltOre);
 		registerRender(groundMarble);
-        registerRender(empyreanPortal);
+        //registerRender(empyreanPortal);
         registerRender(glowquartz);
 		registerRender(stalactite);
 		registerRender(firePit);

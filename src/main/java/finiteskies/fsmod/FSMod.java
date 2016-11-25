@@ -121,8 +121,8 @@ public class FSMod {
 		System.out.println("Init");	
 		ModCrafting.register();
 		ModEntities.registerEntity();
-		EmpyreanDimension.mainRegistry();
-		ModBiomes.init();
+		//EmpyreanDimension.mainRegistry();
+		//ModBiomes.init();
 		proxy.registerRenders();	
 		proxy.registerRenderers();
 		GameRegistry.registerFuelHandler(new ModFuelHandler());
