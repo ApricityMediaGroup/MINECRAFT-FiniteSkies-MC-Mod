@@ -19,9 +19,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
-public class EntityLlama extends EntityAnimal {
+public class EntityAlpaca extends EntityAnimal {
 
-	public EntityLlama(World worldIn) {
+	public EntityAlpaca(World worldIn) {
 		super(worldIn);		
 		/*		
 		this.tasks.addTask(0, new EntityAISwimming(this));
@@ -79,7 +79,7 @@ public class EntityLlama extends EntityAnimal {
 	@Override
 	public EntityAgeable createChild(EntityAgeable ageable) {
 		
-		return new EntityLlama(this.worldObj);
+		return new EntityAlpaca(this.worldObj);
 	}
 	@Override
     public float getEyeHeight()

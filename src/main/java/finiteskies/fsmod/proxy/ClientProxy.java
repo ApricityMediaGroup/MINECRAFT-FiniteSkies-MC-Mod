@@ -1,15 +1,15 @@
 package finiteskies.fsmod.proxy;
 
 import finiteskies.fsmod.entity.EntityFish;
-import finiteskies.fsmod.entity.EntityLlama;
+import finiteskies.fsmod.entity.EntityAlpaca;
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.model.ModelEntityFish;
-import finiteskies.fsmod.model.ModelEntityLlama;
+import finiteskies.fsmod.model.ModelEntityAlpaca;
 import finiteskies.fsmod.model.ModelEntitySquirrel;
 import finiteskies.fsmod.render.RenderEntityFish;
-import finiteskies.fsmod.render.RenderEntityLlama;
+import finiteskies.fsmod.render.RenderEntityAlpaca;
 import finiteskies.fsmod.render.RenderEntitySquirrel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -65,7 +65,7 @@ public class ClientProxy extends CommonProxy
 		RenderManager rm = Minecraft.getMinecraft().getRenderManager();
 		RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(rm, new ModelEntitySquirrel(), 0.1F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFish.class, new RenderEntityFish(rm, new ModelEntityFish(), 0.0F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityLlama.class, new RenderEntityLlama(rm, new ModelEntityLlama(), 0.4F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAlpaca.class, new RenderEntityAlpaca(rm, new ModelEntityAlpaca(), 0.4F));
 	}
 	@SubscribeEvent
 	public void onPrePlayerRender(RenderPlayerEvent.Pre event)

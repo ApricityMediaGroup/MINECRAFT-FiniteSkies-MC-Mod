@@ -120,7 +120,7 @@ public class FSMod {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
 		ModCrafting.register();
-		//ModEntities.registerEntity();
+		ModEntities.registerEntity();
 		EmpyreanDimension.mainRegistry();
 		ModBiomes.init();
 		proxy.registerRenders();	

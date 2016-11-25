@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
-public class ModelEntityLlama extends ModelBase
+public class ModelEntityAlpaca extends ModelBase
 {
     ModelRenderer body;
     ModelRenderer chest;
@@ -28,7 +28,7 @@ public class ModelEntityLlama extends ModelBase
     protected float childYOffset = 13.0F;
     protected float childZOffset = 0.0F;
   
-  public ModelEntityLlama()
+  public ModelEntityAlpaca()
   {
 	    textureWidth = 128;
 	    textureHeight = 64;

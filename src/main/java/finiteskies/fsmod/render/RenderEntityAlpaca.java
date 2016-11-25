@@ -1,7 +1,7 @@
 package finiteskies.fsmod.render;
 
 import finiteskies.fsmod.Reference;
-import finiteskies.fsmod.entity.EntityLlama;
+import finiteskies.fsmod.entity.EntityAlpaca;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -11,22 +11,22 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderEntityLlama extends RenderLiving {
+public class RenderEntityAlpaca extends RenderLiving {
 
-	private static final ResourceLocation EntityLlamaTextures = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entity/llama.png");
+	private static final ResourceLocation EntityAlpacaTextures = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entity/alpaca.png");
 
-	public RenderEntityLlama(RenderManager rendermanagerIn, ModelBase modelbaseIn, float shadowsizeIn) {
+	public RenderEntityAlpaca(RenderManager rendermanagerIn, ModelBase modelbaseIn, float shadowsizeIn) {
 		super(rendermanagerIn, modelbaseIn, shadowsizeIn);
 	}
 
-	protected ResourceLocation getEntityTexture(EntityLlama entity)
+	protected ResourceLocation getEntityTexture(EntityAlpaca entity)
     {
-        return EntityLlamaTextures;
+        return EntityAlpacaTextures;
     }
 	
 	@Override
 	protected ResourceLocation getEntityTexture(Entity entity) {
-		return this.getEntityTexture((EntityLlama)entity);
+		return this.getEntityTexture((EntityAlpaca)entity);
 	}
     
 }

@@ -7,6 +7,7 @@ import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.entity.EntityFish;
 import net.minecraft.entity.EntityList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class ModEntities {
@@ -17,10 +18,11 @@ public class ModEntities {
 	public static ModEntities instance() {
 		return INSTANCE;
 	}
+/*
 	private ModEntities() {
 		availableIndicies = new BitSet(256);
 		availableIndicies.set(1, 255);
-		for (Object id : EntityList.ID_TO_CLASS.keySet()) {
+		for (Object id : EntityList.) {
 			availableIndicies.clear((Integer)id);
 		}
 	}
@@ -32,17 +34,21 @@ public class ModEntities {
 		}
 		return res;
 	}   
-
+*/
 	
 //	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
 //		int randomId = findGlobalUniqueEntityId();
 //		EntityRegistry.registerModEntity(entityClass, entityName, randomId, FSMod.instance, 64, 1, true, solidColor, spotColor);
 //	}
+	private static final ResourceLocation EntitySquirrelTextures = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entity/squirrel.png");
+	private static final ResourceLocation EntityFishTextures = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entity/fish.png");
+	private static final ResourceLocation EntityAlpacaTextures = new ResourceLocation(Reference.MOD_ID + ":" + "textures/entity/alpaca.png");
+
 	
 	public static void registerEntity() {
-		int entityId = findGlobalUniqueEntityId();
-		EntityRegistry.registerModEntity(EntitySquirrel.class, "Squirrel", entityId, FSMod.instance, 64, 1, true, 0x982000, 0x421805);
-		EntityRegistry.registerModEntity(EntityFish.class, "Fish", entityId + 1, FSMod.instance, 64, 1, true, 0x6b9f93, 0xadbedb);
-		EntityRegistry.registerModEntity(EntityLlama.class, "Llama", entityId + 2, FSMod.instance, 64, 1, true, 0xffffe6, 0x663300);
+		int entityId = 200;
+		EntityRegistry.registerModEntity(EntitySquirrelTextures, EntitySquirrel.class, "Squirrel", entityId, FSMod.instance, 64, 1, true, 0x982000, 0x421805);
+		EntityRegistry.registerModEntity(EntityFishTextures, EntityFish.class, "Fish", entityId + 1, FSMod.instance, 64, 1, true, 0x6b9f93, 0xadbedb);
+		EntityRegistry.registerModEntity(EntityAlpacaTextures, EntityAlpaca.class, "Alpaca", entityId + 2, FSMod.instance, 64, 1, true, 0xffffe6, 0x663300);
 	}
 }
