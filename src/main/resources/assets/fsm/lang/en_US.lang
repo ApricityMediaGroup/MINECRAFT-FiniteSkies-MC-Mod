@@ -75,5 +75,6 @@ item.glassJar.name=Glass Jar
 item.bigGlassJar.name=Big Glass Jar
 
 //Entities\\
-entity.fsm.Squirrel.name=Squirrel
-entity.fsm.Fish.name=Fish
+entity.Squirrel.name=Squirrel
+entity.Fish.name=Fish
+entity.Alpaca.name=Alpaca
