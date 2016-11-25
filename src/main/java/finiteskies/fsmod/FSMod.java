@@ -43,6 +43,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 //Built on Forge 12.18.1.2044 | Minecraft 1.10.2 | Made with Love <3 - Finite Team
 //Updating to Forge 13.19.0.2157 | 1.11 | Simmering with Love <3 
@@ -57,46 +59,46 @@ public class FSMod {
 	public static CommonProxy proxy;
 	
 	public static final CreativeTabs CREATIVE_TAB_FOOD = new CreativeTabs("tabFSModFood") {
-		   @Override
-		   public Item getTabIconItem() {
-		       return ModItems.strawberry;
-		   }
+		   @SideOnly(Side.CLIENT)
+	        public ItemStack getTabIconItem(){
+	            return new ItemStack(ModItems.strawberry);
+	        }
 		};
 	public static final CreativeTabs CREATIVE_TAB_MISC = new CreativeTabs("tabFSModMisc") {
-			   @Override
-			   public Item getTabIconItem() {
-			       return ModItems.milkPot;
-		  }
+		   @SideOnly(Side.CLIENT)
+	        public ItemStack getTabIconItem(){
+	            return new ItemStack(ModItems.milkPot);
+	        }
 		};
 	public static final CreativeTabs CREATIVE_TAB_PLANTS = new CreativeTabs("tabFSModPlants") {
-		   @Override
-		   public Item getTabIconItem() {
-			   return Item.getItemFromBlock(ModBlocks.strawberryPlant);
-	  }
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem(){
+            return new ItemStack(Item.getItemFromBlock(ModBlocks.strawberryPlant));
+        }
 	};
 	public static final CreativeTabs CREATIVE_TAB_TOOLS = new CreativeTabs("tabFSModTools") {
-			   @Override
-			   public Item getTabIconItem() {
-				   return ModItems.foodKnife;
-		  }
+		   @SideOnly(Side.CLIENT)
+	        public ItemStack getTabIconItem(){
+	            return new ItemStack(ModItems.foodKnife);
+	        }
 		};
 	public static final CreativeTabs CREATIVE_TAB_BLOCKS = new CreativeTabs("tabFSModBlocks") {
-			   @Override
-			   public Item getTabIconItem() {
-				   return Item.getItemFromBlock(ModBlocks.sandstoneBrick);
-		  }
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem(){
+            return new ItemStack(Item.getItemFromBlock(ModBlocks.sandstoneBrick));
+        }
 		};
 	public static final CreativeTabs CREATIVE_TAB_ORE = new CreativeTabs("tabFSModOre") {
-			   @Override
-			   public Item getTabIconItem() {
-				   return Item.getItemFromBlock(ModBlocks.dirtFossil);
-		  }
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem(){
+            return new ItemStack(Item.getItemFromBlock(ModBlocks.dirtFossil));
+        }
 		};
 	public static final CreativeTabs CREATIVE_TAB_FURNITURE = new CreativeTabs("tabFSModFurniture") {
-			   @Override
-			   public Item getTabIconItem() {
-				   return Item.getItemFromBlock(ModBlocks.lantern);
-		  }
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem(){
+            return new ItemStack(Item.getItemFromBlock(ModBlocks.lantern));
+        }
 		};
 		
 		
@@ -118,7 +120,7 @@ public class FSMod {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
 		ModCrafting.register();
-		ModEntities.registerEntity();
+		//ModEntities.registerEntity();
 		EmpyreanDimension.mainRegistry();
 		ModBiomes.init();
 		proxy.registerRenders();	

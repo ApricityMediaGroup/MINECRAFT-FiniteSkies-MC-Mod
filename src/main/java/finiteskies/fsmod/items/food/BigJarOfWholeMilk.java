@@ -39,7 +39,9 @@ public class BigJarOfWholeMilk extends Item {
     {
         if (entityLiving instanceof EntityPlayer && !((EntityPlayer)entityLiving).capabilities.isCreativeMode)
         {
-            --stack.stackSize;
+        	//func was stackSize
+        	//remove 1?
+        	stack.func_190918_g(1);
         }
 
         if (!worldIn.isRemote)
@@ -51,7 +53,7 @@ public class BigJarOfWholeMilk extends Item {
         {
             ((EntityPlayer)entityLiving).addStat(StatList.getObjectUseStats(this));
         }
-        return stack.stackSize <= 0 ? new ItemStack(ModItems.glassJar) : stack;	
+        return stack.func_190926_b() ? new ItemStack(ModItems.bigGlassJar) : stack;
     }
    
     /**
