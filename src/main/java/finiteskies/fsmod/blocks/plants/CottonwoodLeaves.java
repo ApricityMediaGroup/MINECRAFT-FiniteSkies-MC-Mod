@@ -89,8 +89,7 @@ public class CottonwoodLeaves extends BlockLeaves
 	}
 
 	
-	@Override
-    protected ItemStack createStackedBlock(IBlockState state)
+	protected ItemStack createStackedBlock(IBlockState state)
     {
         return new ItemStack(Item.getItemFromBlock(this), 1);
     }

@@ -179,7 +179,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 		this.chunkZ = z;
 		this.rand.setSeed((long) x * 341873128712L + (long) z * 132897987541L);
 		ChunkPrimer chunkprimer = new ChunkPrimer();
-		this.biomesForGeneration = this.worldObj.getBiomeProvider().loadBlockGeneratorData(this.biomesForGeneration, x * 16, z * 16, 16, 16);
+		//this.biomesForGeneration = this.worldObj.getBiomeProvider().loadBlockGeneratorData(this.biomesForGeneration, x * 16, z * 16, 16, 16);
 		this.setBlocksInChunk(x, z, chunkprimer);
 		this.func_185962_a(chunkprimer);
 
@@ -197,7 +197,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 	private float func_185960_a(int p_185960_1_, int p_185960_2_, int p_185960_3_, int p_185960_4_) {
 		float f = (float) (p_185960_1_ * 2 + p_185960_3_);
 		float f1 = (float) (p_185960_2_ * 2 + p_185960_4_);
-		float f2 = 100.0F - MathHelper.sqrt_float(f * f + f1 * f1) * 8.0F;
+		float f2 = 100.0F - MathHelper.sqrt(f * f + f1 * f1) * 8.0F;
 
 		if (f2 > 80.0F) {
 			f2 = 80.0F;
@@ -216,7 +216,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 					float f3 = (MathHelper.abs((float) k) * 3439.0F + MathHelper.abs((float) l) * 147.0F) % 13.0F + 9.0F;
 					f = (float) (p_185960_3_ - i * 2);
 					f1 = (float) (p_185960_4_ - j * 2);
-					float f4 = 100.0F - MathHelper.sqrt_float(f * f + f1 * f1) * f3;
+					float f4 = 100.0F - MathHelper.sqrt(f * f + f1 * f1) * f3;
 
 					if (f4 > 80.0F) {
 						f4 = 80.0F;
@@ -290,7 +290,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 
 					if (j1 > p_185963_6_ / 2 - k1) {
 						double d6 = (double) ((float) (j1 - (p_185963_6_ / 2 - k1)) / 64.0F);
-						d6 = MathHelper.clamp_double(d6, 0.0D, 1.0D);
+						d6 = MathHelper.clamp(d6, 0.0D, 1.0D);
 						d2 = d2 * (1.0D - d6) + -3000.0D * d6;
 					}
 
@@ -315,7 +315,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.worldObj, x, z, false);
 		BlockPos blockpos = new BlockPos(x * 16, 0, z * 16);
 
-		this.worldObj.getBiomeGenForCoords(blockpos.add(16, 0, 16)).decorate(this.worldObj, this.worldObj.rand, blockpos);
+		//this.worldObj.getBiomeGenForCoords(blockpos.add(16, 0, 16)).decorate(this.worldObj, this.worldObj.rand, blockpos);
 		long i = (long) x * (long) x + (long) z * (long) z;
 
 		if (i > 4096L) {
@@ -345,7 +345,9 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 	}
 
 	public List<Biome.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos) {
-		return this.worldObj.getBiomeGenForCoords(pos).getSpawnableList(creatureType);
+		return null;
+		
+		//return this.worldObj.getBiomeGenForCoords(pos).getSpawnableList(creatureType);
 	}
 
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position) {

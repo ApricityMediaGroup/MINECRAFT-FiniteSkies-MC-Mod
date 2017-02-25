@@ -86,12 +86,12 @@ public class EmpyreanPortal extends BlockBreakable
 
             if (i > 0 && !worldIn.getBlockState(blockpos.up()).isNormalCube())
             {
-                Entity entity = ItemMonsterPlacer.spawnCreature(worldIn, EntityList.getEntityStringFromClass(EntityPigZombie.class), (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 1.1D, (double)blockpos.getZ() + 0.5D);
+                // WORKED IN 1.11 DOESNT WORK IN 1.11.2 //Entity entity = ItemMonsterPlacer.spawnCreature(worldIn, EntityList.getEntityStringFromClass(EntityPigZombie.class), (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 1.1D, (double)blockpos.getZ() + 0.5D);
 
-                if (entity != null)
-                {
-                    entity.timeUntilPortal = entity.getPortalCooldown();
-                }
+               //if (entity != null)
+               // {
+                //    entity.timeUntilPortal = entity.getPortalCooldown();
+                //}
             }
         }
     }
@@ -475,10 +475,10 @@ public class EmpyreanPortal extends BlockBreakable
                             break label24;
                         }
 
-                        if (block == ModBlocks.empyreanPortal)
-                        {
-                            ++this.portalBlockCount;
-                        }
+                       // if (block == ModBlocks.empyreanPortal)
+                       // {
+                        //    ++this.portalBlockCount;
+                       // }
 
                         if (i == 0)
                         {
@@ -526,7 +526,8 @@ public class EmpyreanPortal extends BlockBreakable
             @SuppressWarnings("deprecation")
 			protected boolean isEmptyBlock(Block blockIn)
             {
-                return blockIn.getMaterial(blockIn.getDefaultState()) == Material.AIR || blockIn == Blocks.FIRE || blockIn == ModBlocks.empyreanPortal;
+				return true;
+             //   return blockIn.getMaterial(blockIn.getDefaultState()) == Material.AIR || blockIn == Blocks.FIRE || blockIn == ModBlocks.empyreanPortal;
             }
 
             public boolean isValid()
@@ -542,7 +543,7 @@ public class EmpyreanPortal extends BlockBreakable
 
                     for (int j = 0; j < this.height; ++j)
                     {
-                        this.world.setBlockState(blockpos.up(j), ModBlocks.empyreanPortal.getDefaultState().withProperty(EmpyreanPortal.AXIS, this.axis), 2);
+                       // this.world.setBlockState(blockpos.up(j), ModBlocks.empyreanPortal.getDefaultState().withProperty(EmpyreanPortal.AXIS, this.axis), 2);
                     }
                 }
             }

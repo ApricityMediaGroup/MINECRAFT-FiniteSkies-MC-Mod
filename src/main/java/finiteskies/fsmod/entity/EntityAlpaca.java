@@ -79,7 +79,7 @@ public class EntityAlpaca extends EntityAnimal {
 	@Override
 	public EntityAgeable createChild(EntityAgeable ageable) {
 		
-		return new EntityAlpaca(this.worldObj);
+		return new EntityAlpaca(this.world);
 	}
 	@Override
     public float getEyeHeight()

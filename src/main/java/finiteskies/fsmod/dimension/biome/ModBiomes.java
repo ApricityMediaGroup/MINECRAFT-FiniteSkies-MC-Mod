@@ -36,7 +36,7 @@ public class ModBiomes {
 	}
 	
 	public static void registerBiome() {
-		BiomeDictionary.registerBiomeType(empyrean_biome, Type.END);
+		//BiomeDictionary.registerBiomeType(empyrean_biome, Type.END);
 		BiomeManager.addSpawnBiome(empyrean_biome);
 	}
 }

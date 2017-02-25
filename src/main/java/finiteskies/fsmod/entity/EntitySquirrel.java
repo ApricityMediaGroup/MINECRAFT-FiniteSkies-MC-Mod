@@ -44,7 +44,6 @@ public class EntitySquirrel extends EntityAnimal {
     {
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
-        this.tasks.addTask(2, new EntityAIAvoidEntity(this, EntityPlayer.class, 2.0F, 1.0D, 1.2D));
         this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(4, new EntityAITempt(this, 1.25D, ModItems.acorn, false));
         this.tasks.addTask(5, new EntityAIFollowParent(this, 1.25D));
@@ -87,7 +86,7 @@ public class EntitySquirrel extends EntityAnimal {
 	@Override
 	public EntityAgeable createChild(EntityAgeable ageable) {
 		
-		return new EntitySquirrel(this.worldObj);
+		return new EntitySquirrel(this.world);
 	}
 	@Override
     public float getEyeHeight()

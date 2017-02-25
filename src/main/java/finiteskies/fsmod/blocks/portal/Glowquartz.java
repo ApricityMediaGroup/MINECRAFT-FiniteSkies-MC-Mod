@@ -27,7 +27,7 @@ public class Glowquartz extends BlockGlowstone {
     @SuppressWarnings("deprecation")
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
-    	((EmpyreanPortal) ModBlocks.empyreanPortal).trySpawnPortal(worldIn, pos);
+    	//((EmpyreanPortal) ModBlocks.empyreanPortal).trySpawnPortal(worldIn, pos);
     }
 }
 

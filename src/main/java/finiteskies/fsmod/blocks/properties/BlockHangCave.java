@@ -60,7 +60,7 @@ public class BlockHangCave extends Block implements net.minecraftforge.common.IP
      */
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
     {
-        super.neighborChanged(state, worldIn, pos, blockIn);
+        super.neighborChanged(state, worldIn, pos, blockIn, pos);
         this.checkAndDropBlock(worldIn, pos, state);
     }
 

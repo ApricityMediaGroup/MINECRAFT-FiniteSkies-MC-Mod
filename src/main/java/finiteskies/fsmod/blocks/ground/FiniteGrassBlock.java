@@ -119,7 +119,7 @@ public class FiniteGrassBlock extends Block implements IGrowable
                     {
                         if (rand.nextInt(8) == 0)
                         {
-                            BlockFlower.EnumFlowerType blockflower$enumflowertype = worldIn.getBiomeGenForCoords(blockpos1).pickRandomFlower(rand, blockpos1);
+                            BlockFlower.EnumFlowerType blockflower$enumflowertype = worldIn.getBiomeForCoordsBody(blockpos1).pickRandomFlower(rand, blockpos1);
                             BlockFlower blockflower = blockflower$enumflowertype.getBlockType().getBlock();
                             IBlockState iblockstate = blockflower.getDefaultState().withProperty(blockflower.getTypeProperty(), blockflower$enumflowertype);
 

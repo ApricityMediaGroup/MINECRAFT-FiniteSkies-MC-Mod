@@ -18,7 +18,8 @@ public class WorldProviderEmpyrean extends WorldProvider
 	@Override
 	public IChunkGenerator createChunkGenerator()
 	{
-		return new EmpyreanChunkGenerator(this.worldObj, this.getDimension());
+		return null;
+		//return new EmpyreanChunkGenerator(this.worldObj, this.getDimension());
 	}
 
 	@Override
@@ -61,6 +62,7 @@ public class WorldProviderEmpyrean extends WorldProvider
 	{
 		return EmpyreanDimension.EMPYREAN_DIMENSION;
 	}
+	/*
 	@Override
 	public void createBiomeProvider() {
 		this.biomeProvider = new BiomeProviderSingle(ModBiomes.empyrean_biome);
@@ -87,7 +89,7 @@ public class WorldProviderEmpyrean extends WorldProvider
     /**
      * Gets the Sun Brightness for rendering sky.
      * */
-    @SideOnly(Side.CLIENT)
+	/*@SideOnly(Side.CLIENT)
     public float getSunBrightness(float par1)
     {
         return worldObj.getSunBrightnessBody(par1);
@@ -96,10 +98,10 @@ public class WorldProviderEmpyrean extends WorldProvider
     /**
      * Gets the Star Brightness for rendering sky.
      * */
-    @SideOnly(Side.CLIENT)
+	/*@SideOnly(Side.CLIENT)
     public float getStarBrightness(float par1)
     {
         return worldObj.getStarBrightnessBody(par1);
-    }
+    }*/
     
 }

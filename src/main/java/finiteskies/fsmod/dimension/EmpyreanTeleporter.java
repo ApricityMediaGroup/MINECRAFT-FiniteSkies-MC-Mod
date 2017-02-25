@@ -20,7 +20,12 @@ import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
 public class EmpyreanTeleporter extends Teleporter{
-	
+
+	public EmpyreanTeleporter(WorldServer worldIn) {
+		super(worldIn);
+		// TODO Auto-generated constructor stub
+	}
+	/*
 	private final WorldServer worldServerInstance;
     private final Random random;
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -452,5 +457,5 @@ public class EmpyreanTeleporter extends Teleporter{
             super(pos.getX(), pos.getY(), pos.getZ());
             this.lastUpdateTime = lastUpdate;
         }
-    }
+    }*/
 }
