@@ -74,7 +74,7 @@ public class Conveyor extends BlockHorizontal {
 	}
 
 	/**
-	 * Convert the BlockState into the correct metadata value
+	 * Convert the BlockState into the correct metadata value/
 	 */
 	public int getMetaFromState(IBlockState state) {
 		return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex();

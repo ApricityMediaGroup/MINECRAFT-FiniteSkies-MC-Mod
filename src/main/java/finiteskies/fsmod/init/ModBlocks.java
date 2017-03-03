@@ -47,8 +47,7 @@ public class ModBlocks {
 	public static Block dirtFossil;
 	public static Block stoneFossil;
 	public static Block saltOre;
-	public static Block groundMarble;
-	//public static Block empyreanPortal;
+	public static Block groundMarble; 
 	public static Block glowquartz;
 	public static Block stalactite;
 	public static Block firePit;
