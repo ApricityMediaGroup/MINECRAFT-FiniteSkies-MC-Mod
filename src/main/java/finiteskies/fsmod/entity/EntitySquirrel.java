@@ -27,7 +27,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 
 public class EntitySquirrel extends EntityAnimal {
-
+    private EntityAIAvoidEntity<EntityPlayer> avoidEntity;
+    
 	public EntitySquirrel(World worldIn) {
 		super(worldIn);		
 		/*		
@@ -42,15 +43,18 @@ public class EntitySquirrel extends EntityAnimal {
     @Override
 	protected void initEntityAI()
     {
-        this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
-        this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
-        this.tasks.addTask(4, new EntityAITempt(this, 1.25D, ModItems.acorn, false));
-        this.tasks.addTask(5, new EntityAIFollowParent(this, 1.25D));
-        this.tasks.addTask(6, new EntityAIWander(this, 1.0D));
-        this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-        this.tasks.addTask(8, new EntityAILookIdle(this));
-
+        this.tasks.addTask(1, new EntityAISwimming(this));
+        this.tasks.addTask(2, new EntityAIPanic(this, 2.0D));
+        this.avoidEntity = new EntityAIAvoidEntity<EntityPlayer>(this, EntityPlayer.class, 16.0F, 0.8D, 1.33D);
+        this.tasks.addTask(3, this.avoidEntity);
+        this.tasks.addTask(4, new EntityAIMate(this, 1.0D));
+        this.tasks.addTask(5, new EntityAITempt(this, 1.25D, ModItems.acorn, false));
+        this.tasks.addTask(6, new EntityAIFollowParent(this, 1.25D));
+        this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+        this.tasks.addTask(9, new EntityAILookIdle(this));
+        
+        
         
     }
 	public boolean isAIEnabled() {

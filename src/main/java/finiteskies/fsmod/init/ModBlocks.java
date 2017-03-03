@@ -1,7 +1,8 @@
 package finiteskies.fsmod.init;
 
 import java.util.Random;
-
+import finiteskies.fsmod.blocks.*;
+import finiteskies.fsmod.blocks.building.Conveyor;
 import finiteskies.fsmod.blocks.building.Cottonwood;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.building.SandstoneBrickStairs;
@@ -56,6 +57,7 @@ public class ModBlocks {
 	public static Block cottonwood;
 	public static Block stainedOakWoodPlanks;
 	public static Block slateStoneBrick;
+	public static Block conveyorBlock;
 
 	
 	public static void init() {
@@ -79,6 +81,7 @@ public class ModBlocks {
 		cottonwood = new Cottonwood();
 		stainedOakWoodPlanks = new StainedOakWoodPlanks();
 		slateStoneBrick = new SlateStoneBrick();
+		conveyorBlock = new Conveyor();
 
 	}
 	
@@ -103,6 +106,7 @@ public class ModBlocks {
         registerBlock(cottonwood);
         registerBlock(stainedOakWoodPlanks);
         registerBlock(slateStoneBrick);
+        registerBlock(conveyorBlock);
 
 	}
 
@@ -134,6 +138,7 @@ public class ModBlocks {
 		registerRender(cottonwood);
 		registerRender(stainedOakWoodPlanks);
 		registerRender(slateStoneBrick);
+		registerRender(conveyorBlock);
 
 	}
 
