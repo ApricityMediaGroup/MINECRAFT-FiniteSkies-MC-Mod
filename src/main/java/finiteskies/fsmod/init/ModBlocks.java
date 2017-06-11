@@ -3,10 +3,17 @@ package finiteskies.fsmod.init;
 import java.util.Random;
 
 import finiteskies.fsmod.blocks.building.Cottonwood;
+import finiteskies.fsmod.blocks.building.ForestBrick;
+import finiteskies.fsmod.blocks.building.Rubble;
+import finiteskies.fsmod.blocks.building.RubbleMossy;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
 import finiteskies.fsmod.blocks.building.SandstoneBrickStairs;
 import finiteskies.fsmod.blocks.building.SlateStoneBrick;
 import finiteskies.fsmod.blocks.building.StainedOakWoodPlanks;
+import finiteskies.fsmod.blocks.building.Tilebrick;
+import finiteskies.fsmod.blocks.building.TilebrickCarved;
+import finiteskies.fsmod.blocks.building.TilebrickCracked;
+import finiteskies.fsmod.blocks.building.TilebrickMossy;
 import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
@@ -55,6 +62,13 @@ public class ModBlocks {
 	public static Block cottonwood;
 	public static Block stainedOakWoodPlanks;
 	public static Block slateStoneBrick;
+	public static Block forestBrick;
+	public static Block rubble;
+	public static Block rubbleMossy;
+	public static Block tilebrick;
+	public static Block tilebrickMossy;
+	public static Block tilebrickCracked;
+	public static Block tilebrickCarved;
 
 	
 	public static void init() {
@@ -78,6 +92,13 @@ public class ModBlocks {
 		cottonwood = new Cottonwood();
 		stainedOakWoodPlanks = new StainedOakWoodPlanks();
 		slateStoneBrick = new SlateStoneBrick();
+		forestBrick = new ForestBrick();
+		rubble = new Rubble();
+		rubbleMossy = new RubbleMossy();
+		tilebrick = new Tilebrick();
+		tilebrickMossy = new TilebrickMossy();
+		tilebrickCracked = new TilebrickCracked();
+		tilebrickCarved = new TilebrickCarved();
 
 	}
 	
@@ -102,6 +123,13 @@ public class ModBlocks {
         registerBlock(cottonwood);
         registerBlock(stainedOakWoodPlanks);
         registerBlock(slateStoneBrick);
+        registerBlock(forestBrick);
+        registerBlock(rubble);
+        registerBlock(rubbleMossy);
+        registerBlock(tilebrick);
+        registerBlock(tilebrickMossy);
+        registerBlock(tilebrickCracked);
+        registerBlock(tilebrickCarved);
 
 	}
 
@@ -133,6 +161,13 @@ public class ModBlocks {
 		registerRender(cottonwood);
 		registerRender(stainedOakWoodPlanks);
 		registerRender(slateStoneBrick);
+		registerRender(forestBrick);
+		registerRender(rubble);
+		registerRender(rubbleMossy);
+		registerRender(tilebrick);
+		registerRender(tilebrickMossy);
+		registerRender(tilebrickCracked);
+		registerRender(tilebrickCarved);
 
 	}
 

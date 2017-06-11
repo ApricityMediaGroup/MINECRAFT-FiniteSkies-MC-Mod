@@ -47,8 +47,7 @@ public class Reference {
 		SALTLUMP("saltLump","salt_lump"),
 		BACON("bacon", "bacon"),
 		RAWBACON("rawBacon", "raw_bacon"),
-		ACORN("acorn","acorn"),
-		SANDSTONEDOORITEM("sandstoneDoorItem", "sandstone_door_item");		
+		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
 
@@ -96,6 +95,13 @@ public class Reference {
 		STAINEDOAKWOODPLANKS("stainedOakWoodPlanks","stained_oak_wood_planks"),
 		SANDSTONEDOORBLOCK("sandstoneDoorBlock","sandstone_door_block"),
 		CONVEYORBLOCK("sandstoneDoorBlock","sandstone_door_block"),
+		FORESTBRICK("forestBrick","forest_brick"),
+		RUBBLE("rubble","rubble"),
+		RUBBLEMOSSY("rubbleMossy","rubble_mossy"),
+		TILEBRICK("tilebrick","tilebrick"),
+		TILEBRICKMOSSY("tilebrickMossy","tilebrick_mossy"),
+		TILEBRICKCRACKED("tilebrickCracked","tilebrick_cracked"),
+		TILEBRICKCARVED("tilebrickCarved","tilebrick_carved"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 
