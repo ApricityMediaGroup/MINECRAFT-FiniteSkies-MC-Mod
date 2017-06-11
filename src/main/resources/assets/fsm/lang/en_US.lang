@@ -50,7 +50,6 @@ tile.firePit.name=Fire Pit
 tile.finiteGrassBlock.name=Finite Grass Block
 tile.cottonwoodLeaves.name=Cottonwood Leaves
 tile.stainedOakWoodPlanks.name=Stained Oak Wood Planks
-tile.conveyorBlock.name=Conveyor Block
 
 //GROUND\\
 tile.groundMarble.name=Ground Marble

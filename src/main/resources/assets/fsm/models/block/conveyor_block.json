@@ -1,8 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "fsm:blocks/conveyor_block",
-        "front": "fsm:blocks/conveyor_block",
-        "side": "fsm:blocks/conveyor_block"
-    }
-}
