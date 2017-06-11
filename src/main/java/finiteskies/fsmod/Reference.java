@@ -5,14 +5,8 @@ import finiteskies.fsmod.items.food.Butter;
 public class Reference {
 	public static final String MOD_ID = "fsm";
 	public static final String NAME = "FiniteSkies Mod";
-<<<<<<< Upstream, based on branch 'master' of https://github.com/dasreyh/FiniteSkies.git
 	public static final String VERSION = "1.1";
 	public static final String ACCEPTED_VERSIONS = "[1.11.2]";
-=======
-	public static final String VERSION = "1.0";
-	public static final String ACCEPTED_VERSIONS = "[1.11]";
->>>>>>> 1c85708 asd
-	
 	public static final String CLIENT_PROXY_CLASS = "finiteskies.fsmod.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "finiteskies.fsmod.proxy.CommonProxy";
 	public static final String RESOURCE_PREFIX = Reference.MOD_ID + ":";
