@@ -25,7 +25,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeForest.Type;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
@@ -119,7 +119,7 @@ public class FSMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
-		ModCrafting.register();
+		//ModCrafting.register();
 		ModEntities.registerEntity();
 		//EmpyreanDimension.mainRegistry();
 		//ModBiomes.init();

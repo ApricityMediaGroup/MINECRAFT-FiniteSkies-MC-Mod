@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorSimplex;
 import net.minecraft.world.gen.feature.WorldGenEndIsland;
@@ -312,7 +312,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 
 	public void populate(int x, int z) {
 		BlockFalling.fallInstantly = true;
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.worldObj, x, z, false);
+		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(true, this, this.worldObj, rand, x, z, false);
 		BlockPos blockpos = new BlockPos(x * 16, 0, z * 16);
 
 		//this.worldObj.getBiomeGenForCoords(blockpos.add(16, 0, 16)).decorate(this.worldObj, this.worldObj.rand, blockpos);
@@ -336,7 +336,7 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 		int var4 = x * 16;
 		int var5 = z * 16;
 
-		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(false, this, this.worldObj, x, z, false);
+		net.minecraftforge.event.ForgeEventFactory.onChunkPopulate(false, this, this.worldObj, rand, x, z, false);
 		BlockFalling.fallInstantly = false;
 	}
 
@@ -361,5 +361,11 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean func_193414_a(World p_193414_1_, String p_193414_2_, BlockPos p_193414_3_) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

@@ -5,8 +5,8 @@ import java.util.Random;
 import finiteskies.fsmod.init.ModBlocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -32,6 +32,7 @@ public class OreGen implements IWorldGenerator {
 	}
 
 	@Override
+	@Deprecated
 	public void generate(Random random, int chunckX, int chunckZ, World world, IChunkGenerator chunkGenerator,
 			IChunkProvider chunkProvider) {
 		switch (world.provider.getDimension()) {
@@ -71,6 +72,13 @@ public class OreGen implements IWorldGenerator {
 			int z = chunckZ * 16 + random.nextInt(16);
 			generator.generate(world, random, new BlockPos(x, y, z));
 		}
+	}
+
+	@Override
+	public void generate(Random random, int chunkX, int chunkZ, World world,
+			net.minecraft.world.gen.IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

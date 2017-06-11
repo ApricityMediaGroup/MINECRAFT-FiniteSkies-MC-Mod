@@ -4,7 +4,6 @@ import java.util.Random;
 
 import finiteskies.fsmod.blocks.building.Cottonwood;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
-import finiteskies.fsmod.blocks.building.SandstoneDoor;
 import finiteskies.fsmod.blocks.building.SandstoneBrickStairs;
 import finiteskies.fsmod.blocks.building.SlateStoneBrick;
 import finiteskies.fsmod.blocks.building.StainedOakWoodPlanks;
@@ -30,7 +29,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkGenerator;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -56,7 +55,6 @@ public class ModBlocks {
 	public static Block cottonwood;
 	public static Block stainedOakWoodPlanks;
 	public static Block slateStoneBrick;
-	public static Block SandstoneDoor;
 
 	
 	public static void init() {
@@ -80,7 +78,6 @@ public class ModBlocks {
 		cottonwood = new Cottonwood();
 		stainedOakWoodPlanks = new StainedOakWoodPlanks();
 		slateStoneBrick = new SlateStoneBrick();
-		//sandstoneDoor = new SandstoneDoor();
 
 	}
 	

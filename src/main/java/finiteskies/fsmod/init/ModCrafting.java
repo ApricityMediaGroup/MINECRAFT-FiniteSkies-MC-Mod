@@ -7,12 +7,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModCrafting {
-	
+
 	public static void register() {
 		//crafting handler
 
 		
 		//cutting bread to slices
+		
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.breadSlice, 3), new Object[]{
 				Items.BREAD, ModItems.foodKnife
 		});

@@ -95,6 +95,7 @@ public class Reference {
 		COTTONWOODLEAVES("cottonwoodLeaves","cottonwood_leaves"),
 		STAINEDOAKWOODPLANKS("stainedOakWoodPlanks","stained_oak_wood_planks"),
 		SANDSTONEDOORBLOCK("sandstoneDoorBlock","sandstone_door_block"),
+		CONVEYORBLOCK("sandstoneDoorBlock","sandstone_door_block"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 
