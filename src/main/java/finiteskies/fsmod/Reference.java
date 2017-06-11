@@ -47,6 +47,7 @@ public class Reference {
 		SALTLUMP("saltLump","salt_lump"),
 		BACON("bacon", "bacon"),
 		RAWBACON("rawBacon", "raw_bacon"),
+		CORRUPTSWORD("corruptSword","corrupt_sword"),
 		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
