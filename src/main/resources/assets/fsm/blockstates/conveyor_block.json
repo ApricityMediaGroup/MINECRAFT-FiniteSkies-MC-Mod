@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "fsm:conveyor_block" },
+        "facing=north": { "model": "fsm:conveyor_block", "y": 180 },
+        "facing=east":  { "model": "fsm:conveyor_block", "y": 270 },
+        "facing=west":  { "model": "fsm:conveyor_block", "y": 90 }
+    }
+}

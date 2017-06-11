@@ -74,11 +74,5 @@ public class OreGen implements IWorldGenerator {
 		}
 	}
 
-	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world,
-			net.minecraft.world.gen.IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
