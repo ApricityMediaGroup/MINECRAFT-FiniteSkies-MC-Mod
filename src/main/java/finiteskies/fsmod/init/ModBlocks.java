@@ -15,7 +15,6 @@ import finiteskies.fsmod.blocks.building.TilebrickCarved;
 import finiteskies.fsmod.blocks.building.TilebrickCracked;
 import finiteskies.fsmod.blocks.building.TilebrickMossy;
 import finiteskies.fsmod.blocks.cave.Stalactite;
-import finiteskies.fsmod.blocks.crops.StrawberryCrop;
 import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Firepit;
@@ -48,7 +47,6 @@ public class ModBlocks {
 	public static Block lantern;
 	public static Block cokingCoalOre;
 	public static Block blueberryPlant;
-	public static Block strawberryCrop;
 	public static Block flowerPot;
 	public static Block dirtFossil;
 	public static Block stoneFossil;
@@ -77,7 +75,6 @@ public class ModBlocks {
 		lantern = new Lantern();
 		cokingCoalOre = new CokingCoalOre();
 		blueberryPlant = new BlueberryPlant();
-		strawberryCrop = new StrawberryCrop();
 		flowerPot = new FlowerPot();
 		dirtFossil = new DirtFossil();
 		stoneFossil = new StoneFossil();
@@ -108,7 +105,6 @@ public class ModBlocks {
 		registerBlock(lantern);
 		registerBlock(cokingCoalOre);
         registerBlock(blueberryPlant);
-        registerBlock(strawberryCrop);
         registerBlock(flowerPot);
         registerBlock(dirtFossil);
         registerBlock(stoneFossil);
@@ -146,7 +142,6 @@ public class ModBlocks {
 		registerRender(lantern);
 		registerRender(cokingCoalOre);
 		registerRender(blueberryPlant);
-		registerRender(strawberryCrop);
 		registerRender(flowerPot);
 		registerRender(dirtFossil);
 		registerRender(stoneFossil);

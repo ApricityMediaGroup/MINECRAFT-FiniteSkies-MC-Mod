@@ -36,6 +36,7 @@ import finiteskies.fsmod.items.ore.CokingCoal;
 import finiteskies.fsmod.items.ore.SaltLump;
 import finiteskies.fsmod.items.tools.*;
 import finiteskies.fsmod.items.weapons.CorruptSword;
+import finiteskies.fsmod.items.weapons.Musket;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -86,6 +87,8 @@ public class ModItems {
 	public static Item bowl;
     //tools
 	public static Item foodKnife;
+	//weapons
+	public static Item musket;
 	public static Item corruptSword;
 	//ore & ingots
 	public static Item carbonSteelIngot;
@@ -128,6 +131,7 @@ public class ModItems {
 		rawBacon = new RawBacon();
 		acorn = new Acorn();
 		corruptSword = new CorruptSword();
+		musket = new Musket(10, 2F);
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -165,6 +169,7 @@ public class ModItems {
 		GameRegistry.register(rawBacon);
 		GameRegistry.register(acorn);
 		GameRegistry.register(corruptSword);
+		GameRegistry.register(musket);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -202,6 +207,7 @@ public class ModItems {
 		registerRender(rawBacon);
 		registerRender(acorn);
 		registerRender(corruptSword);
+		registerRender(musket); 
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

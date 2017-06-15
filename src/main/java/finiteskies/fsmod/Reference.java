@@ -48,6 +48,7 @@ public class Reference {
 		BACON("bacon", "bacon"),
 		RAWBACON("rawBacon", "raw_bacon"),
 		CORRUPTSWORD("corruptSword","corrupt_sword"),
+		MUSKET("musket","musket"),
 		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
@@ -79,7 +80,6 @@ public class Reference {
 		LANTERN("lantern","lantern"),
 		COKINGCOALORE("cokingCoalOre","coking_coal_ore"),
 		BLUEBERRYPLANT("blueberryPlant","blueberry_plant"),
-		STRAWBERRYCROP("strawberryCrop","strawberry_crop"),
 		FLOWERPOT("flowerPot","flower_pot"),
 		DIRTFOSSIL("dirtFossil","dirt_fossil"),
 		STONEFOSSIL("stoneFossil","stone_fossil"),
