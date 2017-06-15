@@ -1,23 +1,30 @@
 package finiteskies.fsmod.proxy;
 
 import finiteskies.fsmod.entity.EntityFish;
+import finiteskies.fsmod.entity.EntityMusketBullet;
 import finiteskies.fsmod.entity.EntityAlpaca;
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
-import finiteskies.fsmod.items.weapons.EntityMusketBullet;
 import finiteskies.fsmod.model.ModelEntityFish;
 import finiteskies.fsmod.model.ModelEntityMusketBullet;
 import finiteskies.fsmod.model.ModelEntityAlpaca;
 import finiteskies.fsmod.model.ModelEntitySquirrel;
 import finiteskies.fsmod.render.RenderEntityFish;
 import finiteskies.fsmod.render.RenderEntityMusketBullet;
+import finiteskies.fsmod.render.EntityMusketBulletRenderFactory;
 import finiteskies.fsmod.render.RenderEntityAlpaca;
 import finiteskies.fsmod.render.RenderEntitySquirrel;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.RenderItem;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderArrow;
+import net.minecraft.client.renderer.entity.RenderLeashKnot;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -28,7 +35,7 @@ public class ClientProxy extends CommonProxy
 	public static boolean rendering = false;
 	public static Entity renderEntity = null;
 	public static Entity backupEntity = null;
-
+	public static RenderItem renderItem;
 	@Override
 	public void registerRenders()
 	{		
@@ -66,11 +73,12 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void registerRenderers() {
 		RenderManager rm = Minecraft.getMinecraft().getRenderManager();
+		RenderItem ri = Minecraft.getMinecraft().getRenderItem();
+		
 		RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(rm, new ModelEntitySquirrel(), 0.1F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFish.class, new RenderEntityFish(rm, new ModelEntityFish(), 0.0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityAlpaca.class, new RenderEntityAlpaca(rm, new ModelEntityAlpaca(), 0.4F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityMusketBullet.class, new RenderEntityMusketBullet(rm, new ModelEntityMusketBullet(), 0.4F));
-
+		RenderingRegistry.registerEntityRenderingHandler(EntityMusketBullet.class, new RenderEntityMusketBullet(rm));
 	}
 	@SubscribeEvent
 	public void onPrePlayerRender(RenderPlayerEvent.Pre event)

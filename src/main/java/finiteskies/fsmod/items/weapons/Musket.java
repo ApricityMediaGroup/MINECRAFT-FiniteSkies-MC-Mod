@@ -2,6 +2,7 @@ package finiteskies.fsmod.items.weapons;
 
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
+import finiteskies.fsmod.entity.EntityMusketBullet;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,7 +28,7 @@ public class Musket extends Item{
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn){
 		if(!worldIn.isRemote){
 			playerIn.sendMessage(new TextComponentString("Fire!"));
-			EntityMusketBullet bullet = new EntityMusketBullet(worldIn, playerIn, spread);
+			EntityMusketBullet bullet = new EntityMusketBullet(worldIn, playerIn/*, spread*/);
 			worldIn.spawnEntity(bullet);
 		}
 		return super.onItemRightClick(worldIn, playerIn, handIn);

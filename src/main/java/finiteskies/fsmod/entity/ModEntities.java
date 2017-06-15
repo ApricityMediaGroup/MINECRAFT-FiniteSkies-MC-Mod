@@ -5,7 +5,6 @@ import java.util.BitSet;
 import finiteskies.fsmod.FSMod;
 import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.entity.EntitySquirrel;
-import finiteskies.fsmod.items.weapons.EntityMusketBullet;
 import finiteskies.fsmod.entity.EntityFish;
 import net.minecraft.entity.EntityList;
 import net.minecraft.util.ResourceLocation;
