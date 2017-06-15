@@ -49,6 +49,7 @@ public class Reference {
 		RAWBACON("rawBacon", "raw_bacon"),
 		CORRUPTSWORD("corruptSword","corrupt_sword"),
 		MUSKET("musket","musket"),
+		COFFEEBEANS("coffeeBeans","coffee_beans"),
 		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
@@ -104,6 +105,7 @@ public class Reference {
 		TILEBRICKCRACKED("tilebrickCracked","tilebrick_cracked"),
 		TILEBRICKCARVED("tilebrickCarved","tilebrick_carved"),
 		TILEBRICKSTAIRS("tilebrickStairs","tilebrick_stairs"),
+		BEEHIVE("beehive","beehive"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 

@@ -19,6 +19,7 @@ import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Firepit;
 import finiteskies.fsmod.blocks.lights.Lantern;
+import finiteskies.fsmod.blocks.nature.Beehive;
 import finiteskies.fsmod.blocks.ore.CokingCoalOre;
 import finiteskies.fsmod.blocks.ore.DirtFossil;
 import finiteskies.fsmod.blocks.ore.SaltOre;
@@ -69,6 +70,7 @@ public class ModBlocks {
 	public static Block tilebrickCracked;
 	public static Block tilebrickCarved;
 	public static Block tilebrickStairs;
+	public static Block beehive;
 
 	
 	public static void init() {
@@ -99,6 +101,7 @@ public class ModBlocks {
 		tilebrickCracked = new TilebrickCracked();
 		tilebrickCarved = new TilebrickCarved();
 		tilebrickStairs = new TilebrickStairs();
+		beehive = new Beehive();
 
 	}
 	
@@ -130,6 +133,7 @@ public class ModBlocks {
         registerBlock(tilebrickCracked);
         registerBlock(tilebrickCarved);
         registerBlock(tilebrickStairs);
+        registerBlock(beehive);
 
 	}
 
@@ -168,6 +172,7 @@ public class ModBlocks {
 		registerRender(tilebrickCracked);
 		registerRender(tilebrickCarved);
 		registerRender(tilebrickStairs);
+		registerRender(beehive);
 
 	}
 

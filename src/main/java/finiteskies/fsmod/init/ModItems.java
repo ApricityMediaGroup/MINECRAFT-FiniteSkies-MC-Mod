@@ -13,6 +13,7 @@ import finiteskies.fsmod.items.food.BreadSlice;
 import finiteskies.fsmod.items.food.Butter;
 import finiteskies.fsmod.items.food.Chocolate;
 import finiteskies.fsmod.items.food.CocoaButter;
+import finiteskies.fsmod.items.food.CoffeeBeans;
 import finiteskies.fsmod.items.food.HeavyCream;
 import finiteskies.fsmod.items.food.JarOfWholeMilk;
 import finiteskies.fsmod.items.food.Pineapple;
@@ -72,6 +73,7 @@ public class ModItems {
 	public static Item pineappleSlice;
 	public static Item bacon;
 	public static Item rawBacon;
+	public static Item coffeeBeans;
 	//building
 
 	//plants
@@ -132,6 +134,7 @@ public class ModItems {
 		acorn = new Acorn();
 		corruptSword = new CorruptSword();
 		musket = new Musket(10, 2F);
+		coffeeBeans = new CoffeeBeans();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -170,6 +173,7 @@ public class ModItems {
 		GameRegistry.register(acorn);
 		GameRegistry.register(corruptSword);
 		GameRegistry.register(musket);
+		GameRegistry.register(coffeeBeans);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -208,6 +212,7 @@ public class ModItems {
 		registerRender(acorn);
 		registerRender(corruptSword);
 		registerRender(musket); 
+		registerRender(coffeeBeans);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {
