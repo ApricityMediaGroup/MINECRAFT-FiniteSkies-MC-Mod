@@ -103,6 +103,7 @@ public class Reference {
 		TILEBRICKMOSSY("tilebrickMossy","tilebrick_mossy"),
 		TILEBRICKCRACKED("tilebrickCracked","tilebrick_cracked"),
 		TILEBRICKCARVED("tilebrickCarved","tilebrick_carved"),
+		TILEBRICKSTAIRS("tilebrickStairs","tilebrick_stairs"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 

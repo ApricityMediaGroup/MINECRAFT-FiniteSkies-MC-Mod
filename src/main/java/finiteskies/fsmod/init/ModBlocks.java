@@ -29,6 +29,7 @@ import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
 import finiteskies.fsmod.blocks.portal.EmpyreanPortal;
 import finiteskies.fsmod.blocks.portal.Glowquartz;
+import finiteskies.fsmod.blocks.stairs.TilebrickStairs;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -67,6 +68,7 @@ public class ModBlocks {
 	public static Block tilebrickMossy;
 	public static Block tilebrickCracked;
 	public static Block tilebrickCarved;
+	public static Block tilebrickStairs;
 
 	
 	public static void init() {
@@ -96,6 +98,7 @@ public class ModBlocks {
 		tilebrickMossy = new TilebrickMossy();
 		tilebrickCracked = new TilebrickCracked();
 		tilebrickCarved = new TilebrickCarved();
+		tilebrickStairs = new TilebrickStairs();
 
 	}
 	
@@ -126,6 +129,7 @@ public class ModBlocks {
         registerBlock(tilebrickMossy);
         registerBlock(tilebrickCracked);
         registerBlock(tilebrickCarved);
+        registerBlock(tilebrickStairs);
 
 	}
 
@@ -163,6 +167,7 @@ public class ModBlocks {
 		registerRender(tilebrickMossy);
 		registerRender(tilebrickCracked);
 		registerRender(tilebrickCarved);
+		registerRender(tilebrickStairs);
 
 	}
 
