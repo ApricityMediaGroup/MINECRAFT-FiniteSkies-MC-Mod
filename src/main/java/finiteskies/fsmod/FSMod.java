@@ -41,6 +41,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -101,7 +103,8 @@ public class FSMod {
         }
 		};
 		
-		
+	//PlayerLightSource playerLightSource = new PlayerLightSource();
+	//DynamicLights dynamicLights = new DynamicLights();
 		
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -112,6 +115,8 @@ public class FSMod {
 		ModBlocks.register();
 		ModSoundEvents.registerSounds();
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
+		//playerLightSource.preInit(event);
+		//dynamicLights.preInit(event);
 		proxy.preInit();
 
 	}
@@ -135,5 +140,24 @@ public class FSMod {
 		EntityRegistry.addSpawn(EntitySquirrel.class, 10, 3, 10, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.FOREST_HILLS, 
 		Biomes.ROOFED_FOREST, Biomes.TAIGA, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS);
 	}
+	
+    @EventHandler
+    public void load(FMLInitializationEvent event)
+    {
+    	//playerLightSource.load(event);
+    	//dynamicLights.load(event);
+    }
 
+    @EventHandler
+    public void modsLoaded(FMLPostInitializationEvent event)
+    {
+    	//playerLightSource.modsLoaded(event);
+    }
+    
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent tick)
+    {
+    	//playerLightSource.onTick(tick);
+    	//dynamicLights.onTick(tick);
+    }
 }
