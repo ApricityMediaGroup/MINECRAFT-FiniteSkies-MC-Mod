@@ -50,6 +50,18 @@ public class Reference {
 		CORRUPTSWORD("corruptSword","corrupt_sword"),
 		MUSKET("musket","musket"),
 		COFFEEBEANS("coffeeBeans","coffee_beans"),
+		ANISESEEDS("aniseSeeds","anise_seeds"),
+		CHILIPEPPER("chiliPepper","chili_pepper"),
+		GARLIC("garlic","garlic"),
+		GROUNDPEPPER("groundPepper","ground_pepper"),
+		GROUNDSALT("groundSalt","ground_salt"),
+		MINCEDGARLIC("mincedGarlic","minced_garlic"),
+		PAPRIKA("paprika","paprika"),
+		PEPPERCORN("pepperCorn","pepper_corn"),
+		PIGINTESTINES("pigIntestines","pig_intestines"),
+		BANANA("banana","banana"),
+		BANANABUNDLE("bananaBundle","banana_bundle"),
+		BANANASLICES("bananaSlices","banana_slices"),
 		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
@@ -106,9 +118,13 @@ public class Reference {
 		TILEBRICKCARVED("tilebrickCarved","tilebrick_carved"),
 		TILEBRICKSTAIRS("tilebrickStairs","tilebrick_stairs"),
 		BEEHIVE("beehive","beehive"),
+		RUBBLEPATH("rubblePath","rubble_path"),
+		BRICKPATH("brickPath","brick_path"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
 		//Ends with semicolon continues with commas		
 
+		//CARPENTER BEES!!!! D:
+		
 		private String unlocalizedName;
 		private String registryName;
 		
