@@ -8,6 +8,9 @@ import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
 import finiteskies.fsmod.items.food.AniseSeeds;
 import finiteskies.fsmod.items.food.Bacon;
+import finiteskies.fsmod.items.food.Banana;
+import finiteskies.fsmod.items.food.BananaBundle;
+import finiteskies.fsmod.items.food.BananaSlices;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
 import finiteskies.fsmod.items.food.BreadSlice;
@@ -92,6 +95,9 @@ public class ModItems {
 	public static Item paprika;
 	public static Item pepperCorn;
 	public static Item pigIntestines;
+	public static Item banana;
+	public static Item bananaBundle;
+	public static Item bananaSlices;
 	//building
 	
 	//plants
@@ -162,6 +168,9 @@ public class ModItems {
 		paprika = new Paprika();
 		pepperCorn = new PepperCorn();
 		pigIntestines = new PigIntestines();
+		banana = new Banana();
+		bananaBundle = new BananaBundle();
+		bananaSlices = new BananaSlices();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -210,6 +219,9 @@ public class ModItems {
 		GameRegistry.register(paprika);
 		GameRegistry.register(pepperCorn);
 		GameRegistry.register(pigIntestines);
+		GameRegistry.register(banana);
+		GameRegistry.register(bananaBundle);
+		GameRegistry.register(bananaSlices);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -258,6 +270,9 @@ public class ModItems {
 		registerRender(paprika);
 		registerRender(pepperCorn);
 		registerRender(pigIntestines);
+		registerRender(banana);
+		registerRender(bananaBundle);
+		registerRender(bananaSlices);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {

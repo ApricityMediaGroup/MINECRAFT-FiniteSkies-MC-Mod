@@ -59,6 +59,9 @@ public class Reference {
 		PAPRIKA("paprika","paprika"),
 		PEPPERCORN("pepperCorn","pepper_corn"),
 		PIGINTESTINES("pigIntestines","pig_intestines"),
+		BANANA("banana","banana"),
+		BANANABUNDLE("bananaBundle","banana_bundle"),
+		BANANASLICES("bananaSlices","banana_slices"),
 		ACORN("acorn","acorn");	
 
 		//Ends with semicolon continues with commas		
