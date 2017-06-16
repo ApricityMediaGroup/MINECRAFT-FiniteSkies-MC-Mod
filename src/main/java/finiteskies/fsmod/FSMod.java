@@ -1,39 +1,20 @@
 package finiteskies.fsmod;
 
-import finiteskies.fsmod.dimension.EmpyreanDimension;
-import finiteskies.fsmod.dimension.biome.ModBiomes;
 
-import java.util.Random;
 
 import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.entity.ModEntities;
 import finiteskies.fsmod.init.ModBlocks;
-import finiteskies.fsmod.init.ModCrafting;
 import finiteskies.fsmod.init.ModFuelHandler;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.proxy.CommonProxy;
-import finiteskies.fsmod.worldgen.CaveGen;
 import finiteskies.fsmod.worldgen.OreGen;
-import finiteskies.fsmod.worldgen.PlantGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeForest.Type;
-import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.init.Biomes;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
