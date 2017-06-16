@@ -6,16 +6,25 @@ import finiteskies.fsmod.items.crops.Acorn;
 import finiteskies.fsmod.items.crops.BlueberrySeeds;
 import finiteskies.fsmod.items.crops.StrawberrySeeds;
 import finiteskies.fsmod.items.food.Alcohol;
+import finiteskies.fsmod.items.food.AniseSeeds;
 import finiteskies.fsmod.items.food.Bacon;
 import finiteskies.fsmod.items.food.BigJarOfWholeMilk;
 import finiteskies.fsmod.items.food.Blueberry;
 import finiteskies.fsmod.items.food.BreadSlice;
 import finiteskies.fsmod.items.food.Butter;
+import finiteskies.fsmod.items.food.ChiliPepper;
 import finiteskies.fsmod.items.food.Chocolate;
 import finiteskies.fsmod.items.food.CocoaButter;
 import finiteskies.fsmod.items.food.CoffeeBeans;
+import finiteskies.fsmod.items.food.Garlic;
+import finiteskies.fsmod.items.food.GroundPepper;
+import finiteskies.fsmod.items.food.GroundSalt;
 import finiteskies.fsmod.items.food.HeavyCream;
 import finiteskies.fsmod.items.food.JarOfWholeMilk;
+import finiteskies.fsmod.items.food.MincedGarlic;
+import finiteskies.fsmod.items.food.Paprika;
+import finiteskies.fsmod.items.food.PepperCorn;
+import finiteskies.fsmod.items.food.PigIntestines;
 import finiteskies.fsmod.items.food.Pineapple;
 import finiteskies.fsmod.items.food.PineappleSlice;
 import finiteskies.fsmod.items.food.RawBacon;
@@ -74,8 +83,17 @@ public class ModItems {
 	public static Item bacon;
 	public static Item rawBacon;
 	public static Item coffeeBeans;
+	public static Item aniseSeeds;
+	public static Item chiliPepper;
+	public static Item garlic;
+	public static Item groundPepper;
+	public static Item groundSalt;
+	public static Item mincedGarlic;
+	public static Item paprika;
+	public static Item pepperCorn;
+	public static Item pigIntestines;
 	//building
-
+	
 	//plants
 	public static Item strawberrySeeds;
 	public static Item blueberrySeeds;
@@ -135,6 +153,15 @@ public class ModItems {
 		corruptSword = new CorruptSword();
 		musket = new Musket(10, 2F);
 		coffeeBeans = new CoffeeBeans();
+		aniseSeeds = new AniseSeeds();
+		chiliPepper = new ChiliPepper();
+		garlic = new Garlic();
+		groundPepper = new GroundPepper();
+		groundSalt = new GroundSalt();
+		mincedGarlic = new MincedGarlic();
+		paprika = new Paprika();
+		pepperCorn = new PepperCorn();
+		pigIntestines = new PigIntestines();
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
@@ -174,6 +201,15 @@ public class ModItems {
 		GameRegistry.register(corruptSword);
 		GameRegistry.register(musket);
 		GameRegistry.register(coffeeBeans);
+		GameRegistry.register(aniseSeeds);
+		GameRegistry.register(chiliPepper);
+		GameRegistry.register(garlic);
+		GameRegistry.register(groundPepper);
+		GameRegistry.register(groundSalt);
+		GameRegistry.register(mincedGarlic);
+		GameRegistry.register(paprika);
+		GameRegistry.register(pepperCorn);
+		GameRegistry.register(pigIntestines);
 	}
 	//FOUR ---------------------------------------------------------
 	public static void registerRenders() {
@@ -213,6 +249,15 @@ public class ModItems {
 		registerRender(corruptSword);
 		registerRender(musket); 
 		registerRender(coffeeBeans);
+		registerRender(aniseSeeds);
+		registerRender(chiliPepper);
+		registerRender(garlic);
+		registerRender(groundPepper);
+		registerRender(groundSalt);
+		registerRender(mincedGarlic);
+		registerRender(paprika);
+		registerRender(pepperCorn);
+		registerRender(pigIntestines);
 	}
 	//DONE --- STOP
 	private static void registerRender(Item item) {
