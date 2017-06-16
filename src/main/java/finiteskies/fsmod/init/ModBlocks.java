@@ -15,6 +15,8 @@ import finiteskies.fsmod.blocks.building.TilebrickCarved;
 import finiteskies.fsmod.blocks.building.TilebrickCracked;
 import finiteskies.fsmod.blocks.building.TilebrickMossy;
 import finiteskies.fsmod.blocks.cave.Stalactite;
+import finiteskies.fsmod.blocks.decoration.BrickPath;
+import finiteskies.fsmod.blocks.decoration.RubblePath;
 import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Firepit;
@@ -71,6 +73,8 @@ public class ModBlocks {
 	public static Block tilebrickCarved;
 	public static Block tilebrickStairs;
 	public static Block beehive;
+	public static Block rubblePath;
+	public static Block brickPath;
 
 	
 	public static void init() {
@@ -102,6 +106,8 @@ public class ModBlocks {
 		tilebrickCarved = new TilebrickCarved();
 		tilebrickStairs = new TilebrickStairs();
 		beehive = new Beehive();
+		rubblePath = new RubblePath();
+		brickPath = new BrickPath();
 
 	}
 	
@@ -134,7 +140,8 @@ public class ModBlocks {
         registerBlock(tilebrickCarved);
         registerBlock(tilebrickStairs);
         registerBlock(beehive);
-
+        registerBlock(rubblePath);
+        registerBlock(brickPath);
 	}
 
 	static void registerBlock(Block block) {
@@ -173,7 +180,8 @@ public class ModBlocks {
 		registerRender(tilebrickCarved);
 		registerRender(tilebrickStairs);
 		registerRender(beehive);
-
+		registerRender(rubblePath);
+		registerRender(brickPath);
 	}
 
 	private static void registerRender(Block block) {
