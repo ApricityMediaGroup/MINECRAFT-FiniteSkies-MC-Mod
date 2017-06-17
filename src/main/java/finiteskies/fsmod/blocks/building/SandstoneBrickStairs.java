@@ -11,7 +11,6 @@ public class SandstoneBrickStairs extends BlockStairs {
 
 	public SandstoneBrickStairs(IBlockState modelState) {
 		super(modelState);
-		// TODO Auto-generated constructor stub
 	}
     /**
      * Initializes a new instance of the BlockStainedBrickStairs class.

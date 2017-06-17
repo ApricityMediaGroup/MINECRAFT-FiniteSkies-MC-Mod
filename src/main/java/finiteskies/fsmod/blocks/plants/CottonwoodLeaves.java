@@ -97,7 +97,6 @@ public class CottonwoodLeaves extends BlockLeaves
 	
 	@Override
 	public EnumType getWoodType(int meta) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

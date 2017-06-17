@@ -23,7 +23,6 @@ public class EmpyreanTeleporter extends Teleporter{
 
 	public EmpyreanTeleporter(WorldServer worldIn) {
 		super(worldIn);
-		// TODO Auto-generated constructor stub
 	}
 	/*
 	private final WorldServer worldServerInstance;

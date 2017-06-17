@@ -8,7 +8,6 @@ public class ModFuelHandler implements IFuelHandler{
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
-		// TODO Auto-generated method stub
 		Item var1 = fuel.getItem();
 		
 		if(var1 == ModItems.cokingCoal){

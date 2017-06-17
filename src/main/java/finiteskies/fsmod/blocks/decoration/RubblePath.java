@@ -13,7 +13,7 @@ import net.minecraft.world.IBlockAccess;
 
 public class RubblePath extends Block {
 
-	private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625 * 5, 0, 0.0625 * 5, 0.0625 * 11, 0.0625 * 9, 0.0625 * 11);
+	private static final AxisAlignedBB BOUNDING_BOX =  new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.05D, 1.0D);
 	
 	public RubblePath() {
 		super(Material.ROCK);
@@ -24,7 +24,7 @@ public class RubblePath extends Block {
 		setSoundType(SoundType.STONE);
 		setCreativeTab(FSMod.CREATIVE_TAB_BLOCKS);
 	}
-
+	//TODO Make the sound of stone when walking on, currently makes the sound of block underneath.
 	@Override
 	public boolean isFullCube(IBlockState state) {
 		return false;

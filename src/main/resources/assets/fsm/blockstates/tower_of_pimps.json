@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "fsm:tower_of_pimps" }
+    }
+}

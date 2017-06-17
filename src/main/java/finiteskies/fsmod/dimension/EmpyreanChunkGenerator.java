@@ -359,13 +359,11 @@ public class EmpyreanChunkGenerator implements IChunkGenerator
 
 	@Override
 	public BlockPos getStrongholdGen(World worldIn, String structureName, BlockPos position, boolean p_180513_4_) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean func_193414_a(World p_193414_1_, String p_193414_2_, BlockPos p_193414_3_) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 }
