@@ -15,6 +15,8 @@ import finiteskies.fsmod.render.RenderEntityMusketBullet;
 import finiteskies.fsmod.render.EntityMusketBulletRenderFactory;
 import finiteskies.fsmod.render.RenderEntityAlpaca;
 import finiteskies.fsmod.render.RenderEntitySquirrel;
+import finiteskies.fsmod.tileentity.JarTileEntity;
+import finiteskies.fsmod.tileentity.render.JarRenderer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.entity.Render;
@@ -27,6 +29,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -68,6 +71,9 @@ public class ClientProxy extends CommonProxy
 	}
 	@Override
 	public void init() {
+		
+		ClientRegistry.bindTileEntitySpecialRenderer(JarTileEntity.class, new JarRenderer());
+		
 	}
 	@SuppressWarnings({ "deprecation", "unchecked" })
 	@Override
