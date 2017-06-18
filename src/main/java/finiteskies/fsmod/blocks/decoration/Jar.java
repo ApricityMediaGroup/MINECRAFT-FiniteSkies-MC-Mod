@@ -24,6 +24,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.functions.SetCount;
@@ -60,22 +61,20 @@ public class Jar extends Block implements ITileEntityProvider {
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		TileEntity tileEntity = worldIn.getTileEntity(pos);
-		
-		//ItemStack itemInHand = playerIn.getHeldItem(hand).stack;
 		if(!worldIn.isRemote){
 		if(tileEntity instanceof JarTileEntity){
 			JarTileEntity jar = (JarTileEntity) tileEntity;
-			if(playerIn.getHeldItemMainhand().getItem() != null){ //may need to be setEmpty
+			if(playerIn.getHeldItemMainhand().getItem() != null){
 			if(playerIn.getHeldItemMainhand().getItem() == ModItems.strawberry){
 				if(jar.addItem()){
-					
-					ItemStack itemsInHand = new ItemStack(playerIn.getHeldItemMainhand().getItem());
-					int itemsInHandSize = itemsInHand.getCount();
-					itemsInHand.setCount(itemsInHandSize--);
-					//itemsInHandSize--;
-					//setCount if thisdoesnt work
+					ItemStack stack = playerIn.getHeldItem(hand);
+					stack.shrink(1);
 					return true;
-
+					//In 1.11, the ItemStack.stackSize field was made private. Instead of directly modifying this field like before, there are getter, setter, and mutator methods available.
+					//getCount: equivalent to simply retrieving the field.
+					//setCount: equivalent to setting the field
+					//grow: equivalent to increasing the field. stack.grow(1) is equivalent to stack.stackSize++.
+					//shrink: equivalent to decreasing the field. stack.shrink(1) is equivalent to stack.stackSize--.
 					}
 				}
 			}
