@@ -121,9 +121,7 @@ public class Reference {
 		RUBBLEPATH("rubblePath","rubble_path"),
 		BRICKPATH("brickPath","brick_path"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick"),
-		REDSTONEGENERATOR("redstoneGenerator","redstone_generator"),
-		JAR("jar","jar"),
-		TOWEROFPIMPS("towerOfPimps","tower_of_pimps");
+		REDSTONEGENERATOR("redstoneGenerator","redstone_generator");
 		//Ends with semicolon continues with commas		
 
 		//CARPENTER BEES!!!! D:
