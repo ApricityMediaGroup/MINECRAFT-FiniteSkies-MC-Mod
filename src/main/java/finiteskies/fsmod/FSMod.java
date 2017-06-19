@@ -8,6 +8,7 @@ import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModFuelHandler;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
+import finiteskies.fsmod.preinit.ModTileEntities;
 import finiteskies.fsmod.proxy.CommonProxy;
 import finiteskies.fsmod.worldgen.OreGen;
 import net.minecraft.creativetab.CreativeTabs;
@@ -107,10 +108,12 @@ public class FSMod {
 		System.out.println("Init");	
 		//ModCrafting.register();
 		ModEntities.registerEntity();
+		ModTileEntities.init();
 		//EmpyreanDimension.mainRegistry();
 		//ModBiomes.init();
 		proxy.registerRenders();	
 		proxy.registerRenderers();
+		proxy.registerGuis();
 		GameRegistry.registerFuelHandler(new ModFuelHandler());
 
 	}

@@ -120,7 +120,8 @@ public class Reference {
 		BEEHIVE("beehive","beehive"),
 		RUBBLEPATH("rubblePath","rubble_path"),
 		BRICKPATH("brickPath","brick_path"),
-		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick");
+		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick"),
+		REDSTONEGENERATOR("redstoneGenerator","redstone_generator");
 		//Ends with semicolon continues with commas		
 
 		//CARPENTER BEES!!!! D:

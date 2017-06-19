@@ -4,6 +4,7 @@ import finiteskies.fsmod.entity.EntityFish;
 import finiteskies.fsmod.entity.EntityMusketBullet;
 import finiteskies.fsmod.entity.EntityAlpaca;
 import finiteskies.fsmod.entity.EntitySquirrel;
+import finiteskies.fsmod.gui.GuiHandler;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.model.ModelEntityFish;
@@ -80,6 +81,12 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityAlpaca.class, new RenderEntityAlpaca(rm, new ModelEntityAlpaca(), 0.4F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMusketBullet.class, new RenderEntityMusketBullet(rm));
 	}
+	@Override
+	public void registerGuis() {
+	        super.registerGuis();
+	        new GuiHandler();
+	}
+	
 	@SubscribeEvent
 	public void onPrePlayerRender(RenderPlayerEvent.Pre event)
 	{

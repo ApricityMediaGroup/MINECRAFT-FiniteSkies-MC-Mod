@@ -50,6 +50,9 @@ public class CommonProxy implements ProxyInterface
 	public void registerRenderers() {
 	}
 	
+	public void registerGuis() {
+		
+	}
     public void init(FMLInitializationEvent e) {
     }
 

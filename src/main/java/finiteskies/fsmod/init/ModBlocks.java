@@ -1,13 +1,11 @@
 package finiteskies.fsmod.init;
 
-import java.util.Random;
-
+import finiteskies.fsmod.Reference;
 import finiteskies.fsmod.blocks.building.Cottonwood;
 import finiteskies.fsmod.blocks.building.ForestBrick;
 import finiteskies.fsmod.blocks.building.Rubble;
 import finiteskies.fsmod.blocks.building.RubbleMossy;
 import finiteskies.fsmod.blocks.building.SandstoneBrick;
-import finiteskies.fsmod.blocks.building.SandstoneBrickStairs;
 import finiteskies.fsmod.blocks.building.SlateStoneBrick;
 import finiteskies.fsmod.blocks.building.StainedOakWoodPlanks;
 import finiteskies.fsmod.blocks.building.Tilebrick;
@@ -17,7 +15,7 @@ import finiteskies.fsmod.blocks.building.TilebrickMossy;
 import finiteskies.fsmod.blocks.cave.Stalactite;
 import finiteskies.fsmod.blocks.decoration.BrickPath;
 import finiteskies.fsmod.blocks.decoration.RubblePath;
-import finiteskies.fsmod.blocks.ground.FiniteGrassBlock;
+import finiteskies.fsmod.blocks.energy.RedstoneGenerator;
 import finiteskies.fsmod.blocks.ground.GroundMarble;
 import finiteskies.fsmod.blocks.lights.Firepit;
 import finiteskies.fsmod.blocks.lights.Lantern;
@@ -30,22 +28,20 @@ import finiteskies.fsmod.blocks.plants.BlueberryPlant;
 import finiteskies.fsmod.blocks.plants.CottonwoodLeaves;
 import finiteskies.fsmod.blocks.plants.FlowerPot;
 import finiteskies.fsmod.blocks.plants.StrawberryPlant;
-import finiteskies.fsmod.blocks.portal.EmpyreanPortal;
 import finiteskies.fsmod.blocks.portal.Glowquartz;
 import finiteskies.fsmod.blocks.stairs.TilebrickStairs;
+import finiteskies.fsmod.tileentity.TileEntityRedstoneGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class ModBlocks {
 	
+
 	public static Block sandstoneBrick;
 	public static Block strawberryPlant;
 	public static Block lantern;
@@ -75,6 +71,7 @@ public class ModBlocks {
 	public static Block beehive;
 	public static Block rubblePath;
 	public static Block brickPath;
+	public static Block redstoneGenerator;
 
 	
 	public static void init() {
@@ -108,7 +105,7 @@ public class ModBlocks {
 		beehive = new Beehive();
 		rubblePath = new RubblePath();
 		brickPath = new BrickPath();
-
+		redstoneGenerator = new RedstoneGenerator(TileEntityRedstoneGenerator.class);
 	}
 	
 	public static void register() {
@@ -142,6 +139,7 @@ public class ModBlocks {
         registerBlock(beehive);
         registerBlock(rubblePath);
         registerBlock(brickPath);
+        registerBlock(redstoneGenerator);
 	}
 
 	static void registerBlock(Block block) {
@@ -182,6 +180,7 @@ public class ModBlocks {
 		registerRender(beehive);
 		registerRender(rubblePath);
 		registerRender(brickPath);
+        registerRender(redstoneGenerator);
 	}
 
 	private static void registerRender(Block block) {
