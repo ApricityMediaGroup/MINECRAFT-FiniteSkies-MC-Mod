@@ -10,6 +10,7 @@ import finiteskies.fsmod.init.ModItems;
 import finiteskies.fsmod.init.ModSoundEvents;
 import finiteskies.fsmod.preinit.ModTileEntities;
 import finiteskies.fsmod.proxy.CommonProxy;
+import finiteskies.fsmod.tileentity.JarTileEntity;
 import finiteskies.fsmod.worldgen.OreGen;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
@@ -115,6 +116,9 @@ public class FSMod {
 		proxy.registerRenderers();
 		proxy.registerGuis();
 		GameRegistry.registerFuelHandler(new ModFuelHandler());
+		
+		// TODO Add a class file to register tile entitys like Mod Blocks and Mod Items so we dont have to list them all in here...
+		GameRegistry.registerTileEntity(JarTileEntity.class, Reference.MOD_ID + "JarTileEntity");
 
 	}
 

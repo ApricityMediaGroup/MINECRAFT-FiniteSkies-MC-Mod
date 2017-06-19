@@ -83,20 +83,16 @@ public class StrawberryPlant extends BlockBush implements IGrowable, net.minecra
     //It got mad at me for not having these.
 	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		// TODO Auto-generated method stub
-		
+	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {	
 	}
 	
     /**
