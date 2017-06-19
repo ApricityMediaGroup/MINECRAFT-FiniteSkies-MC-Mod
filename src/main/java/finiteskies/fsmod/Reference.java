@@ -120,6 +120,8 @@ public class Reference {
 		BEEHIVE("beehive","beehive"),
 		RUBBLEPATH("rubblePath","rubble_path"),
 		BRICKPATH("brickPath","brick_path"),
+		JAR("jar","jar"),
+		TOWEROFPIMPS("towerOfPimps","tower_of_pimps"),
 		SLATESTONEBRICK("slateStoneBrick", "slate_stone_brick"),
 		REDSTONEGENERATOR("redstoneGenerator","redstone_generator");
 		//Ends with semicolon continues with commas		

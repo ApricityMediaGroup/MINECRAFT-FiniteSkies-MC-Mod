@@ -15,8 +15,8 @@ public class CorruptSword extends Item{
 		setRegistryName(Reference.FiniteItems.CORRUPTSWORD.getRegistryName());
 		setCreativeTab(FSMod.CREATIVE_TAB_TOOLS);
 		setMaxStackSize(1);
-		setMaxDamage(64);
 	}
+	
     public void addInformation(ItemStack item, EntityPlayer player, List list, boolean show){
     list.add("Cuts eggs surprisingly well...");
     }
