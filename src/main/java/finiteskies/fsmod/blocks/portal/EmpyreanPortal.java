@@ -69,7 +69,6 @@ public class EmpyreanPortal extends BlockBreakable
         }
     }
 
-    @SuppressWarnings("deprecation")
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
         super.updateTick(worldIn, pos, state, rand);
@@ -80,7 +79,7 @@ public class EmpyreanPortal extends BlockBreakable
             BlockPos blockpos;
 
             for (blockpos = pos; !worldIn.getBlockState(blockpos).isFullyOpaque() && blockpos.getY() > 0; blockpos = blockpos.down())
-            {
+           {
                 ;
             }
 
