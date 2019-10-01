@@ -37,42 +37,40 @@ public final class ItemRegistry{
 	
 	public static final List<Item> itemlist = new ArrayList<Item>();
     public static final HashMap<String, Item> items = new HashMap<String, Item>();
-
-	public static final HashSet<Item> allFishRaw = new HashSet<Item>();
+    
 	public static final HashSet<Item> allFood = new HashSet<Item>();
-	public static final HashSet<Item> allJuice = new HashSet<Item>();
 	
 	
 	// Items
 	public static Item strawberryItem;
-	
-	
-	
-	public static boolean initialized = false;
-	
+	public static Item blueberryItem;
+	public static Item toastItem;
+	public static Item breadSliceItem;
+		
 	public static void registerItems() {
 		registerFoodItems();
 				
-		initialized = true;
 	}
 	
 	private static void registerFoodItems() {
 		
-		strawberryItem = registerItemFood("strawberry", 2, 2);
+		strawberryItem = registerItemFood("strawberryitem", 2, 2);
+		blueberryItem = registerItemFood("blueberryitem", 2, 2);
+		toastItem = registerItemFood("toastitem", 2, 2);
+		breadSliceItem = registerItemFood("breadsliceitem", 2, 2);
+		
+		System.out.println("---- Registered Food Items");
 		
 	}
 	
 	private static Item registerItemFood(String registryName, int amount, float saturation) {
 		final Item item = new ItemFsmFood(amount, saturation);
 		allFood.add(item);
-
+		
+		System.out.println("---- Added to Registry");
+		
 		return registerItem(item, registryName);
-	}
-	
-	private static Item registerGenericItem(String registryName) {
-		final Item item = new Item();
-
-		return registerItem(item, registryName);
+		
 	}
 
 	public static Item registerItem(Item item, String registryName) {
@@ -82,8 +80,7 @@ public final class ItemRegistry{
         itemlist.add(item);
         return item;
     }
-	
-	
+
 }	
 	/*
 	

@@ -74,25 +74,25 @@ public class FSMod {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");	
 		//ModCrafting.register();
-		ModEntities.registerEntity();
-		ModTileEntities.init();
+		//ModEntities.registerEntity();
+		//ModTileEntities.init();
 		//EmpyreanDimension.mainRegistry();
 		//ModBiomes.init();
 		proxy.registerRenders();	
-		proxy.registerRenderers();
-		proxy.registerGuis();
-		GameRegistry.registerFuelHandler(new ModFuelHandler());
+		//proxy.registerRenderers();
+		//proxy.registerGuis();
+		//GameRegistry.registerFuelHandler(new ModFuelHandler());
 		
 		// TODO Add a class file to register tile entitys like Mod Blocks and Mod Items so we dont have to list them all in here...
-		GameRegistry.registerTileEntity(JarTileEntity.class, Reference.MOD_ID + "JarTileEntity");
+		//GameRegistry.registerTileEntity(JarTileEntity.class, Reference.MOD_ID + "JarTileEntity");
 
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
-		EntityRegistry.addSpawn(EntitySquirrel.class, 10, 3, 10, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.FOREST_HILLS, 
-		Biomes.ROOFED_FOREST, Biomes.TAIGA, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS);
+		//EntityRegistry.addSpawn(EntitySquirrel.class, 10, 3, 10, EnumCreatureType.CREATURE, Biomes.FOREST, Biomes.FOREST_HILLS, 
+		//Biomes.ROOFED_FOREST, Biomes.TAIGA, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.BIRCH_FOREST, Biomes.BIRCH_FOREST_HILLS);
 	}
 	
     @EventHandler
