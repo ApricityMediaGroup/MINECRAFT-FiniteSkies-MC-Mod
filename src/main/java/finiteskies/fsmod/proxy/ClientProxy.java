@@ -7,6 +7,7 @@ import finiteskies.fsmod.entity.EntitySquirrel;
 import finiteskies.fsmod.gui.GuiHandler;
 import finiteskies.fsmod.init.ModBlocks;
 import finiteskies.fsmod.init.ModItems;
+import finiteskies.fsmod.items.ItemRenderRegister;
 import finiteskies.fsmod.model.ModelEntityFish;
 import finiteskies.fsmod.model.ModelEntityMusketBullet;
 import finiteskies.fsmod.model.ModelEntityAlpaca;
@@ -43,8 +44,8 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void registerRenders()
 	{		
-		ModItems.registerRenders();
-		ModBlocks.registerRenders();
+		ItemRenderRegister.registerItemRenderer();
+		//ModBlocks.registerRenders();
 		}
 
 	@Override
@@ -82,10 +83,10 @@ public class ClientProxy extends CommonProxy
 		RenderManager rm = Minecraft.getMinecraft().getRenderManager();
 		RenderItem ri = Minecraft.getMinecraft().getRenderItem();
 		
-		RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(rm, new ModelEntitySquirrel(), 0.1F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityFish.class, new RenderEntityFish(rm, new ModelEntityFish(), 0.0F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityAlpaca.class, new RenderEntityAlpaca(rm, new ModelEntityAlpaca(), 0.4F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityMusketBullet.class, new RenderEntityMusketBullet(rm));
+		//RenderingRegistry.registerEntityRenderingHandler(EntitySquirrel.class, new RenderEntitySquirrel(rm, new ModelEntitySquirrel(), 0.1F));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityFish.class, new RenderEntityFish(rm, new ModelEntityFish(), 0.0F));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAlpaca.class, new RenderEntityAlpaca(rm, new ModelEntityAlpaca(), 0.4F));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityMusketBullet.class, new RenderEntityMusketBullet(rm));
 	}
 	@Override
 	public void registerGuis() {

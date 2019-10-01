@@ -57,12 +57,20 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
 	
 	//ONE --------------------------------------------------
 	
+	public static final Item STRAWBERRY = new Strawberry();
+	
+	
+	/*
+        
+        
+        
 	//foods
 	public static Item strawberry;
 	public static Item blueberry;
@@ -174,7 +182,7 @@ public class ModItems {
 	}
 	//THREE -----------------------------------------------------
 	public static void register() {
-		GameRegistry.register(strawberry);
+		RegistryEvent.(strawberry);
 		GameRegistry.register(blueberry);
 		GameRegistry.register(milkPot);
 		GameRegistry.register(breadSlice);
@@ -274,6 +282,8 @@ public class ModItems {
 		registerRender(bananaBundle);
 		registerRender(bananaSlices);
 	}
+	
+	*/
 	//DONE --- STOP
 	private static void registerRender(Item item) {
 		System.out.println(item.getRegistryName());

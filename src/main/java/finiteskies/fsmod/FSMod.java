@@ -43,48 +43,17 @@ public class FSMod {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static final CreativeTabs CREATIVE_TAB_FOOD = new CreativeTabs("tabFSModFood") {
-		   @SideOnly(Side.CLIENT)
-	        public ItemStack getTabIconItem(){
-	            return new ItemStack(ModItems.strawberry);
-	        }
-		};
-	public static final CreativeTabs CREATIVE_TAB_MISC = new CreativeTabs("tabFSModMisc") {
-		   @SideOnly(Side.CLIENT)
-	        public ItemStack getTabIconItem(){
-	            return new ItemStack(ModItems.milkPot);
-	        }
-		};
-	public static final CreativeTabs CREATIVE_TAB_PLANTS = new CreativeTabs("tabFSModPlants") {
-        @SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem(){
-            return new ItemStack(Item.getItemFromBlock(ModBlocks.strawberryPlant));
-        }
+	
+	
+	public static final CreativeTabs modTab = new CreativeTabs(Reference.MOD_ID) {
+		@Override
+		@SideOnly(Side.CLIENT)
+		public ItemStack getTabIconItem() {
+			return new ItemStack(ItemRegistry.strawberryItem);
+		}
 	};
-	public static final CreativeTabs CREATIVE_TAB_TOOLS = new CreativeTabs("tabFSModTools") {
-		   @SideOnly(Side.CLIENT)
-	        public ItemStack getTabIconItem(){
-	            return new ItemStack(ModItems.foodKnife);
-	        }
-		};
-	public static final CreativeTabs CREATIVE_TAB_BLOCKS = new CreativeTabs("tabFSModBlocks") {
-        @SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem(){
-            return new ItemStack(Item.getItemFromBlock(ModBlocks.sandstoneBrick));
-        }
-		};
-	public static final CreativeTabs CREATIVE_TAB_ORE = new CreativeTabs("tabFSModOre") {
-        @SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem(){
-            return new ItemStack(Item.getItemFromBlock(ModBlocks.dirtFossil));
-        }
-		};
-	public static final CreativeTabs CREATIVE_TAB_FURNITURE = new CreativeTabs("tabFSModFurniture") {
-        @SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem(){
-            return new ItemStack(Item.getItemFromBlock(ModBlocks.lantern));
-        }
-		};
+	
+
 		
 	//PlayerLightSource playerLightSource = new PlayerLightSource();
 	//DynamicLights dynamicLights = new DynamicLights();
@@ -92,12 +61,9 @@ public class FSMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
-		ModItems.init();
-		ModItems.register();
-		ModBlocks.init();
-		ModBlocks.register();
-		ModSoundEvents.registerSounds();
-		GameRegistry.registerWorldGenerator(new OreGen(), 0);
+
+		//ModSoundEvents.registerSounds();
+		//GameRegistry.registerWorldGenerator(new OreGen(), 0);
 		//playerLightSource.preInit(event);
 		//dynamicLights.preInit(event);
 		proxy.preInit();
